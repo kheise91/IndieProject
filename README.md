@@ -10,6 +10,30 @@ Sometimes it can be difficult making plans with others. [ProjectName] will also 
 
 ### Project Technologies/Techniques
 
+* Security/Authentication
+  * Tomcat's JDBC Realm Authentication
+  * User role: bookmark shows, view past shows, edit profile, view other profiles
+  * All: view upcoming shows
+* Database
+  * MySQL
+  * Store users and roles
+  * Store user's favorite genre and previous shows
+* ORM Framework
+  * Hibernate 5
+* Dependency Management
+  * Maven
+* Web Services
+  * Bandsintown API
+* CSS
+  * Bootstrap
+* Hosting
+  * AWS
+* Logging
+  * Log4J2
+* Unit Testing
+  * JUnit
+* IDE: IntelliJ IDEA
+
 ### Design
 
 * [Screen Design](DesignDocuments/ScreenDesign.md)

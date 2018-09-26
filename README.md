@@ -8,9 +8,9 @@ This repository is for my Indie Project.
 
 ### Design
 
-* [Screen Design](DesignDocuments/Screens.md)
-* [Application Flow](DesignDocuments/applications.md)
-* [Database Design](DesignDocuments/databaseDiagram.png)
+* [Screen Design](DesignDocuments/ScreenDesign.md)
+* [Application Flow](DesignDocuments/ApplicationFlow.md)
+* Database Design
 
 ### [Project Plan](ProjectPlan.md)
 

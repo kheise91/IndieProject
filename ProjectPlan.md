@@ -29,6 +29,7 @@
 - [ ] Add the role entity
 - [ ] Create the role dao
 - [ ] Create the role dao unit tests
+- [ ] Weekly Journal Entry
 
 ### Week 6
 

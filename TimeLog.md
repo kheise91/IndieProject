@@ -8,3 +8,5 @@
 | 9/26/2018 | Week 3 Activity 1 and Week 3 Exercise | 1.5 | |
 | 9/26/2018 | Project Problem Statement, Project Plan, Screen Design, and Scope | 1.5 | |
 | 10/01/2018 | Created wireframes, updated ScreenDesign.md, adding to ProjectPlan.md | 1 | |
+| 10/03/2018 | Week 4 videos and readings | 1 | |
+| 10/04/2018 | Week 4 exercise | 1.5 | |

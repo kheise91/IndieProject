@@ -10,3 +10,5 @@
 | 10/01/2018 | Created wireframes, updated ScreenDesign.md, adding to ProjectPlan.md | 1 | |
 | 10/03/2018 | Week 4 videos and readings | 1 | |
 | 10/04/2018 | Week 4 exercise | 1.5 | |
+| 10/09/2018 | Week 5 videos and readings | 1.5 | |
+| 10/15/2018 | Week 5 exercise | 2 | |

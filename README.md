@@ -38,7 +38,7 @@ Sometimes it can be difficult making plans with others. [ProjectName] will also 
 
 * [Screen Design](DesignDocuments/ScreenDesign.md)
 * [Application Flow](DesignDocuments/ApplicationFlow.md)
-* Database Design
+* [Database Design](DesignDocuments/ConcertFinderDatabase.png)
 
 ### [Project Plan](ProjectPlan.md)
 

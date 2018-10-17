@@ -1,1 +1,2 @@
-delete from user;
+DELETE FROM user;
+INSERT INTO user VALUES (1, 'John', 'Johnson', 'password1', 'jj@here.com', '53901', 'Metal'), (2, 'Joe', 'Johnson', 'password2', 'jj2@here.com', '53954', 'Classic Rock'), (3, 'Jack', 'Jackson', 'password3', 'jj3@there.net', '53712', 'Electronic');

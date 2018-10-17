@@ -1,26 +1,26 @@
 # Project Plan
 
 ### Week 3
-- [ ] Create project in IntelliJ and GitHub
-- [ ] Add link to project in student reop.
-- [ ] Write Problem Statement
-- [ ] Design Home Screen
-- [ ] Project Plan
-- [ ] Scope / Web Services(s) / Technologies
-- [ ] Weekly Journal Entry
+- [x] Create project in IntelliJ and GitHub
+- [x] Add link to project in student repo.
+- [x] Write Problem Statement
+- [x] Design Home Screen
+- [x] Project Plan
+- [x] Scope / Web Services(s) / Technologies
+- [x] Weekly Journal Entry
 
 ### Week 4
-- [ ] Design Log In and Sign Up pages
+- [x] Design Log In and Sign Up pages
 - [ ] Create home page jsp
-- [ ] Complete database design
-- [ ] Create the database and user table
-- [ ] Create user entity class
-- [ ] Create user dao
-- [ ] Create test database
-- [ ] Create user dao unit tests
-- [ ] Set up logging
-- [ ] Prepare for Week 5 peer design/code review
-- [ ] Weekly Journal Entry
+- [x] Complete database design
+- [x] Create the database and user table
+- [x] Create user entity class
+- [x] Create user dao
+- [x] Create test database
+- [x] Create user dao unit tests
+- [x] Set up logging
+- [x] Prepare for Week 5 peer design/code review
+- [x] Weekly Journal Entry
 
 ### Week 5
 - [ ] Design remaining screens

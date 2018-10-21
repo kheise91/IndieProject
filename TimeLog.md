@@ -14,3 +14,4 @@
 | 10/15/2018 | Week 5 exercise | 2 | |
 | 10/16/2018 | Week 6 videos and exercise | 2.5 | |
 | 10/17/2018 | Created test database with tables, User class, UserDao, and the UserDao tests. | 2 | |
+| 10/21/2018 | Week 7 videos and exercise | 2 | |

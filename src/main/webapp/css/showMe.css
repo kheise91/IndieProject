@@ -23,7 +23,7 @@ nav a:hover {
     font-size: 1.75em;
 }
 
-.navbar-toggler-icon {
+.navbar-toggler {
     color: #BAD2EE;
 }
 
@@ -47,8 +47,8 @@ nav a:hover {
 }
 
 .signUp-btn {
-    background-color: #e2986e;
-    border: 3px solid #e2986e;
+    background-color: #dd8755;
+    border: 3px solid #dd8755;
     border-radius: 12px;
     color: #060A13;
     font-size: 1.1em;
@@ -57,14 +57,39 @@ nav a:hover {
     padding: .5em 1em .5em 1em;
 }
 .signUp-btn:hover {
-    background-color: #dd8755;
-    border-color: #dd8755;
+    background-color: #d9783f;
+    border-color: #d9783f;
     color: #060A13;
     text-decoration: none;
 }
 
 
 /* Sign Up Page Styles */
-.signUpDiv {
-    background-color: #969AA3;
+#showMeTitle {
+    color: #ab5d2c;
+    letter-spacing: .1em;
+}
+
+.signUpForm {
+    background-color: #dd8755;
+    border-radius: 12px;
+    box-shadow: 2px 3px 4px;
+    padding: 1em;
+}
+#submitButton {
+    background-color: #2C65AB;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    letter-spacing: .15em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+    width: 100%;
+}
+#submitButton:hover {
+    background-color: #25548e;
 }

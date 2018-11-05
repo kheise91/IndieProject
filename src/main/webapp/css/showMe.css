@@ -23,6 +23,10 @@ nav a:hover {
     font-size: 1.75em;
 }
 
+.navbar-toggler-icon {
+    color: #BAD2EE;
+}
+
 .nav-link {
     border-bottom: 2px solid #060A13;
     font-variant: small-caps;
@@ -47,8 +51,9 @@ nav a:hover {
     border: 3px solid #e2986e;
     border-radius: 12px;
     color: #060A13;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-variant: small-caps;
+    letter-spacing: .1em;
     padding: .5em 1em .5em 1em;
 }
 .signUp-btn:hover {
@@ -56,4 +61,10 @@ nav a:hover {
     border-color: #dd8755;
     color: #060A13;
     text-decoration: none;
+}
+
+
+/* Sign Up Page Styles */
+.signUpDiv {
+    background-color: #969AA3;
 }

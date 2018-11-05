@@ -23,33 +23,13 @@
     </head>
 
     <body style="background-image: url('images/showMeBackground.jpg');">
-        <nav class="navbar navbar-expand-md">
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.jsp">ShowMe</a>
-
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Log In</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <jsp:include page="indexNavbar.jsp" />
 
         <div class="container text-center">
             <h1 class="display-1">Music is Life</h1>
             <h1 class="display-2">See it Live</h1>
 
-            <a href="#" class="signUp-btn">Get Started</a>
+            <a href="signUp.jsp" class="signUp-btn">Get Started</a>
         </div>
 
     </body>

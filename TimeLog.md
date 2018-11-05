@@ -16,3 +16,4 @@
 | 10/17/2018 | Created test database with tables, User class, UserDao, and the UserDao tests. | 2 | |
 | 10/21/2018 | Week 7 videos and exercise | 2 | |
 | 10/24/2018 | Created 3 more screen designs | 1 | |
+| 11/05/2018 | Feedback for Lisa's presentation and created index.jsp | 3 | |

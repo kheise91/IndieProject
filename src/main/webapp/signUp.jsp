@@ -18,6 +18,9 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <!-- Custom CSS and JavaScript -->
     <link rel="stylesheet" href="css/showMe.css" />
 </head>
@@ -29,8 +32,9 @@
         <div class="row">
             <div class="col-sm-6">
                 <section>
-                    <h1 id="showMeTitle" class="text-center display-4">ShowMe</h1>
-                    <br />
+                    <h1 class="text-center display-4 showMeTitle">ShowMe</h1>
+                    <hr /><br />
+
                     <h5>What if there was one place you could go to view upcoming concerts in your area, based on your
                         musical tastes? ShowMe will do just that.
                         <br /><br />
@@ -43,7 +47,7 @@
             <div class="col-sm-1"></div>
 
             <div class="col-sm-4">
-                <form class="signUpForm">
+                <form class="signUpLogInForm">
                     <div class="form-group">
                         <label for="username">Username:</label>
                         <input type="text" class="form-control" id="username" />

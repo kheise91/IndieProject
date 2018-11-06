@@ -17,3 +17,6 @@
 | 10/21/2018 | Week 7 videos and exercise | 2 | |
 | 10/24/2018 | Created 3 more screen designs | 1 | |
 | 11/05/2018 | Feedback for Lisa's presentation and created index.jsp | 3 | |
+| 11/05/2018 | Created sign up page for indie project | 1 | |
+| 11/06/2018 | Week 8 activities | 2.5 | |
+| 11/06/2018 | Created log in page for indie project | 1 | |

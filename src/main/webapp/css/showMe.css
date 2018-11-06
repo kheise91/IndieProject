@@ -23,7 +23,7 @@ nav a:hover {
     font-size: 1.75em;
 }
 
-.navbar-toggler {
+.fa-bars {
     color: #BAD2EE;
 }
 
@@ -65,12 +65,12 @@ nav a:hover {
 
 
 /* Sign Up Page Styles */
-#showMeTitle {
+.showMeTitle {
     color: #ab5d2c;
     letter-spacing: .1em;
 }
 
-.signUpForm {
+.signUpLogInForm {
     background-color: #dd8755;
     border-radius: 12px;
     box-shadow: 2px 3px 4px;

@@ -4,7 +4,7 @@
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fas fa-bars"></span>
     </button>
 
     <!-- Navbar links -->

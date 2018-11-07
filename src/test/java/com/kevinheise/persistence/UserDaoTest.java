@@ -1,6 +1,8 @@
 package com.kevinheise.persistence;
 
+import com.kevinheise.entity.Role;
 import com.kevinheise.entity.User;
+import com.kevinheise.testUtils.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,14 +13,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserDaoTest {
 
-    UserDao dao;
+    GenericDao userDao;
+    GenericDao roleDao;
 
     @BeforeEach
     void setUp() {
-        com.kevinheise.testUtils.Database database = com.kevinheise.testUtils.Database.getInstance();
-        database.runSQL("cleandb.sql");
+        userDao = new GenericDao(User.class);
+        roleDao = new GenericDao(Role.class);
 
-        dao = new UserDao();
+        Database database = com.kevinheise.testUtils.Database.getInstance();
+        database.runSQL("cleandb.sql");
     }
 
     /**
@@ -26,7 +30,7 @@ public class UserDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        User retrievedUser = dao.getById(1);
+        User retrievedUser = (User) userDao.getById(1);
         assertEquals("John", retrievedUser.getFirstName());
         assertEquals("Johnson", retrievedUser.getLastName());
     }
@@ -37,12 +41,29 @@ public class UserDaoTest {
     @Test
     void insertUserSuccess() {
         User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
-        int id = dao.insert(newUser);
+        int id = userDao.insert(newUser);
         assertNotEquals(0, id);
 
-        User insertedUser = dao.getById(id);
+        User insertedUser = (User) userDao.getById(id);
         assertEquals("Kevin", insertedUser.getFirstName());
         assertEquals("Heise", insertedUser.getLastName());
+    }
+
+    /**
+     * Verify successful insert of user with Role
+     */
+    @Test
+    void insertUserWithRoleSuccess() {
+        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
+        Role newRole = new Role("user", "kheise", newUser);
+        newUser.addRole(newRole);
+
+        int id = userDao.insert(newUser);
+        User insertedUser = (User) userDao.getById(id);
+        List<Role> roleList = roleDao.getByPropertyEqual("username", insertedUser.getUsername());
+        Role insertedRole = roleList.get(0);
+
+        assertEquals(insertedRole.getUsername(), insertedUser.getUsername());
     }
 
     /**
@@ -50,12 +71,12 @@ public class UserDaoTest {
      */
     @Test
     void updateUserSuccess() {
-        User userToUpdate = dao.getById(1);
+        User userToUpdate = (User) userDao.getById(1);
         userToUpdate.setFirstName("Mark");
         userToUpdate.setLastName("Matthews");
-        dao.saveOrUpdate(userToUpdate);
+        userDao.saveOrUpdate(userToUpdate);
 
-        User updatedUser = dao.getById(1);
+        User updatedUser = (User) userDao.getById(1);
         assertEquals("Mark", updatedUser.getFirstName());
         assertEquals("Matthews", updatedUser.getLastName());
     }
@@ -65,8 +86,8 @@ public class UserDaoTest {
      */
     @Test
     void removeUserSuccess() {
-        dao.delete(dao.getById(1));
-        assertNull(dao.getById(1));
+        userDao.delete(userDao.getById(1));
+        assertNull(userDao.getById(1));
     }
 
     /**
@@ -74,7 +95,19 @@ public class UserDaoTest {
      */
     @Test
     void getAllUsersSuccess() {
-        List<User> users = dao.getAll();
+        List<User> users = userDao.getAll();
         assertEquals(3, users.size());
+    }
+
+    /**
+     * Verify successful retrieval of user by username
+     */
+    @Test
+    void getByUsernameSuccess() {
+        List<User> retrievedUserList = userDao.getByPropertyEqual("username", "johnj");
+        assertEquals(1, retrievedUserList.size());
+
+        User retrievedUser = retrievedUserList.get(0);
+        assertEquals("johnJ", retrievedUser.getUsername());
     }
 }

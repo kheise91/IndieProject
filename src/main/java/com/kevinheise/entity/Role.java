@@ -17,8 +17,10 @@ public class Role {
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "username")
     private String username;
 
     @ManyToOne
@@ -80,6 +82,24 @@ public class Role {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * Gets username.
+     *
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * Sets username.
+     *
+     * @param username the username
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**

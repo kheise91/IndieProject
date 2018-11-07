@@ -59,3 +59,12 @@
 [DEBUG] 2018-11-07 02:26:16.040 [main] UserDao - The list of users [User{id=1, firstName='John', lastName='Johnson', password='password1', emailAddress='jj@here.com', zipcode='53901', favoriteGenre='Metal'}, User{id=2, firstName='Joe', lastName='Johnson', password='password2', emailAddress='jj2@here.com', zipcode='53954', favoriteGenre='Classic Rock'}, User{id=3, firstName='Jack', lastName='Jackson', password='password3', emailAddress='jj3@there.net', zipcode='53712', favoriteGenre='Electronic'}]
 [DEBUG] 2018-11-07 02:29:34.562 [main] UserDao - The list of users [User{id=1, firstName='John', lastName='Johnson', password='password1', emailAddress='jj@here.com', zipcode='53901', favoriteGenre='Metal'}, User{id=2, firstName='Joe', lastName='Johnson', password='password2', emailAddress='jj2@here.com', zipcode='53954', favoriteGenre='Classic Rock'}, User{id=3, firstName='Jack', lastName='Jackson', password='password3', emailAddress='jj3@there.net', zipcode='53712', favoriteGenre='Electronic'}]
 [DEBUG] 2018-11-07 03:07:48.652 [main] UserDao - The list of users [User{id=1, username='johnJ', emailAddress='johnj@here.net', password='johnpassword', firstName='John', lastName='Johnson', birthDate=1991-01-01 00:00:00.0, zipCode='53594', favoriteGenre='Classical'}, User{id=2, username='joeJ', emailAddress='joej@there.com', password='joepassword', firstName='Joe', lastName='Johnson', birthDate=1989-02-08 00:00:00.0, zipCode='53711', favoriteGenre='Metal'}, User{id=3, username='kyleS', emailAddress='kyles@where.gov', password='kylepassword', firstName='Kyle', lastName='Smith', birthDate=1991-10-30 00:00:00.0, zipCode='53901', favoriteGenre='Electronic'}]
+[DEBUG] 2018-11-07 04:00:52.025 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 04:02:15.917 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 04:02:39.948 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 04:03:00.551 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 04:54:06.448 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 04:56:02.446 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 04:56:26.631 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 04:56:27.614 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 04:59:39.710 [main] GenericDao - Searching for order with username = kheise

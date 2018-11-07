@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center">Welcome <% out.print(request.getRemoteUser()); %></h1>
+                <h1 class="text-center">Welcome</h1>
                 <hr />
             </div>
         </div>

@@ -120,3 +120,44 @@
 [DEBUG] 2018-11-07 08:33:09.069 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-07 08:38:47.616 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-07 08:40:21.718 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 09:28:53.824 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 09:29:55.720 [http-nio-8080-exec-7] SignUpUser - Adding user: User{id=0, username='jsmith', emailAddress='johnsmith@somewhere.com', password='password', firstName='null', lastName='null', birthDate=null, zipCode='53754', favoriteGenre='Reggae'}
+[DEBUG] 2018-11-07 09:32:18.094 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 09:32:54.209 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='jj', emailAddress='aa', password='pass', firstName='null', lastName='null', birthDate=null, zipCode='44332', favoriteGenre='none'}
+[DEBUG] 2018-11-07 09:39:01.696 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 09:39:52.726 [http-nio-8080-exec-27] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kk', password='password', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Latin'}
+[DEBUG] 2018-11-07 09:42:09.949 [http-nio-8080-exec-34] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kk', password='fdf', firstName='null', lastName='null', birthDate=null, zipCode='33333', favoriteGenre='none'}
+[ERROR] 2018-11-07 09:49:23.838 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:50:18.462 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:51:09.724 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:52:00.781 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:52:51.586 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:53:42.736 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:53:42.738 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:54:33.569 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:54:33.580 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[DEBUG] 2018-11-07 09:54:33.607 [main] GenericDao - Searching for order with username = johnj
+[ERROR] 2018-11-07 09:55:24.595 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:56:15.560 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:56:15.565 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:57:06.899 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:57:06.900 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:57:57.054 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[DEBUG] 2018-11-07 09:57:57.068 [main] GenericDao - Searching for order with username = johnj
+[ERROR] 2018-11-07 09:58:48.609 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[ERROR] 2018-11-07 09:59:39.693 [main] Database - com.mysql.jdbc.exceptions.jdbc4.MySQLTransactionRollbackException: Lock wait timeout exceeded; try restarting transaction
+[DEBUG] 2018-11-07 10:04:52.341 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:11:49.778 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:12:27.258 [http-nio-8080-exec-2] SignUpUser - Adding user: User{id=0, username='john', emailAddress='smith', password='jsmith', firstName='null', lastName='null', birthDate=null, zipCode='54443', favoriteGenre='none'}
+[DEBUG] 2018-11-07 10:14:17.201 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:15:53.763 [http-nio-8080-exec-25] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kh', password='kk', firstName='null', lastName='null', birthDate=null, zipCode='44332', favoriteGenre='Reggae'}
+[DEBUG] 2018-11-07 10:18:33.530 [http-nio-8080-exec-29] SignUpUser - Adding user: User{id=0, username='aa', emailAddress='aa', password='aa', firstName='null', lastName='null', birthDate=null, zipCode='44332', favoriteGenre='Christian/Gospel'}
+[DEBUG] 2018-11-07 10:21:30.315 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:22:06.659 [http-nio-8080-exec-35] SignUpUser - Adding user: User{id=0, username='ss', emailAddress='ss', password='ss', firstName='null', lastName='null', birthDate=null, zipCode='33221', favoriteGenre='Christian/Gospel'}
+[DEBUG] 2018-11-07 10:24:10.014 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:24:57.612 [http-nio-8080-exec-51] SignUpUser - Adding user: User{id=0, username='jj', emailAddress='aa', password='jj', firstName='null', lastName='null', birthDate=null, zipCode='33992', favoriteGenre='Electronic'}
+[DEBUG] 2018-11-07 10:26:02.172 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:27:01.346 [http-nio-8080-exec-61] SignUpUser - Adding user: User{id=0, username='ss', emailAddress='ss', password='ss', firstName='null', lastName='null', birthDate=null, zipCode='4545', favoriteGenre='Christian/Gospel'}
+[DEBUG] 2018-11-07 10:27:59.902 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 10:28:39.745 [http-nio-8080-exec-69] SignUpUser - Adding user: User{id=0, username='ss', emailAddress='ss', password='ss', firstName='null', lastName='null', birthDate=null, zipCode='33221', favoriteGenre='Classical'}
+[DEBUG] 2018-11-07 11:00:12.964 [main] GenericDao - Searching for order with username = johnj

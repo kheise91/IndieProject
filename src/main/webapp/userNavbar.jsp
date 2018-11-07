@@ -19,10 +19,10 @@
             </li>
             &nbsp;&nbsp;
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><% out.print(request.getRemoteUser()); %>&nbsp;<span class="far fa-user"></span></a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Edit Profile</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
+                    <a class="dropdown-item" href="logOut.jsp">Log Out</a>
                 </div>
             </li>
         </ul>

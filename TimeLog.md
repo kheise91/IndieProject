@@ -23,3 +23,5 @@
 | 11/06/2018 | Created home page for indie project and made changes to stylesheets | 2 | |
 | 11/07/2018 | Redesigning database and implementing generic dao | 2.5 | |
 | 11/07/2018 | Adding sign up functionality to indie project | 1.5 | |
+| 11/07/2018 | Adding authentication to indie project | 2 | |
+| 11/07/2018 | Deploying indie project to AWS | 1 | |

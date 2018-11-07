@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * The type User.
@@ -18,18 +19,24 @@ public class User {
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
+    private String username;
+
+    @Column(name = "email_address")
+    private String emailAddress;
+
+    private String password;
+
     @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
 
-    private String password;
+    @Column(name = "birth_date")
+    private Date birthDate;
 
-    @Column(name = "email_address")
-    private String emailAddress;
-
-    private String zipcode;
+    @Column(name = "zip_code")
+    private String zipCode;
 
     @Column(name = "favorite_genre")
     private String favoriteGenre;
@@ -43,19 +50,24 @@ public class User {
     /**
      * Instantiates a new User.
      *
+     * @param username      the username
+     * @param emailAddress  the email address
+     * @param password      the password
      * @param firstName     the first name
      * @param lastName      the last name
-     * @param password      the password
-     * @param emailAddress  the email address
-     * @param zipcode       the zipcode
+     * @param birthDate     the birth date
+     * @param zipCode       the zip code
      * @param favoriteGenre the favorite genre
      */
-    public User(String firstName, String lastName, String password, String emailAddress, String zipcode, String favoriteGenre) {
+    public User(String username, String emailAddress, String password, String firstName, String lastName, Date birthDate,
+                String zipCode, String favoriteGenre) {
+        this.username = username;
+        this.emailAddress = emailAddress;
+        this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
-        this.emailAddress = emailAddress;
-        this.zipcode = zipcode;
+        this.birthDate = birthDate;
+        this.zipCode = zipCode;
         this.favoriteGenre = favoriteGenre;
     }
 
@@ -75,6 +87,60 @@ public class User {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    /**
+     * Gets username.
+     *
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * Sets username.
+     *
+     * @param username the username
+     */
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    /**
+     * Gets email address.
+     *
+     * @return the email address
+     */
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    /**
+     * Sets email address.
+     *
+     * @param emailAddress the email address
+     */
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    /**
+     * Gets password.
+     *
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * Sets password.
+     *
+     * @param password the password
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**
@@ -114,57 +180,39 @@ public class User {
     }
 
     /**
-     * Gets password.
+     * Gets birth date.
      *
-     * @return the password
+     * @return the birth date
      */
-    public String getPassword() {
-        return password;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
     /**
-     * Sets password.
+     * Sets birth date.
      *
-     * @param password the password
+     * @param birthDate the birth date
      */
-    public void setPassword(String password) {
-        this.password = password;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     /**
-     * Gets email address.
+     * Gets zip code.
      *
-     * @return the email address
+     * @return the zip code
      */
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getZipCode() {
+        return zipCode;
     }
 
     /**
-     * Sets email address.
+     * Sets zip code.
      *
-     * @param emailAddress the email address
+     * @param zipCode the zip code
      */
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
-    }
-
-    /**
-     * Gets zipcode.
-     *
-     * @return the zipcode
-     */
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    /**
-     * Sets zipcode.
-     *
-     * @param zipcode the zipcode
-     */
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     /**
@@ -189,11 +237,13 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", username='" + username + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", password='" + password + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", zipcode='" + zipcode + '\'' +
+                ", birthDate=" + birthDate +
+                ", zipCode='" + zipCode + '\'' +
                 ", favoriteGenre='" + favoriteGenre + '\'' +
                 '}';
     }

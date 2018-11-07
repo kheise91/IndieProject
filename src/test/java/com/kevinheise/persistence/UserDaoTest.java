@@ -4,6 +4,7 @@ import com.kevinheise.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -35,7 +36,7 @@ public class UserDaoTest {
      */
     @Test
     void insertUserSuccess() {
-        User newUser = new User("Kevin", "Heise", "mypassword", "kheise@madisoncollege.edu", "53901", "Classical");
+        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
         int id = dao.insert(newUser);
         assertNotEquals(0, id);
 

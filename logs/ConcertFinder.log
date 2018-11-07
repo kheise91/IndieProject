@@ -68,3 +68,20 @@
 [DEBUG] 2018-11-07 04:56:26.631 [main] GenericDao - Searching for order with username = kheise
 [DEBUG] 2018-11-07 04:56:27.614 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-07 04:59:39.710 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:17:23.929 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:19:38.454 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:19:39.049 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:22:39.718 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:22:40.368 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:24:06.258 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:24:07.169 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:27:16.080 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:27:16.794 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:28:05.335 [main] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-11-07 05:28:05.926 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:35:49.443 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:37:38.702 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:42:08.092 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 05:49:06.235 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 06:05:24.770 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-07 06:06:23.052 [http-nio-8080-exec-23] SignUpUser - Adding user: User{id=0, username='itsme', emailAddress='me@here.net', password='mypassword', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Metal'}

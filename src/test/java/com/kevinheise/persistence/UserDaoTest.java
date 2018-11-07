@@ -39,6 +39,20 @@ public class UserDaoTest {
      * Verify successful insert of user
      */
     @Test
+    void insertUserWithRoleSuccess() {
+        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
+        Role newRole = new Role("user", "kheise", newUser);
+        newUser.addRole(newRole);
+        int id = userDao.insert(newUser);
+
+        User insertedUser = (User) userDao.getById(id);
+        assertEquals(newRole.getUsername(), insertedUser.getUsername());
+    }
+
+    /**
+     * Verify successful insert of user with role
+     */
+    @Test
     void insertUserSuccess() {
         User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
         int id = userDao.insert(newUser);
@@ -49,22 +63,6 @@ public class UserDaoTest {
         assertEquals("Heise", insertedUser.getLastName());
     }
 
-    /**
-     * Verify successful insert of user with Role
-     */
-    @Test
-    void insertUserWithRoleSuccess() {
-        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
-        Role newRole = new Role("user", "kheise", newUser);
-        newUser.addRole(newRole);
-
-        int id = userDao.insert(newUser);
-        User insertedUser = (User) userDao.getById(id);
-        List<Role> roleList = roleDao.getByPropertyEqual("username", insertedUser.getUsername());
-        Role insertedRole = roleList.get(0);
-
-        assertEquals(insertedRole.getUsername(), insertedUser.getUsername());
-    }
 
     /**
      * Verify successful update of user

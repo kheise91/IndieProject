@@ -104,6 +104,10 @@ nav a:hover {
     color: darkred;
 }
 
+.successMessage {
+    color: green;
+}
+
 p a {
     color: #2C65AB;
 }

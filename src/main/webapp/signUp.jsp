@@ -47,30 +47,30 @@
             <div class="col-sm-1"></div>
 
             <div class="col-sm-4">
-                <form class="signUpLogInForm">
+                <form class="signUpLogInForm" action="signUpUser" method="POST">
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" required="required" />
+                        <input type="text" class="form-control" id="username" name="username" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" required="required" />
+                        <input type="text" class="form-control" id="email" name="email" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" required="required" />
+                        <input type="password" class="form-control" id="password" name="password" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="passwordConfirm">Confirm Password:</label>
-                        <input type="password" class="form-control" id="passwordConfirm" required="required" />
+                        <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="zipCode">ZIP Code:</label>
-                        <input type="text" class="form-control" id="zipCode" required="required" />
+                        <input type="text" class="form-control" id="zipCode" name="zipCode" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="genre">Favorite Genre:</label>
-                        <select class="form-control" id="genre">
+                        <select class="form-control" id="genre" name="favoriteGenre">
                             <option value="none">(Choose Genre)</option>
                             <option value="Rock">Rock</option>
                             <option value="Electronic">Electronic</option>
@@ -91,7 +91,7 @@
                         </select>
                     </div>
                     <br />
-                    <button type="submit" id="submitButton">Create Account</button>
+                    <button type="submit" id="submitButton" name="submit">Create Account</button>
                 </form>
             </div>
 

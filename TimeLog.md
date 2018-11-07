@@ -21,3 +21,4 @@
 | 11/06/2018 | Week 8 activities | 2.5 | |
 | 11/06/2018 | Created log in page for indie project | 1 | |
 | 11/06/2018 | Created home page for indie project and made changes to stylesheets | 2 | |
+| 11/07/2018 | Redesigning database and implementing generic dao | 2.5 | |

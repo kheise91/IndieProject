@@ -15,7 +15,7 @@
             </li>
             &nbsp;&nbsp;
             <li class="nav-item">
-                <a class="nav-link" href="logIn.jsp">Log In</a>
+                <a class="nav-link" href="home.jsp">Log In</a>
             </li>
         </ul>
     </div>

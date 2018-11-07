@@ -40,15 +40,15 @@
 
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <form class="signUpLogInForm">
+                <form class="signUpLogInForm" action="j_security_check" method="POST">
                     <h2 class="text-center">Log In</h2>
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" required="required" />
+                        <input type="text" class="form-control" id="username" name="j_username" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" required="required" />
+                        <input type="password" class="form-control" id="password" name="j_password" required="required" />
                     </div>
                     <br />
 

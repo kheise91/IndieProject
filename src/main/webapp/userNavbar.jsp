@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md">
     <!-- Brand -->
-    <a class="navbar-brand" href="index.jsp">ShowMe</a>
+    <a class="navbar-brand" href="home.jsp">ShowMe</a>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -11,11 +11,19 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="signUp.jsp">Sign Up</a>
+                <a class="nav-link" href="#">My Shows</a>
             </li>
             &nbsp;&nbsp;
             <li class="nav-item">
-                <a class="nav-link" href="logIn.jsp">Log In</a>
+                <a class="nav-link" href="#">Friends</a>
+            </li>
+            &nbsp;&nbsp;
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Edit Profile</a>
+                    <a class="dropdown-item" href="#">Log Out</a>
+                </div>
             </li>
         </ul>
     </div>

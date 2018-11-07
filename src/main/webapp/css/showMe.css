@@ -1,8 +1,8 @@
 /*
-    StyleSheet for Index.jsp
+    StyleSheet for Index, Sign Up, and Log In Pages
 */
 
-/* Navbar styles */
+/* Index Navbar styles */
 nav {
     background-color: #060A13;
     margin-bottom: 5em;
@@ -13,10 +13,10 @@ nav {
 }
 
 nav a {
-    color: #BAD2EE;
+    color: #6eaae2;
 }
 nav a:hover {
-    color: #eeceba;
+    color: #dd8755;
 }
 
 .navbar-brand {
@@ -24,7 +24,7 @@ nav a:hover {
 }
 
 .fa-bars {
-    color: #BAD2EE;
+    color: #6eaae2;
 }
 
 .nav-link {
@@ -33,16 +33,20 @@ nav a:hover {
     font-size: 1.2em;
 }
 .nav-link:hover {
-    border-bottom: 2px solid #eeceba;
+    border-bottom: 2px solid #dd8755;
 }
 
 
 /* Main Section */
 .display-1 {
-    color: #ab5d2c;
+    background: -webkit-linear-gradient(black, #dd8755);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .display-2 {
-    color: #ab5d2c;
+    background: -webkit-linear-gradient(black, #dd8755);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1em;
 }
 
@@ -64,9 +68,11 @@ nav a:hover {
 }
 
 
-/* Sign Up Page Styles */
+/* Sign Up and Log In Page Styles */
 .showMeTitle {
-    color: #ab5d2c;
+    background: -webkit-linear-gradient(black, #dd8755);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: .1em;
 }
 
@@ -92,4 +98,8 @@ nav a:hover {
 }
 #submitButton:hover {
     background-color: #25548e;
+}
+
+p a {
+    color: #2C65AB;
 }

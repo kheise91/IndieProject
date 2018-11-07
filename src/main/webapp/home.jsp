@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>ShowMe</title>
+    <title>ShowMe - Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
 
@@ -23,16 +23,19 @@
 
     <!-- Custom CSS and JavaScript -->
     <link rel="stylesheet" href="css/showMe.css" />
+    <link rel="stylesheet" href="css/userPagesStyles.css" />
 </head>
 
-<body style="background-image: url('images/showMeBackground.jpg');">
-    <jsp:include page="indexNavbar.jsp" />
+<body>
+    <jsp:include page="userNavbar.jsp" />
 
-    <div class="container text-center">
-        <h1 class="display-1">Music is Life</h1>
-        <h1 class="display-2">See it Live</h1>
-
-        <a href="signUp.jsp" class="signUp-btn">Get Started</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center">Welcome [Username]</h1>
+                <hr />
+            </div>
+        </div>
     </div>
 
 </body>

@@ -50,23 +50,23 @@
                 <form class="signUpLogInForm">
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" />
+                        <input type="text" class="form-control" id="username" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control" id="email" />
+                        <input type="text" class="form-control" id="email" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" />
+                        <input type="password" class="form-control" id="password" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="passwordConfirm">Confirm Password:</label>
-                        <input type="password" class="form-control" id="passwordConfirm" />
+                        <input type="password" class="form-control" id="passwordConfirm" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="zipCode">ZIP Code:</label>
-                        <input type="text" class="form-control" id="zipCode" />
+                        <input type="text" class="form-control" id="zipCode" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="genre">Favorite Genre:</label>

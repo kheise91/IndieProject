@@ -30,6 +30,7 @@
 
     <div class="container">
         <div class="row">
+
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
                 <h1 class="text-center display-4 showMeTitle">ShowMe</h1>
@@ -43,14 +44,21 @@
                     <h2 class="text-center">Log In</h2>
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" id="username" />
+                        <input type="text" class="form-control" id="username" required="required" />
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" id="password" />
+                        <input type="password" class="form-control" id="password" required="required" />
                     </div>
                     <br />
+
                     <button type="submit" id="submitButton">Log In</button>
+                    <br />
+
+                    <p>Don't have an account?
+                        <br />
+                        <a href="signUp.jsp">Sign up here</a>
+                    </p>
                 </form>
             </div>
             <div class="col-sm-4"></div>

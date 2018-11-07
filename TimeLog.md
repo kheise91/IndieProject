@@ -20,3 +20,4 @@
 | 11/05/2018 | Created sign up page for indie project | 1 | |
 | 11/06/2018 | Week 8 activities | 2.5 | |
 | 11/06/2018 | Created log in page for indie project | 1 | |
+| 11/06/2018 | Created home page for indie project and made changes to stylesheets | 2 | |

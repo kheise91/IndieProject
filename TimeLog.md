@@ -25,3 +25,7 @@
 | 11/07/2018 | Adding sign up functionality to indie project | 1.5 | |
 | 11/07/2018 | Adding authentication to indie project | 2 | |
 | 11/07/2018 | Deploying indie project to AWS | 1 | |
+| 11/11/2018 | Week 9 videos and activitites | 2.5 | |
+| 11/12/2018 | Week 9 exercise and team project | 2 | |
+| 11/13/2018 | Screen designs for team project | 1 | |
+| 11/14/2018 | JSPs for team project | 3 | |

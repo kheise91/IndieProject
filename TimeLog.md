@@ -29,3 +29,6 @@
 | 11/12/2018 | Week 9 exercise and team project | 2 | |
 | 11/13/2018 | Screen designs for team project | 1 | |
 | 11/14/2018 | JSPs for team project | 3 | |
+| 11/15/2018 | Team project | 1.5 | |
+| 11/18/2018 | Completed Sign Up and Log In pages for team project | 3 | |
+| 11/18/2018 | Configured tomcat authentication and worked on sql scripts and JSPs for team project | 4 | |

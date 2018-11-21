@@ -31,4 +31,5 @@
 | 11/14/2018 | JSPs for team project | 3 | |
 | 11/15/2018 | Team project | 1.5 | |
 | 11/18/2018 | Completed Sign Up and Log In pages for team project | 3 | |
-| 11/18/2018 | Configured tomcat authentication and worked on sql scripts and JSPs for team project | 4 | |
+| 11/19/2018 | Configured tomcat authentication and worked on sql scripts and JSPs for team project | 4 | |
+| 11/20/2018 | Team Project - finished homepage jsp that contains the forms and links for consuming rest services. I also created the rest service to produce html | 3.5 | |

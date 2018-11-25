@@ -1,0 +1,77 @@
+/*******************************************************************************
+* Stylesheet for index.html                                                    *
+*******************************************************************************/
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+.bg-img {
+    display: none;
+
+    background-image: url("../images/wallpaper.jpg");
+    background-position: 48% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: auto;
+    z-index: -1;
+}
+
+.headingDiv {
+    margin-top: 2em;
+}
+h1, h2 {
+    display: none;
+
+    color: darkorange;
+    text-shadow: darkblue 4px 5px 6px;
+    letter-spacing: .2em;
+    font-family: fantasy;
+    font-weight: normal;
+}
+/* Meidum screens and up */
+@media (min-width: 768px) {
+    .headingDiv {
+        margin-top: 10em;
+    }
+    h1 {
+        font-size: 5em;
+    }
+    h2 {
+        font-size: 4em;
+    }
+}
+
+#showMe {
+    position: relative;
+    top: 1000px;
+}
+
+.btn-main {
+    border: 2px solid darkorange;
+    background-color: none;
+    color: darkorange;
+    font-size: 1.25em;
+    font-variant: small-caps;
+    letter-spacing: .05em;
+    margin-top: 2em;
+}
+.btn-main:hover {
+    background-color: darkorange;
+    color: white;
+}

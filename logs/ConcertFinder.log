@@ -161,3 +161,8 @@
 [DEBUG] 2018-11-07 10:27:59.902 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-07 10:28:39.745 [http-nio-8080-exec-69] SignUpUser - Adding user: User{id=0, username='ss', emailAddress='ss', password='ss', firstName='null', lastName='null', birthDate=null, zipCode='33221', favoriteGenre='Classical'}
 [DEBUG] 2018-11-07 11:00:12.964 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-25 13:52:26.170 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-25 13:56:46.013 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-25 14:06:56.506 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-25 14:09:55.741 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-11-25 14:16:47.444 [main] GenericDao - Searching for order with username = johnj

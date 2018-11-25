@@ -1,22 +1,18 @@
-<nav class="navbar navbar-expand-md">
-    <!-- Brand -->
-    <a class="navbar-brand" href="index.jsp">ShowMe</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="fas fa-bars"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="signUp.jsp">Sign Up</a>
-            </li>
-            &nbsp;&nbsp;
-            <li class="nav-item">
-                <a class="nav-link" href="home.jsp">Log In</a>
-            </li>
-        </ul>
+<nav>
+    <div class="open">
+        <span class="cls"></span>
+        <span>
+                <ul class="sub-menu">
+                    <li>
+                        <br /><br />
+                        <a href="signUp.jsp" title="about"><i class="fas fa-user"></i>&nbsp;&nbsp;Sign Up</a>
+                    </li>
+                    <li>
+                        <br />
+                        <a href="logIn.jsp" title="skills"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;Sign In</a>
+                    </li>
+                </ul>
+            </span>
+        <span class="cls"></span>
     </div>
 </nav>

@@ -1,113 +1,29 @@
+/*******************************************************************************
+*   General Styles for  for ShowMe web site                                      *
+*******************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+
 /*
-    StyleSheet for Index, Sign Up, and Log In Pages
-*/
-
-/* Index Navbar styles */
+    Nav Styles
+ */
 nav {
-    background-color: #060A13;
-    margin-bottom: 5em;
-}
-
-.navbar {
-    padding: .5em 2em .5em 2em;
-}
-
-nav a {
-    color: #6eaae2;
-}
-nav a:hover {
-    color: #dd8755;
+    background-color: rgba(0, 0, 0, .75);
+    height: 80px;
 }
 
 .navbar-brand {
-    font-size: 1.75em;
-}
-
-.fa-bars {
-    color: #6eaae2;
-}
-
-.nav-link {
-    border-bottom: 2px solid #060A13;
+    color: orange;
+    font-size: 1.5em;
+    font-family: fantasy;
     font-variant: small-caps;
-    font-size: 1.2em;
-}
-.nav-link:hover {
-    border-bottom: 2px solid #dd8755;
-}
-
-
-/* Main Section */
-.display-1 {
-    background: -webkit-linear-gradient(black, #dd8755);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.display-2 {
-    background: -webkit-linear-gradient(black, #dd8755);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1em;
-}
-
-.signUp-btn {
-    background-color: #dd8755;
-    border: 3px solid #dd8755;
-    border-radius: 12px;
-    color: #060A13;
-    font-size: 1.1em;
-    font-variant: small-caps;
-    letter-spacing: .1em;
-    padding: .5em 1em .5em 1em;
-}
-.signUp-btn:hover {
-    background-color: #d9783f;
-    border-color: #d9783f;
-    color: #060A13;
-    text-decoration: none;
-}
-
-
-/* Sign Up and Log In Page Styles */
-.showMeTitle {
-    background: -webkit-linear-gradient(black, #dd8755);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: .1em;
-}
-
-.signUpLogInForm {
-    background-color: #dd8755;
-    border-radius: 12px;
-    box-shadow: 2px 3px 4px;
-    padding: 1em;
-}
-#submitButton {
-    background-color: #2C65AB;
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-size: 1.1em;
-    font-variant: small-caps;
-    letter-spacing: .15em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    letter-spacing: .25em;
     padding: .5em;
-    width: 100%;
 }
-#submitButton:hover {
-    background-color: #25548e;
-}
-
-.errorMessage {
-    color: darkred;
-}
-
-.successMessage {
-    color: green;
-}
-
-p a {
-    color: #2C65AB;
+.navbar-brand:hover {
+    color: darkorange;
+    text-shadow: darkblue 3px 4px 5px;
 }

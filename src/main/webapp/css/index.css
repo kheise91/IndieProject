@@ -32,9 +32,6 @@ body {
     z-index: -1;
 }
 
-.headingDiv {
-    margin-top: 2em;
-}
 h1, h2 {
     display: none;
 
@@ -44,10 +41,16 @@ h1, h2 {
     font-family: fantasy;
     font-weight: normal;
 }
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
 /* Meidum screens and up */
 @media (min-width: 768px) {
     .headingDiv {
-        margin-top: 10em;
+        margin-top: 8em;
     }
     h1 {
         font-size: 5em;

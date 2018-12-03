@@ -6,17 +6,19 @@
 
     <jsp:include page="headTags.jsp" />
 
-    <link href="css/signUp.css" />
+    <link rel="stylesheet" href="css/signUp.css" />
 </head>
 
-<body style="background-image: url('images/showMeBackground.jpg');">
+<body>
+
+    <div class="bg-img"></div>
     <jsp:include page="indexNavbar.jsp" />
 
-    <div class="container">
+    <div class="container behind">
         <div class="row">
             <div class="col-sm-6">
                 <section>
-                    <h1 class="text-center display-4 showMeTitle">ShowMe</h1>
+                    <h1 class="text-center">ShowMe</h1>
                     <hr /><br />
 
                     <h5>What if there was one place you could go to view upcoming concerts in your area, based on your
@@ -31,7 +33,7 @@
             <div class="col-sm-1"></div>
 
             <div class="col-sm-4">
-                <form class="signUpLogInForm" action="signUpUser" method="POST">
+                <form action="signUpUser" method="POST">
                     <div class="form-group">
                         <label for="username">Username:</label>
                         <input type="text" class="form-control" id="username" name="username" required="required" />
@@ -83,5 +85,6 @@
         </div>
     </div>
 
+<br /><br />
 </body>
 </html>

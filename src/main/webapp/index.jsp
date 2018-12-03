@@ -13,7 +13,6 @@
 <body>
 
     <div class="bg-img"></div>
-
     <jsp:include page="indexNavbar.jsp" />
 
     <div class="container text-center">
@@ -22,7 +21,7 @@
             <h2>See it Live</h2>
         </div>
 
-        <a href="#" class="btn btn-main" id="showMe">Show Me</a>
+        <a href="signUp.jsp" class="btn btn-main" id="showMe">Show Me</a>
     </div>
 
 </body>

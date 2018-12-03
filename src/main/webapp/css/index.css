@@ -35,18 +35,44 @@ body {
 h1, h2 {
     display: none;
 
-    color: darkorange;
-    text-shadow: darkblue 4px 5px 6px;
+    color: orange;
+    text-shadow: 0 0 10px darkorange, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkblue, 0 0 50px darkblue, 0 0 60px darkorange, 0 0 70px darkorange;
     letter-spacing: .2em;
     font-family: fantasy;
     font-weight: normal;
+    font-size: 2.2em;
 }
-h1 {
-    font-size: 2.5em;
+
+#showMe {
+    position: relative;
+    top: 1000px;
+    box-shadow: 0 0 20px darkorange, 0 0 30px darkblue, 0 0 40px darkblue, 0 0 50px darkblue, 0 0 60px darkorange, 0 0 70px darkorange, 0 0 80px darkorange;
+    background-color: darkorange;
+    color: white;
+    font-size: 1em;
+    font-variant: small-caps;
+    letter-spacing: .05em;
+    margin-top: 2em;
 }
-h2 {
-    font-size: 2em;
+#showMe:hover {
+    background-color: #cc7000;
 }
+
+.glow {
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 20px darkorange, 0 0 30px darkblue, 0 0 40px darkblue, 0 0 50px darkblue, 0 0 60px darkorange, 0 0 70px darkorange, 0 0 80px darkorange;
+    }
+    to {
+        box-shadow: 0 0 10px orange, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px orange, 0 0 70px orange;
+    }
+}
+
+
 /* Meidum screens and up */
 @media (min-width: 768px) {
     .headingDiv {
@@ -58,23 +84,7 @@ h2 {
     h2 {
         font-size: 4em;
     }
-}
-
-#showMe {
-    position: relative;
-    top: 1000px;
-}
-
-.btn-main {
-    border: 2px solid darkorange;
-    background-color: none;
-    color: darkorange;
-    font-size: 1.25em;
-    font-variant: small-caps;
-    letter-spacing: .05em;
-    margin-top: 2em;
-}
-.btn-main:hover {
-    background-color: darkorange;
-    color: white;
+    #showMe {
+        font-size: 1.25em;
+    }
 }

@@ -3,6 +3,7 @@ package com.kevinheise.controller;
 import com.kevinheise.entity.Role;
 import com.kevinheise.entity.User;
 import com.kevinheise.persistence.GenericDao;
+import org.apache.catalina.realm.MessageDigestCredentialHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by Kevin Heise
@@ -25,10 +27,19 @@ public class SignUpUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
+        try {
+            credentialHandler.setAlgorithm("sha-256");
+        } catch (NoSuchAlgorithmException e) {
+            logger.debug(e);
+        }
+        credentialHandler.setEncoding("UTF-8");
+        String hashedPassword = credentialHandler.mutate(req.getParameter("password"));
+
         User user = new User();
         user.setUsername(req.getParameter("username"));
         user.setEmailAddress(req.getParameter("email"));
-        user.setPassword(req.getParameter("password"));
+        user.setPassword(hashedPassword);
         user.setZipCode(req.getParameter("zipCode"));
         user.setFavoriteGenre(req.getParameter("favoriteGenre"));
 

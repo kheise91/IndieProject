@@ -183,3 +183,6 @@
 [DEBUG] 2018-11-27 15:37:51.073 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-27 15:41:48.679 [main] GenericDao - Searching for order with username = johnj
 [DEBUG] 2018-11-27 15:44:25.228 [main] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-12-03 15:06:38.638 [http-nio-8080-exec-8] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Classical'}
+[DEBUG] 2018-12-03 15:09:40.905 [http-nio-8080-exec-2] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kkk', firstName='null', lastName='null', birthDate=null, zipCode='33434', favoriteGenre='Alternative'}
+[DEBUG] 2018-12-03 15:28:00.951 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='dc6260691cc5c9a6a0ae457466be5d4b15793e02397d52032d0123af16a00a97$1$113bb08d4803a0427fb8ec549ddad072e58ba12d551e5dbad349a1daf29aac0c', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Electronic'}

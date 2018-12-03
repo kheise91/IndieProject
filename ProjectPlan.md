@@ -11,7 +11,7 @@
 
 ### Week 4
 - [x] Design Log In and Sign Up pages
-- [ ] Create home page jsp
+- [x] Create home page jsp
 - [x] Complete database design
 - [x] Create the database and user table
 - [x] Create user entity class
@@ -23,30 +23,30 @@
 - [x] Weekly Journal Entry
 
 ### Week 5
-- [ ] Design remaining screens
-- [ ] Create templates for JSP's
-- [ ] Add the role table
-- [ ] Add the role entity
-- [ ] Create the role dao
-- [ ] Create the role dao unit tests
-- [ ] Weekly Journal Entry
-- [ ] Create log-in and sign-up jsps
+- [x] Design remaining screens
+- [x] Create templates for JSP's
+- [x] Add the role table
+- [x] Add the role entity
+- [x] Create the role dao
+- [x] Create the role dao unit tests
+- [x] Weekly Journal Entry
+- [x] Create log-in and sign-up jsps
 
 ### Week 6
-- [ ] Create db on AWS
-- [ ] Deploy to AWS
-- [ ] Create dashboard / welcome screen jsp
+- [x] Create db on AWS
+- [x] Deploy to AWS
+- [x] Create dashboard / welcome screen jsp
 - [ ] Create user account page jsp
 - [ ] Add/update/delete account settings jsp
-- [ ] Prepare for Checkpoint 2
-- [ ] Weekly Journal Entry
+- [x] Prepare for Checkpoint 2
+- [x] Weekly Journal Entry
  
 ### Week 7
-- [ ] Set up authentication locally
-- [ ] Set up authentication on AWS
+- [x] Set up authentication locally
+- [x] Set up authentication on AWS
 - [ ] Set up friends page jsp
-- [ ] Review and incorporate feedback from Checkpoint 2
-- [ ] Weekly Journal Entry
+- [x] Review and incorporate feedback from Checkpoint 2
+- [x] Weekly Journal Entry
 
 ### Week 8
 - [ ] Integrate bandsintown api
@@ -54,26 +54,26 @@
 - [ ] Add search functionality to dashboard jsp
 - [ ] Set up My Shows jsp
 - [ ] My Shows to display previous shows, upcoming shows, and shows the user would like to go to
-- [ ] Prepare for Checkpoint 3
-- [ ] Weekly journal entry
+- [x] Prepare for Checkpoint 3
+- [x] Weekly journal entry
 
 ### Week 9
 - [ ] View friends/other user's show data
 - [ ] Add notification when two users are looking for a show to go to together
 - [ ] Add password reset/reminder functionality
-- [ ] Review and incorporate feedback from Checkpoint 3
-- [ ] Weekly Journal Entry
+- [x] Review and incorporate feedback from Checkpoint 3
+- [x] Weekly Journal Entry
 
 ### Week 10
 - [ ] Unit test all api integrations
-- [ ] Weekly Journal Entry
+- [x] Weekly Journal Entry
 
 ### Week 11 - Team project work week
-- [ ] Weekly Journal Entry
+- [x] Weekly Journal Entry
 
 ### Week 12 - Team project due
-- [ ] Review indie project / create todo list
-- [ ] Weekly Journal Entry
+- [x] Review indie project / create todo list
+- [x] Weekly Journal Entry
 
 ### Week 13
 - [ ] Work through todo list for indie project

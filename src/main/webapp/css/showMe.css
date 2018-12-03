@@ -9,7 +9,6 @@
 nav {
     height: 80px;
     margin-bottom: 2em;
-    z-index: 9;
 }
 
 .navbar-brand {
@@ -23,8 +22,4 @@ nav {
 .navbar-brand:hover {
     color: darkorange;
     text-shadow: darkblue 3px 4px 5px;
-}
-
-.behind {
-    z-index: 0;
 }

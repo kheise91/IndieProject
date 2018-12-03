@@ -21,7 +21,7 @@
             <h2>See it Live</h2>
         </div>
 
-        <a href="signUp.jsp" class="btn btn-main" id="showMe">Show Me</a>
+        <a href="signUp.jsp" class="btn" id="showMe">Show Me</a>
     </div>
 
 </body>

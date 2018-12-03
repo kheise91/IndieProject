@@ -14,7 +14,7 @@
     <div class="bg-img"></div>
     <jsp:include page="indexNavbar.jsp" />
 
-    <div class="container behind">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <section>

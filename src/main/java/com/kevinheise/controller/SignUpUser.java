@@ -13,8 +13,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 /**
  * Created by Kevin Heise
@@ -27,6 +29,9 @@ public class SignUpUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        GenericDao dao = new GenericDao(User.class);
+        /*
         MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
         try {
             credentialHandler.setAlgorithm("sha-256");
@@ -35,27 +40,77 @@ public class SignUpUser extends HttpServlet {
         }
         credentialHandler.setEncoding("UTF-8");
         String hashedPassword = credentialHandler.mutate(req.getParameter("password"));
+        */
 
-        User user = new User();
-        user.setUsername(req.getParameter("username"));
-        user.setEmailAddress(req.getParameter("email"));
-        user.setPassword(hashedPassword);
-        user.setZipCode(req.getParameter("zipCode"));
-        user.setFavoriteGenre(req.getParameter("favoriteGenre"));
+        // Get form data
+        String username = req.getParameter("username");
+        String email    = req.getParameter("email");
+        String password = req.getParameter("password");
+        String confirm  = req.getParameter("passwordConfirm");
+        String zipCode  = req.getParameter("zipCode");
+        String genre    = req.getParameter("favoriteGenre");
 
-        logger.debug("Adding user: " + user);
+        // Validate Form
+        String errorMessage = "";
+        List<User> usernameCheck = dao.getByPropertyLike("username", username);
+        if (usernameCheck.size() != 0) {
+            // Check for unique username
+            errorMessage = "*The username you have selected is already in use.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else if (username.length() < 5) {
+            // Check that username is at least 5 characters
+            errorMessage = "*Username must be at least 5 characters.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else if (password.length() < 6) {
+            // Check that password is at least 6 characters
+            errorMessage = "*Password must be at least six characters.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else if (!password.equals(confirm)) {
+            // Check that passwords match
+            errorMessage = "*The passwords you have entered do not match.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else if (zipCode.length() != 5) {
+            // Check that zip code is 5 characters long
+            errorMessage = "*Zip code must be exactly five digits.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else if (genre.equals("none")) {
+            // Check that a favorite genre is selected
+            errorMessage = "*Please select your favorite genre.";
+            HttpSession session = req.getSession();
+            session.setAttribute("errorMessage", errorMessage);
+            resp.sendRedirect("signUp.jsp");
+        } else {
+            // Validation complete, add user
+            User user = new User();
+            user.setUsername(username);
+            user.setEmailAddress(email);
+            user.setPassword(password);
+            user.setZipCode(zipCode);
+            user.setFavoriteGenre(genre);
 
-        Role role = new Role();
-        role.setName("user");
-        role.setUsername(req.getParameter("username"));
-        role.setUser(user);
-        user.addRole(role);
+            logger.debug("Adding user: " + user);
 
-        GenericDao dao = new GenericDao(User.class);
-        dao.insert(user);
+            Role role = new Role();
+            role.setName("user");
+            role.setUsername(username);
+            role.setUser(user);
+            user.addRole(role);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/signUpConfirmation.jsp");
-        dispatcher.forward(req, resp);
+            dao.insert(user);
+
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/signUpConfirmation.jsp");
+            dispatcher.forward(req, resp);
+        }
     }
 
 }

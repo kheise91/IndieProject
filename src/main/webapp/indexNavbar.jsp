@@ -1,4 +1,4 @@
-<nav>
+<nav class="navbar fixed-top">
     <div class="open">
         <span class="cls"></span>
         <span>

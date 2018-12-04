@@ -2,13 +2,25 @@
 *   General Styles for  for ShowMe web site                                      *
 *******************************************************************************/
 
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.1em;
+}
 
 /*
     Nav Styles
  */
-nav {
+.navbar {
     height: 80px;
     margin-bottom: 2em;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .navbar-brand {
@@ -18,8 +30,9 @@ nav {
     font-variant: small-caps;
     letter-spacing: .25em;
     padding: .5em;
+    text-shadow: 0 0 10px orange, 0 0 20px darkblue;
 }
 .navbar-brand:hover {
     color: darkorange;
-    text-shadow: darkblue 3px 4px 5px;
+    text-shadow: 0 0 10px orange, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkorange, 0 0 50px orange;
 }

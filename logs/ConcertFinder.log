@@ -186,3 +186,16 @@
 [DEBUG] 2018-12-03 15:06:38.638 [http-nio-8080-exec-8] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Classical'}
 [DEBUG] 2018-12-03 15:09:40.905 [http-nio-8080-exec-2] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kkk', firstName='null', lastName='null', birthDate=null, zipCode='33434', favoriteGenre='Alternative'}
 [DEBUG] 2018-12-03 15:28:00.951 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='dc6260691cc5c9a6a0ae457466be5d4b15793e02397d52032d0123af16a00a97$1$113bb08d4803a0427fb8ec549ddad072e58ba12d551e5dbad349a1daf29aac0c', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Electronic'}
+[DEBUG] 2018-12-04 12:09:19.396 [http-nio-8080-exec-4] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:09:20.831 [http-nio-8080-exec-4] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='adfasdf', password='asdf', firstName='null', lastName='null', birthDate=null, zipCode='adfd', favoriteGenre='Electronic'}
+[DEBUG] 2018-12-04 12:10:17.503 [http-nio-8080-exec-2] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:10:17.645 [http-nio-8080-exec-2] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='fff', password='sssss', firstName='null', lastName='null', birthDate=null, zipCode='adfd', favoriteGenre='Electronic'}
+[DEBUG] 2018-12-04 12:12:13.823 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:24:08.172 [http-nio-8080-exec-7] GenericDao - Searching for order with username = johnj
+[DEBUG] 2018-12-04 12:24:27.598 [http-nio-8080-exec-10] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:24:47.114 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:24:59.139 [http-nio-8080-exec-5] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:25:06.191 [http-nio-8080-exec-8] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:27:01.143 [http-nio-8080-exec-4] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:27:13.355 [http-nio-8080-exec-5] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-04 12:27:13.359 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Christian/Gospel'}

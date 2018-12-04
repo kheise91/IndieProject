@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,7 @@
 
     <jsp:include page="headTags.jsp" />
 
-    <link rel="stylesheet" href="css/signUp.css" />
+    <link rel="stylesheet" href="css/signUpLogIn.css" />
 </head>
 
 <body>
@@ -14,10 +15,10 @@
     <div class="bg-img"></div>
     <jsp:include page="indexNavbar.jsp" />
 
-    <div class="container">
+    <div class="container main-section">
         <div class="row">
             <div class="col-sm-6">
-                <section>
+                <div id="infoDiv">
                     <h1 class="text-center">ShowMe</h1>
                     <hr /><br />
 
@@ -27,35 +28,39 @@
                         ShowMe will also keep track of any previous shows that you've attended, making it easy to
                         remember the great times you had.
                     </h5>
-                </section>
+                    <br /><br /><br />
+
+                    <h4 class="text-center">Sign Up Today <i class="fas fa-caret-square-right"></i></h4>
+                </div>
             </div>
 
-            <div class="col-sm-1"></div>
+            <div class="col-sm-1"><div id="divider"></div></div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <form action="signUpUser" method="POST">
+                    <p class="error-message">${errorMessage}</p>
                     <div class="form-group">
-                        <label for="username">Username:</label>
+                        <label for="username">*Username:</label>
                         <input type="text" class="form-control" id="username" name="username" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
+                        <label for="email">*Email:</label>
                         <input type="text" class="form-control" id="email" name="email" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Password:</label>
+                        <label for="password">*Password:</label>
                         <input type="password" class="form-control" id="password" name="password" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="passwordConfirm">Confirm Password:</label>
+                        <label for="passwordConfirm">*Confirm Password:</label>
                         <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="zipCode">ZIP Code:</label>
+                        <label for="zipCode">*ZIP Code:</label>
                         <input type="text" class="form-control" id="zipCode" name="zipCode" required="required" />
                     </div>
                     <div class="form-group">
-                        <label for="genre">Favorite Genre:</label>
+                        <label for="genre">*Favorite Genre:</label>
                         <select class="form-control" id="genre" name="favoriteGenre">
                             <option value="none">(Choose Genre)</option>
                             <option value="Rock">Rock</option>
@@ -77,14 +82,10 @@
                         </select>
                     </div>
                     <br />
-                    <button type="submit" id="submitButton" name="submit">Create Account</button>
+                    <button type="submit" class="btn btn-block submit-button" name="submit">Create Account</button>
                 </form>
             </div>
-
-            <div class="col-sm-1"></div>
         </div>
     </div>
-
-<br /><br />
 </body>
 </html>

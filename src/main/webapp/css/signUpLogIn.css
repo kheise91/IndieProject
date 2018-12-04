@@ -1,19 +1,12 @@
 /*******************************************************************************
-* Stylesheet for index.html                                                    *
+* Stylesheet for sign up and log in pages                                      *
 *******************************************************************************/
-
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
 
 body {
     background-color: black;
 }
 
 .bg-img {
-    display: none;
-
     background-image: url("../images/wallpaper.jpg");
     background-position: 48% 0%;
     background-repeat: no-repeat;
@@ -28,17 +21,25 @@ body {
     height: 100%;
     max-width: 100%;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
     z-index: -1;
 }
 
-.headingDiv {
-    margin-top: 7em;
+
+/*
+    Main section
+*/
+
+.main-section {
+    margin-top: 5em;
+    background-color: rgba(0,0,0,.85);
+    border: 2px double darkorange;
+    border-radius: 12px;
+    color: white;
+    padding: 2em 1em;
 }
 
-h1, h2 {
-    display: none;
-
+h1 {
     color: orange;
     text-shadow: 0 0 10px orange, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkorange, 0 0 50px orange;
     letter-spacing: .2em;
@@ -47,37 +48,49 @@ h1, h2 {
     font-size: 2.2em;
 }
 
-#showMe {
-    position: relative;
-    top: 1000px;
-
-    background-color: rgba(0, 0, 0, 0);
+hr {
     color: darkorange;
-    border: 2px solid darkorange;
-    box-shadow: 0 0 10px orange, 0 0 20px darkblue;
-    font-size: 1.25em;
-    font-variant: small-caps;
-    letter-spacing: .05em;
-    margin-top: 2em;
-    border-radius: 16px;
+    background-color: darkorange;
 }
-#showMe:hover {
+
+h4 {
+    color: orange;
+}
+
+#divider {
+    border-bottom: 1px solid darkorange;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*
+    Form Styles
+*/
+.submit-button {
     background-color: orange;
-    border-color: orange;
     color: white;
-    box-shadow: 0 0 10px orange, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkorange, 0 0 50px orange;
+}
+.submit-button:hover {
+    background-color: #cc8500;
+    box-shadow: 2px 2px 5px darkblue;
 }
 
 
 /* Meidum screens and up */
 @media (min-width: 768px) {
-    .headingDiv {
-        margin-top: 10em;
+    .main-section {
+        margin-top: 8em;
+        padding: 2em 3em;
     }
     h1 {
         font-size: 5em;
     }
-    h2 {
-        font-size: 4em;
+    #divider {
+        border-left: 1px solid darkorange;
+        border-bottom: none;
+        height: 100%;
+        margin: 0em 0em 0em 2em;
     }
 }
+

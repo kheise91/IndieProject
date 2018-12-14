@@ -34,3 +34,5 @@
 | 11/19/2018 | Configured tomcat authentication and worked on sql scripts and JSPs for team project | 4 | |
 | 11/20/2018 | Team Project - finished homepage jsp that contains the forms and links for consuming rest services. I also created the rest service to produce html | 3.5 | |
 | 11/21/2018 | Week 11 videos and finishing touches on team project | 1.5 | |
+| 12/03/2018 | Working on design of indie project | 2 | |
+| 12/11/2018 | Peer review for Charles and professional development presentations | 2 | |

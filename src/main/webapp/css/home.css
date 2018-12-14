@@ -1,0 +1,31 @@
+/*******************************************************************************
+* Stylesheet for home page                                                     *
+*******************************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    /*
+    background: linear-gradient(to bottom, #080C2E 0%, #1D4EAA 20%, #885C7F 80%, ghostwhite 100%)
+    */
+    background-color: lightgray;
+}
+
+.container {
+    height: 100%;
+    padding-top: 5em;
+    background-color: white;
+}
+
+.sub-menu li a {
+    padding-top: .25em !important;
+    padding-bottom: .25em !important;
+}
+
+/* Meidum screens and up */
+@media (min-width: 768px) {
+    .container {
+    }
+}

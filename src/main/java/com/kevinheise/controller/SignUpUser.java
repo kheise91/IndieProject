@@ -22,7 +22,7 @@ import java.util.List;
  * Created by Kevin Heise
  */
 
-@WebServlet(name = "SignUpUser", urlPatterns = { "/signUpUser" } )
+@WebServlet(name = "SignUpUser", urlPatterns = { "/signUp" } )
 public class SignUpUser extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());

@@ -92,8 +92,8 @@
 
 .oppenned .sub-menu {
   opacity: 1;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
 }
 .oppenned span:nth-child(2) {
   overflow: visible;
@@ -106,8 +106,8 @@
   transform: rotate(45deg) translateY(12px) translateX(12px);
 }
 .oppenned span:nth-child(2) {
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
   right: -160px;
   top: -160px;
   border-radius: 50%;

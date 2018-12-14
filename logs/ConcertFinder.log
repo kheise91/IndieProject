@@ -201,3 +201,13 @@
 [DEBUG] 2018-12-04 12:27:13.359 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Christian/Gospel'}
 [DEBUG] 2018-12-05 15:19:11.343 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
 [DEBUG] 2018-12-05 15:19:12.178 [http-nio-8080-exec-3] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise@madisoncollege.edu', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Classical'}
+[DEBUG] 2018-12-13 19:35:57.725 [http-nio-8080-exec-14] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-13 19:36:26.859 [http-nio-8080-exec-16] GenericDao - Searching for order with username = kheise2
+[DEBUG] 2018-12-13 19:36:26.898 [http-nio-8080-exec-16] SignUpUser - Adding user: User{id=0, username='kheise2', emailAddress='kk', password='kevinheise', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Rock'}
+[DEBUG] 2018-12-13 19:50:08.006 [http-nio-8080-exec-4] GenericDao - Searching for order with username = kheise4
+[DEBUG] 2018-12-13 19:50:08.512 [http-nio-8080-exec-4] SignUpUser - Adding user: User{id=0, username='kheise4', emailAddress='kh', password='kevinheise', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Metal'}
+[DEBUG] 2018-12-13 22:12:02.945 [http-nio-8080-exec-194] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-13 22:12:07.283 [http-nio-8080-exec-192] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-13 22:12:08.316 [http-nio-8080-exec-203] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-13 22:13:17.913 [http-nio-8080-exec-205] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-13 22:14:24.450 [http-nio-8080-exec-215] GenericDao - Searching for order with username = kheise

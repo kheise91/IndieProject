@@ -1,0 +1,24 @@
+[DEBUG] 2018-12-14 22:44:13.433 [http-nio-8080-exec-5] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-14 22:44:14.447 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='Electronic'}
+[DEBUG] 2018-12-14 22:45:07.154 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-14 22:52:15.950 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-14 22:53:06.815 [http-nio-8080-exec-2] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-14 22:54:54.101 [http-nio-8080-exec-9] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-14 22:56:09.481 [http-nio-8080-exec-18] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:32:01.746 [http-nio-8080-exec-24] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:33:21.680 [http-nio-8080-exec-34] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:33:33.457 [http-nio-8080-exec-32] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:35:50.387 [http-nio-8080-exec-42] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:35:53.250 [http-nio-8080-exec-46] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:35:54.316 [http-nio-8080-exec-29] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:35:55.220 [http-nio-8080-exec-40] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:37:34.566 [http-nio-8080-exec-51] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:38:47.196 [http-nio-8080-exec-60] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:41:12.786 [http-nio-8080-exec-69] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:51:52.100 [http-nio-8080-exec-6] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:52:29.251 [http-nio-8080-exec-2] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:52:30.323 [http-nio-8080-exec-3] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 00:52:31.252 [http-nio-8080-exec-4] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 01:07:23.593 [http-nio-8080-exec-44] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 01:11:40.420 [http-nio-8080-exec-50] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 01:17:15.021 [http-nio-8080-exec-55] GenericDao - Searching for order with username = kheise

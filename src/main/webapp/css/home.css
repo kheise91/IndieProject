@@ -2,6 +2,14 @@
 * Stylesheet for home page                                                     *
 *******************************************************************************/
 
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
 .bg-img {
     background-image: url("../images/wallpaper.jpg");
     background-position: 48% 0%;
@@ -19,13 +27,12 @@
     margin: auto;
     overflow: hidden;
     z-index: -1;
+    opacity: .4;
 }
 
 .container {
-    color: white;
     padding-top: 6em;
-    background-color: white;
-    height: 100%;
+    color: white;
 }
 
 .sub-menu li a {

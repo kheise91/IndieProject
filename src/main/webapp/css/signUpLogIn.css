@@ -2,11 +2,15 @@
 * Stylesheet for sign up and log in pages                                      *
 *******************************************************************************/
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: black;
 }
 
-.bg-img {
+    .bg-img {
     background-image: url("../images/wallpaper.jpg");
     background-position: 48% 0%;
     background-repeat: no-repeat;
@@ -30,13 +34,11 @@ body {
     Main section
 */
 
-.main-section {
-    margin-top: 5em;
-    background-color: rgba(0,0,0,.85);
-    border: 2px double darkorange;
-    border-radius: 12px;
+.container {
+    padding: 6em 1em 0em 1em;
+    background-color: rgba(0,0,0,.75);
     color: white;
-    padding: 2em 1em;
+    height: 100%;
 }
 
 h1 {
@@ -79,9 +81,8 @@ h4 {
 
 /* Meidum screens and up */
 @media (min-width: 768px) {
-    .main-section {
-        margin-top: 8em;
-        padding: 2em 3em;
+    .container {
+        padding-top: 10em;
     }
     h1 {
         font-size: 5em;

@@ -12,8 +12,8 @@
 
 <body>
 
-<div class="bg-img"></div>
 <jsp:include page="indexNavbar.jsp" />
+<div class="bg-img"></div>
 
 <div class="container main-section">
     <div class="row">

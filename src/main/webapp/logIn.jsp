@@ -11,15 +11,15 @@
 
 <body>
 
-<div class="bg-img"></div>
 <jsp:include page="indexNavbar.jsp" />
+<div class="bg-img"></div>
 
-<div class="container">
+<div class="container main-section">
     <div class="row">
         <div class="col-sm-3"></div>
-        <div class="col-sm-6 main-section">
+        <div class="col-sm-6">
             <form class="signUpLogInForm" action="j_security_check" method="POST">
-                <h4 class="text-center">Log In</h4>
+                <h4 class="text-center">Sign In</h4>
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" class="form-control form-control-lg" id="username" name="j_username" required="required" />
@@ -30,7 +30,7 @@
                 </div>
                 <br />
 
-                <button type="submit" class="btn btn-block submit-button">Log In</button>
+                <button type="submit" class="btn btn-block submit-button">Sign In</button>
                 <br />
 
                 <p>Don't have an account?

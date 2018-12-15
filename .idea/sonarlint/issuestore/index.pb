@@ -63,3 +63,7 @@ j
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+h
+8src/main/java/com/kevinheise/eventful/SearchResults.java,d/3/d35bf3478d0a7deca776aff8fd6323fef3b3e376
+a
+1src/main/java/com/kevinheise/eventful/Events.java,c/5/c5edb81fc57d3001b7fb9b6845eea71ece6379e5

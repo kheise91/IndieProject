@@ -36,3 +36,17 @@
     color: darkorange;
     text-shadow: 0 0 10px orange, 0 0 20px darkblue, 0 0 30px darkblue, 0 0 40px darkorange, 0 0 50px orange;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer p {
+    color: ghostwhite;
+    font-size: .9em;
+    opacity: .75;
+}

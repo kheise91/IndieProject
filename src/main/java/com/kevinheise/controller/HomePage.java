@@ -24,10 +24,11 @@ public class HomePage extends HttpServlet {
         Principal userPrincipal = request.getUserPrincipal();
         String username = userPrincipal.getName();
         List<User> foundUser = dao.getByPropertyEqual("username", username);
+        User user = (User) foundUser.get(0);
 
         HttpSession session = request.getSession();
 
-        session.setAttribute("user", username);
+        session.setAttribute("user", user);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
         dispatcher.forward(request, response);

@@ -36,3 +36,4 @@
 | 11/21/2018 | Week 11 videos and finishing touches on team project | 1.5 | |
 | 12/03/2018 | Working on design of indie project | 2 | |
 | 12/11/2018 | Peer review for Charles and professional development presentations | 2 | |
+| 12/13/2018 | Added servlet to redirect to home page and set up main homepage styles | 2 | |

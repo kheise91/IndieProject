@@ -12,12 +12,15 @@
 
 <body>
     <jsp:include page="userNavbar.jsp" />
+    <div class="bg-img"></div>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <h1 class="text-center">Welcome ${user}</h1>
-                <hr />
+            <div class="col-sm-12 text-center">
+                <h1 class="display-4">Hello ${user.firstName}!</h1>
+                <br />
+                <h4>Here are some upcoming concerts near your area based on your interest in
+                    <span id="favoriteGenre">${user.favoriteGenre}</span> music:</h4>
             </div>
         </div>
     </div>

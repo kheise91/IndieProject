@@ -47,3 +47,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+# Project properties
+src/test/resources/project.properties
+src/main/resources/project.properties

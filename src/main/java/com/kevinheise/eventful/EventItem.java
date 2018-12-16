@@ -2,6 +2,8 @@ package com.kevinheise.eventful;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Generated("com.robohorse.robopojogenerator")
 public class EventItem{
@@ -106,7 +108,7 @@ public class EventItem{
 	private Object tzCity;
 
 	@JsonProperty("start_time")
-	private String startTime;
+	private LocalDateTime startTime;
 
 	@JsonProperty("calendar_count")
 	private Object calendarCount;
@@ -397,10 +399,11 @@ public class EventItem{
 	}
 
 	public void setStartTime(String startTime){
-		this.startTime = startTime;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		this.startTime = LocalDateTime.parse(startTime, formatter);
 	}
 
-	public String getStartTime(){
+	public LocalDateTime getStartTime(){
 		return startTime;
 	}
 

@@ -38,21 +38,47 @@
                             <c:if test="${not empty event.image.url}">
                                 <img src="${event.image.url}" />
                             </c:if>
-                            <span class="event-list-date">Dec<br />12</span>
+                            <span class="event-list-date">${event.startTime.format(monthFormatter)}<br />
+                                                          ${event.startTime.format(dayFormatter)}</span>
                             <span class="event-list-title">${event.title}</span>
-                            <br />Majestic Theatre | Madison, WI
+                            <br />${event.venueName} &nbsp;|&nbsp; ${event.cityName}, ${event.regionAbbr}
                         </a>
                 </div>
 
                 <div class="modal" id="modal${event.id}">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <div class="modal-body text-center">
+                            <div class="modal-body">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <c:if test="${empty event.image.medium.url}">
+                                    <img src="images/defaultImage.png" />
+                                </c:if>
                                 <c:if test="${not empty event.image.medium.url}">
                                     <img src="${event.image.medium.url}" />
                                 </c:if>
-                                <h5>${event.title}</h5>
+                                <a href="${event.url}" target="_blank"><h5>${event.title}</h5></a>
+                                <br /><hr />
+                                <p class="event-date-time">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <br />
+                                        ${event.startTime.format(dateFormatter)}
+                                    <br /><br />
+                                    <i class="far fa-clock"></i>
+                                    <br />
+                                        ${event.startTime.format(timeFormatter)}
+                                </p>
+                                <div class="v-divider"></div>
+                                <p class="event-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <br />
+                                    <a href="${event.venueUrl}" target="_blank">${event.venueName}</a>
+                                    <br />
+                                    ${event.venueAddress}
+                                    <br />
+                                    ${event.cityName}, ${event.regionAbbr} ${event.postalCode}
+                                </p>
+                                <div class="h-divider"></div>
+                                <a href="#" class="add-remove-show">Add To My Shows</a>
                             </div>
                         </div>
                     </div>

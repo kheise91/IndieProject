@@ -15,6 +15,11 @@ import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -95,6 +100,16 @@ public class TestServiceClient {
         Search results = mapper.readValue(response, Search.class);
 
         Events events = results.getEvents();
+        EventItem event = events.getEvent().get(0);
+
+        LocalDateTime eventDate = event.getStartTime();
+        LocalDateTime expectedDate = LocalDateTime.parse("2019-01-31T20:00");
+
+        assertEquals(expectedDate, eventDate);
+
+        String abbDate = eventDate.format(DateTimeFormatter.ofPattern("MMM dd"));
+
+        logger.debug(abbDate);
     }
 
 }

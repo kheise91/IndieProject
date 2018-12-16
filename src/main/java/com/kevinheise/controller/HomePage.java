@@ -19,6 +19,8 @@ import javax.ws.rs.client.*;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.security.Principal;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -37,37 +39,53 @@ public class HomePage extends HttpServlet {
         User user = (User) foundUser.get(0);
         logger.info(user.getUsername());
 
-        // Get concert information based on user's favorite genre
+        // Set session attributes and forward to home.jsp
+        DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMM");
+        DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("dd");
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("h:mm a");
+
+        HttpSession session = request.getSession();
+        session.setAttribute("user", user);
+        session.setAttribute("events", getEventList(user.getZipCode(), user.getFavoriteGenre()));
+        session.setAttribute("monthFormatter", monthFormatter);
+        session.setAttribute("dayFormatter", dayFormatter);
+        session.setAttribute("dateFormatter", dateFormatter);
+        session.setAttribute("timeFormatter", timeFormatter);
+
+
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    public List<EventItem> getEventList(String location, String favoriteGenre) {
         Properties properties = new Properties();
         try {
             properties.load(this.getClass().getResourceAsStream("/project.properties"));
         } catch(IOException e) {
             logger.debug(e);
         }
-        String location = user.getZipCode();
-        String favoriteGenre = user.getFavoriteGenre();
+
         String appKey = properties.getProperty("app_key");
-        String url = "http://api.eventful.com/json/events/search?location=" + location + "&within=50&category=music_" + favoriteGenre
-                + "&sort_order=date&app_key=";
+        String url = "http://api.eventful.com/json/events/search?location=" + location + "&within=50&category=music_"
+                + favoriteGenre + "&sort_order=date&app_key=";
         logger.info(url);
 
         Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(url + appKey);
+        WebTarget target = client.target(url + appKey);
         String eventfulResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Search results = mapper.readValue(eventfulResponse, Search.class);
+        Search results = new Search();
+        try {
+            results = mapper.readValue(eventfulResponse, Search.class);
+        } catch (IOException ioe) {
+            logger.error(ioe);
+        }
+
         Events events = results.getEvents();
-        List<EventItem> eventList = events.getEvent();
+        return events.getEvent();
 
-        // Set session attributes and foward to home.jsp
-        HttpSession session = request.getSession();
-        session.setAttribute("user", user);
-        session.setAttribute("events", eventList);
-
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
-        dispatcher.forward(request, response);
     }
 }

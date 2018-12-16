@@ -16,8 +16,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6 main-section">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 main-section">
             <form class="signUpLogInForm" action="j_security_check" method="POST">
                 <h4 class="text-center">Sign In</h4>
                 <p class="error-message text-center">*Invalid Username/Password</p>
@@ -40,7 +40,7 @@
                 </p>
             </form>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-4"></div>
     </div>
 </div>
 

@@ -22,3 +22,98 @@
 [DEBUG] 2018-12-15 01:07:23.593 [http-nio-8080-exec-44] GenericDao - Searching for order with username = kheise
 [DEBUG] 2018-12-15 01:11:40.420 [http-nio-8080-exec-50] GenericDao - Searching for order with username = kheise
 [DEBUG] 2018-12-15 01:17:15.021 [http-nio-8080-exec-55] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 01:38:59.115 [http-nio-8080-exec-56] GenericDao - Searching for order with username = kheise
+[INFO ] 2018-12-15 01:38:59.531 [http-nio-8080-exec-56] HomePage - kheise
+[INFO ] 2018-12-15 01:38:59.531 [http-nio-8080-exec-56] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_Electronic&sort_order=date&app_key=null
+[DEBUG] 2018-12-15 02:01:46.696 [http-nio-8080-exec-67] GenericDao - Searching for order with username = kheise
+[DEBUG] 2018-12-15 02:01:47.281 [http-nio-8080-exec-67] SignUpUser - Adding user: User{id=0, username='kheise', emailAddress='kheise', password='kevinh', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='classical'}
+[DEBUG] 2018-12-15 02:01:55.997 [http-nio-8080-exec-72] GenericDao - Searching for order with username = kheise
+[INFO ] 2018-12-15 02:01:56.131 [http-nio-8080-exec-72] HomePage - kheise
+[INFO ] 2018-12-15 02:21:56.703 [http-nio-8080-exec-74] HomePage - kheise
+[INFO ] 2018-12-15 02:21:56.706 [http-nio-8080-exec-74] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 02:41:08.376 [http-nio-8080-exec-6] HomePage - kheise
+[INFO ] 2018-12-15 02:41:08.389 [http-nio-8080-exec-6] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:14:38.116 [http-nio-8080-exec-6] HomePage - kheise
+[INFO ] 2018-12-15 03:14:38.220 [http-nio-8080-exec-6] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:19:49.370 [http-nio-8080-exec-8] HomePage - kheise
+[INFO ] 2018-12-15 03:19:49.370 [http-nio-8080-exec-8] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:19:58.086 [http-nio-8080-exec-10] HomePage - kheise
+[INFO ] 2018-12-15 03:19:58.086 [http-nio-8080-exec-10] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:21:55.604 [http-nio-8080-exec-1] HomePage - kheise
+[INFO ] 2018-12-15 03:21:55.604 [http-nio-8080-exec-1] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:21:59.861 [http-nio-8080-exec-2] HomePage - kheise
+[INFO ] 2018-12-15 03:21:59.861 [http-nio-8080-exec-2] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_classical&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:22:52.982 [http-nio-8080-exec-4] HomePage - kheise
+[INFO ] 2018-12-15 03:22:52.983 [http-nio-8080-exec-4] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_rock&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:44:55.884 [http-nio-8080-exec-6] HomePage - kheise
+[INFO ] 2018-12-15 03:44:56.416 [http-nio-8080-exec-6] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:51:22.533 [http-nio-8080-exec-10] HomePage - kheise
+[INFO ] 2018-12-15 03:51:22.533 [http-nio-8080-exec-10] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 03:51:49.639 [http-nio-8080-exec-4] HomePage - kheise
+[INFO ] 2018-12-15 03:51:49.639 [http-nio-8080-exec-4] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 04:03:14.308 [http-nio-8080-exec-4] HomePage - kheise
+[INFO ] 2018-12-15 04:03:14.315 [http-nio-8080-exec-4] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 04:13:20.898 [http-nio-8080-exec-8] HomePage - kheise
+[INFO ] 2018-12-15 04:13:20.901 [http-nio-8080-exec-8] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 13:34:47.442 [http-nio-8080-exec-9] HomePage - kheise
+[INFO ] 2018-12-15 13:34:47.466 [http-nio-8080-exec-9] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 13:37:50.680 [http-nio-8080-exec-3] HomePage - kheise
+[INFO ] 2018-12-15 13:37:50.681 [http-nio-8080-exec-3] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[DEBUG] 2018-12-15 13:46:02.443 [http-nio-8080-exec-1] SignUpUser - Adding user: User{id=0, username='countrylover123', emailAddress='countrysucks', password='123456', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='country'}
+[INFO ] 2018-12-15 13:46:27.560 [http-nio-8080-exec-4] HomePage - countrylover123
+[INFO ] 2018-12-15 13:46:27.560 [http-nio-8080-exec-4] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_country&sort_order=date&app_key=
+[INFO ] 2018-12-15 13:53:13.014 [http-nio-8080-exec-9] HomePage - kheise
+[INFO ] 2018-12-15 13:53:13.014 [http-nio-8080-exec-9] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 13:54:02.177 [http-nio-8080-exec-11] HomePage - kheise
+[INFO ] 2018-12-15 13:54:02.177 [http-nio-8080-exec-11] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 13:54:04.962 [http-nio-8080-exec-12] HomePage - kheise
+[INFO ] 2018-12-15 13:54:04.962 [http-nio-8080-exec-12] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:08:10.093 [http-nio-8080-exec-16] HomePage - kheise
+[INFO ] 2018-12-15 15:08:10.093 [http-nio-8080-exec-16] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:15:05.299 [http-nio-8080-exec-23] HomePage - kheise
+[INFO ] 2018-12-15 15:15:05.299 [http-nio-8080-exec-23] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:17:42.280 [http-nio-8080-exec-34] HomePage - kheise
+[INFO ] 2018-12-15 15:17:42.280 [http-nio-8080-exec-34] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:24:07.953 [http-nio-8080-exec-49] HomePage - kheise
+[INFO ] 2018-12-15 15:24:07.953 [http-nio-8080-exec-49] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:25:07.533 [http-nio-8080-exec-53] HomePage - kheise
+[INFO ] 2018-12-15 15:25:07.534 [http-nio-8080-exec-53] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:28:14.565 [http-nio-8080-exec-58] HomePage - kheise
+[INFO ] 2018-12-15 15:28:14.565 [http-nio-8080-exec-58] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:31:56.337 [http-nio-8080-exec-73] HomePage - kheise
+[INFO ] 2018-12-15 15:31:56.338 [http-nio-8080-exec-73] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:36:53.106 [http-nio-8080-exec-87] HomePage - kheise
+[INFO ] 2018-12-15 15:36:53.107 [http-nio-8080-exec-87] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:46:26.637 [http-nio-8080-exec-97] HomePage - kheise
+[INFO ] 2018-12-15 15:46:26.686 [http-nio-8080-exec-97] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:46:41.124 [http-nio-8080-exec-98] HomePage - kheise
+[INFO ] 2018-12-15 15:46:41.124 [http-nio-8080-exec-98] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 15:52:02.371 [http-nio-8080-exec-100] HomePage - kheise
+[INFO ] 2018-12-15 15:52:02.383 [http-nio-8080-exec-100] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[DEBUG] 2018-12-15 16:10:48.222 [http-nio-8080-exec-5] SignUpUser - Adding user: User{id=0, username=';lkjasd;lfkja;lfkj', emailAddress='jdklasjf;aljkdf', password='password', firstName='null', lastName='null', birthDate=null, zipCode='53901', favoriteGenre='classical'}
+[INFO ] 2018-12-15 16:10:58.067 [http-nio-8080-exec-8] HomePage - kheise
+[INFO ] 2018-12-15 16:10:58.068 [http-nio-8080-exec-8] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:17:15.175 [http-nio-8080-exec-1] HomePage - kheise
+[INFO ] 2018-12-15 16:17:15.175 [http-nio-8080-exec-1] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:25:57.834 [http-nio-8080-exec-13] HomePage - kheise
+[INFO ] 2018-12-15 16:25:57.835 [http-nio-8080-exec-13] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:26:08.269 [http-nio-8080-exec-19] HomePage - kheise
+[INFO ] 2018-12-15 16:26:08.269 [http-nio-8080-exec-19] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:30:35.790 [http-nio-8080-exec-26] HomePage - kheise
+[INFO ] 2018-12-15 16:30:35.791 [http-nio-8080-exec-26] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:31:15.273 [http-nio-8080-exec-31] HomePage - kheise
+[INFO ] 2018-12-15 16:31:15.273 [http-nio-8080-exec-31] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:31:56.194 [http-nio-8080-exec-30] HomePage - kheise
+[INFO ] 2018-12-15 16:31:56.196 [http-nio-8080-exec-30] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:32:02.008 [http-nio-8080-exec-39] HomePage - kheise
+[INFO ] 2018-12-15 16:32:02.008 [http-nio-8080-exec-39] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:34:47.768 [http-nio-8080-exec-48] HomePage - kheise
+[INFO ] 2018-12-15 16:34:47.777 [http-nio-8080-exec-48] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:38:31.976 [http-nio-8080-exec-57] HomePage - kheise
+[INFO ] 2018-12-15 16:38:31.976 [http-nio-8080-exec-57] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:39:55.112 [http-nio-8080-exec-48] HomePage - kheise
+[INFO ] 2018-12-15 16:39:55.114 [http-nio-8080-exec-48] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:43:18.244 [http-nio-8080-exec-69] HomePage - kheise
+[INFO ] 2018-12-15 16:43:18.245 [http-nio-8080-exec-69] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-15 16:46:00.976 [http-nio-8080-exec-82] HomePage - kheise
+[INFO ] 2018-12-15 16:46:00.980 [http-nio-8080-exec-82] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=

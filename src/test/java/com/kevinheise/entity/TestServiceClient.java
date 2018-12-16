@@ -1,10 +1,10 @@
 package com.kevinheise.entity;
 
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kevinheise.eventful.EventItem;
-import com.kevinheise.eventful.Events;
-import com.kevinheise.eventful.SearchResults;
+import com.kevinheise.eventful.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,41 +30,71 @@ public class TestServiceClient {
 
     @BeforeEach
     public void setUp() {
+        url = "http://api.eventful.com/json/events/search?c=music_electronic&l=Madison&within=50&sort_order=date&app_key=";
         properties = new Properties();
-        url = "http://api.eventful.com/json/events/search?location=Madison&category=music&sort_order=date&app_key=";
         try {
             properties.load(this.getClass().getResourceAsStream("/project.properties"));
+            app_key = properties.getProperty("app_key");
         } catch(IOException e) {
             logger.debug(e);
         }
-        app_key = properties.getProperty("api_key");
+
+
     }
 
     @Test
-    public void testEventfulApi() throws Exception {
+    void testEventfulApi() throws Exception {
         Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(url + app_key);
+        WebTarget target = client.target(url + app_key);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
         assertEquals("???", response);
     }
 
     @Test
-    public void testJSONDecoding() throws Exception {
+     void testGetListOfEvents() throws Exception {
         Client client = ClientBuilder.newClient();
-        WebTarget target =
-                client.target(url + app_key);
+        WebTarget target = client.target(url + app_key);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
 
         ObjectMapper mapper = new ObjectMapper();
-        SearchResults results = mapper.readValue(response, SearchResults.class);
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+        Search results = mapper.readValue(response, Search.class);
 
-        Events testEvents = new Events();
-        EventItem testEvent = new EventItem();
         Events events = results.getEvents();
-        EventItem event = events.getEvent().get(0);
+        List<EventItem> eventList = events.getEvent();
 
-        assertEquals("???", event.getTitle());
+        assertEquals("???", eventList);
+    }
+
+    @Test
+    void testGetImage() throws Exception {
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(url + app_key);
+        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+        Search results = mapper.readValue(response, Search.class);
+
+        Events events = results.getEvents();
+        List<EventItem> eventList = events.getEvent();
+        String eventImage = eventList.get(4).getImage().getUrl();
+
+        assertEquals("???", eventImage);
+    }
+
+    @Test
+    void testGetDate() throws Exception {
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target(url + app_key);
+        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+        Search results = mapper.readValue(response, Search.class);
+
+        Events events = results.getEvents();
     }
 
 }

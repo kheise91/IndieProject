@@ -63,7 +63,23 @@ j
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-h
-8src/main/java/com/kevinheise/eventful/SearchResults.java,d/3/d35bf3478d0a7deca776aff8fd6323fef3b3e376
 a
 1src/main/java/com/kevinheise/eventful/Events.java,c/5/c5edb81fc57d3001b7fb9b6845eea71ece6379e5
+J
+src/main/webapp/footer.jsp,3/8/3819c16e4a27752a128752c506287183b0c69775
+`
+0src/main/java/com/kevinheise/eventful/Image.java,e/9/e94cda761144d3cc53eed5f929302ae603bf711a
+h
+8src/main/java/com/kevinheise/eventful/PerformerItem.java,f/c/fc04c6fa82abc85e5eb0bd4b6876c29532b241c4
+d
+4src/main/java/com/kevinheise/eventful/EventItem.java,b/7/b72a028d5b55be27f7093f94c4c3f9310da2c8f1
+d
+4src/main/java/com/kevinheise/eventful/Performer.java,c/2/c2db2099f224fcfbea4493509cfb797e2fb80e28
+e
+5src/main/java/com/kevinheise/eventful/Performers.java,e/b/eb35b44e895876a90a59539cd2a95f30c41a4b82
+`
+0src/main/java/com/kevinheise/eventful/Small.java,0/6/061137bbe6282a7f7565d3a8f623d7cffdf0ab14
+`
+0src/main/java/com/kevinheise/eventful/Thumb.java,5/6/56d82704d153f2e2ca60d7e78aa78f0fde23abd8
+a
+1src/main/java/com/kevinheise/eventful/Search.java,d/5/d50dd1a3dc59e235b45932420fadad8359e9c98f

@@ -45,6 +45,50 @@ body {
     font-size: 25px;
 }
 
+.list-group img {
+    width: 55px;
+    height: 55px;
+    float: left;
+}
+
+.list-group a {
+    background-color: rgba(0,0,0,.6);
+    border: 2px solid orange;
+    box-shadow: 2px 2px 10px darkorange;
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+}
+.list-group a:hover {
+    text-decoration: none;
+}
+
+.event-list-title {
+    color: #9dd0e1;
+    font-size: 1.25em;
+}
+
+.event-list-date {
+    font-size: 1.25em;
+    display: block;
+    float: right;
+}
+
+.modal-body {
+    background-color: white;
+}
+
+.close {
+    color: red;
+    float: right;
+    padding-bottom: .5em;
+}
+
+.modal img {
+    max-width: 128px;
+}
+
 /* Meidum screens and up */
 @media (min-width: 768px) {
     .container {

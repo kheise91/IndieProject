@@ -63,22 +63,23 @@
                     <label for="genre">*Favorite Genre:</label>
                     <select class="form-control" id="genre" name="favoriteGenre">
                         <option value="none">(Choose Genre)</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Electronic">Electronic</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Alternative">Alternative</option>
-                        <option value="Folk">Folk</option>
-                        <option value="Hip Hop">Hip Hop</option>
-                        <option value="Punk">Punk</option>
-                        <option value="R&B/Soul">R&B/Soul</option>
-                        <option value="Country">Country</option>
-                        <option value="Jazz">Jazz</option>
-                        <option value="Reggae">Reggae</option>
-                        <option value="Blues">Blues</option>
-                        <option value="Metal">Metal</option>
-                        <option value="Latin">Latin</option>
-                        <option value="Christian/Gospel">Christian/Gospel</option>
-                        <option value="Classical">Classical</option>
+                        <option value="blues">Blues</option>
+                        <option value="classical">Classical</option>
+                        <option value="country">Country</option>
+                        <option value="dance">Dance</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="folk">Folk</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="latin">Latin</option>
+                        <option value="opera">Opera</option>
+                        <option value="rb">R&B/Soul</option>
+                        <option value="reggae">Reggae</option>
+                        <option value="rap_hiphop">Hip Hop/Rap</option>
+                        <option value="metal">Heavy Metal</option>
+                        <option value="inspirational">Inspirational</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="alternative">Alternative</option>
                     </select>
                 </div>
                 <br />

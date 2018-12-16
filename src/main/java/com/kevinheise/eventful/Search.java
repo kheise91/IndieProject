@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class SearchResults{
+public class Search{
 
 	@JsonProperty("page_number")
 	private String pageNumber;
@@ -108,7 +108,7 @@ public class SearchResults{
 	@Override
  	public String toString(){
 		return 
-			"SearchResults{" + 
+			"Search{" + 
 			"page_number = '" + pageNumber + '\'' + 
 			",last_item = '" + lastItem + '\'' + 
 			",first_item = '" + firstItem + '\'' + 

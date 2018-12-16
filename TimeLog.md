@@ -37,3 +37,5 @@
 | 12/03/2018 | Working on design of indie project | 2 | |
 | 12/11/2018 | Peer review for Charles and professional development presentations | 2 | |
 | 12/13/2018 | Added servlet to redirect to home page and set up main homepage styles | 2 | |
+| 12/14/2018 | Implementing API and testing methods | 2.5 | |
+| 12/15/2018 | Displaying API results to home page | 3 | |

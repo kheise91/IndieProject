@@ -23,6 +23,9 @@
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
 
+# Solar Lint plugin:
+.idea/sonarlint/
+
 ## File-based project format:
 *.iws
 

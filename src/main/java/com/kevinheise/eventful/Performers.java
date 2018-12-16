@@ -2,18 +2,19 @@ package com.kevinheise.eventful;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
+import java.util.List;
 
 @Generated("com.robohorse.robopojogenerator")
 public class Performers{
 
 	@JsonProperty("performer")
-	private Performer performer;
+	private List<PerformerItem> performer;
 
-	public void setPerformer(Performer performer){
+	public void setPerformer(List<PerformerItem> performer){
 		this.performer = performer;
 	}
 
-	public Performer getPerformer(){
+	public List<PerformerItem> getPerformer(){
 		return performer;
 	}
 

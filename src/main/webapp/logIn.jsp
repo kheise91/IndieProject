@@ -16,8 +16,8 @@
 
 <div class="container main-section">
     <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
             <form class="signUpLogInForm" action="j_security_check" method="POST">
                 <h4 class="text-center">Sign In</h4>
                 <div class="form-group">
@@ -39,7 +39,7 @@
                 </p>
             </form>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-4"></div>
     </div>
 </div>
 

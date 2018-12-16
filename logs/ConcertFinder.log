@@ -187,3 +187,11 @@
 [INFO ] 2018-12-16 02:38:20.898 [http-nio-8080-exec-7] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
 [INFO ] 2018-12-16 02:46:11.088 [http-nio-8080-exec-33] HomePage - kheise
 [INFO ] 2018-12-16 02:46:11.089 [http-nio-8080-exec-33] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-16 05:33:15.377 [http-nio-8080-exec-32] HomePage - kheise
+[INFO ] 2018-12-16 05:33:15.405 [http-nio-8080-exec-32] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[ERROR] 2018-12-16 05:33:40.125 [http-nio-8080-exec-32] HomePage - com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: (String)""; line: 1, column: 0]
+[INFO ] 2018-12-16 05:33:59.724 [http-nio-8080-exec-38] HomePage - kheise
+[INFO ] 2018-12-16 05:33:59.726 [http-nio-8080-exec-38] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=
+[INFO ] 2018-12-16 05:36:37.211 [http-nio-8080-exec-43] HomePage - kheise
+[INFO ] 2018-12-16 05:36:37.217 [http-nio-8080-exec-43] HomePage - http://api.eventful.com/json/events/search?location=53901&within=50&category=music_electronic&sort_order=date&app_key=

@@ -15,79 +15,111 @@
 <jsp:include page="indexNavbar.jsp" />
 <div class="bg-img"></div>
 
-<div class="container main-section">
+<div class="container">
+
     <div class="row">
-        <div class="col-sm-6">
-            <div id="infoDiv">
-                <h1 class="text-center">ShowMe</h1>
-                <hr /><br />
-
-                <h5>What if there was one place you could go to view upcoming concerts in your area, based on your
-                    musical tastes? ShowMe will do just that.
-                    <br /><br />
-                    ShowMe will also keep track of any previous shows that you've attended, making it easy to
-                    remember the great times you had.
-                </h5>
-                <br /><br /><br />
-
-                <h4 class="text-center">Sign Up Today <i class="fas fa-caret-square-right"></i></h4>
-            </div>
+        <div class="col-sm-12">
+            <h1 class="text-center">ShowMe</h1>
+            <hr /><br /><br />
         </div>
+    </div>
 
-        <div class="col-sm-1"><div id="divider"></div></div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h5><i class="far fa-eye"></i>
+                <br /><br />
+                View upcoming concerts in your area based on your musical tastes
+            </h5>
+            <div id="v-divider-left"></div>
+        </div>
+        <div class="col-sm-4">
+            <h5><i class="fas fa-calendar-check"></i>
+                <br /><br />
+                Keep track of the shows you plan on attending
+            </h5>
+        </div>
+        <div class="col-sm-4">
+            <div id="v-divider-right"></div>
+            <h5><i class="fas fa-users"></i>
+                <br /><br />
+                Find link-minded individuals who are looking to share a ride to the show
+            </h5>
+        </div>
+    </div>
 
-        <div class="col-sm-5">
-            <form action="signUp" method="POST">
+    <a href="#signUp" id="signUpLink"><h3 class="text-center">Sign Up Today <i class="fas fa-caret-square-right"></i></h3></a>
+</div>
+
+<div class="container" id="signUp">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <form class="row" action="signUp" method="POST">
                 <p class="error-message">${errorMessage}</p>
-                <div class="form-group">
+                <div class="form-group col-sm-6">
+                    <label for="firstName">*First Name:</label>
+                    <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" required="required" />
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="lastName">*Last Name:</label>
+                    <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" required="required" />
+                </div>
+                <div class="form-group col-sm-6">
                     <label for="username">*Username:</label>
-                    <input type="text" class="form-control" id="username" name="username" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="username" name="username" required="required" />
                 </div>
-                <div class="form-group">
+                <div class="form-group col-sm-6">
+                <label for="genre">*Favorite Genre:</label>
+                <select class="form-control form-control-lg" id="genre" name="favoriteGenre">
+                    <option value="none">(Choose Genre)</option>
+                    <option value="blues">Blues</option>
+                    <option value="classical">Classical</option>
+                    <option value="country">Country</option>
+                    <option value="dance">Dance</option>
+                    <option value="electronic">Electronic</option>
+                    <option value="folk">Folk</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="latin">Latin</option>
+                    <option value="opera">Opera</option>
+                    <option value="rb">R&B/Soul</option>
+                    <option value="reggae">Reggae</option>
+                    <option value="rap_hiphop">Hip Hop/Rap</option>
+                    <option value="metal">Heavy Metal</option>
+                    <option value="inspirational">Inspirational</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="alternative">Alternative</option>
+                </select>
+            </div>
+                <div class="form-group col-sm-12">
                     <label for="email">*Email:</label>
-                    <input type="text" class="form-control" id="email" name="email" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="email" name="email" required="required" />
                 </div>
-                <div class="form-group">
-                    <label for="password">*Password:</label>
-                    <input type="password" class="form-control" id="password" name="password" required="required" />
+                <div class="form-group col-sm-6">
+                    <label for="zipCode">*Phone Number:</label>
+                    <input type="text" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" placeholder="(###)###-####" required="required" />
                 </div>
-                <div class="form-group">
-                    <label for="passwordConfirm">*Confirm Password:</label>
-                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" required="required" />
-                </div>
-                <div class="form-group">
+                <div class="form-group col-sm-6">
                     <label for="zipCode">*ZIP Code:</label>
-                    <input type="text" class="form-control" id="zipCode" name="zipCode" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="zipCode" name="zipCode" required="required" />
                 </div>
-                <div class="form-group">
-                    <label for="genre">*Favorite Genre:</label>
-                    <select class="form-control" id="genre" name="favoriteGenre">
-                        <option value="none">(Choose Genre)</option>
-                        <option value="blues">Blues</option>
-                        <option value="classical">Classical</option>
-                        <option value="country">Country</option>
-                        <option value="dance">Dance</option>
-                        <option value="electronic">Electronic</option>
-                        <option value="folk">Folk</option>
-                        <option value="jazz">Jazz</option>
-                        <option value="latin">Latin</option>
-                        <option value="opera">Opera</option>
-                        <option value="rb">R&B/Soul</option>
-                        <option value="reggae">Reggae</option>
-                        <option value="rap_hiphop">Hip Hop/Rap</option>
-                        <option value="metal">Heavy Metal</option>
-                        <option value="inspirational">Inspirational</option>
-                        <option value="rock">Rock</option>
-                        <option value="pop">Pop</option>
-                        <option value="alternative">Alternative</option>
-                    </select>
+                <div class="form-group col-sm-6">
+                    <label for="password">*Password:</label>
+                    <input type="password" class="form-control form-control-lg" id="password" name="password" required="required" />
                 </div>
-                <br />
+                <div class="form-group col-sm-6">
+                    <label for="passwordConfirm">*Confirm Password:</label>
+                    <input type="password" class="form-control form-control-lg" id="passwordConfirm" name="passwordConfirm" required="required" />
+                </div>
+                <br /><br />
                 <button type="submit" class="btn btn-block submit-button" name="submit">Create Account</button>
             </form>
         </div>
+        <div class="col-sm-2"></div>
     </div>
 </div>
+
+<jsp:include page="footer.jsp" />
 
 </body>
 </html>

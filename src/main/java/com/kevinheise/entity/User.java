@@ -5,7 +5,6 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.*;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,9 +22,6 @@ public class User {
 
     private String username;
 
-    @Column(name = "email_address")
-    private String emailAddress;
-
     private String password;
 
     @Column(name = "first_name")
@@ -34,8 +30,11 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "birth_date")
-    private Date birthDate;
+    @Column(name = "email_address")
+    private String emailAddress;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
     @Column(name = "zip_code")
     private String zipCode;
@@ -45,6 +44,11 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Show> shows = new HashSet<>();
+
+    private Set<User> friends = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -56,22 +60,21 @@ public class User {
      * Instantiates a new User.
      *
      * @param username      the username
-     * @param emailAddress  the email address
      * @param password      the password
      * @param firstName     the first name
      * @param lastName      the last name
-     * @param birthDate     the birth date
+     * @param emailAddress  the email address
+     * @param phoneNumber   the phone number
      * @param zipCode       the zip code
      * @param favoriteGenre the favorite genre
      */
-    public User(String username, String emailAddress, String password, String firstName, String lastName, Date birthDate,
-                String zipCode, String favoriteGenre) {
+    public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String zipCode, String favoriteGenre) {
         this.username = username;
-        this.emailAddress = emailAddress;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthDate = birthDate;
+        this.emailAddress = emailAddress;
+        this.phoneNumber = phoneNumber;
         this.zipCode = zipCode;
         this.favoriteGenre = favoriteGenre;
     }
@@ -110,24 +113,6 @@ public class User {
      */
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    /**
-     * Gets email address.
-     *
-     * @return the email address
-     */
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    /**
-     * Sets email address.
-     *
-     * @param emailAddress the email address
-     */
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
     }
 
     /**
@@ -185,21 +170,39 @@ public class User {
     }
 
     /**
-     * Gets birth date.
+     * Gets email address.
      *
-     * @return the birth date
+     * @return the email address
      */
-    public Date getBirthDate() {
-        return birthDate;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
     /**
-     * Sets birth date.
+     * Sets email address.
      *
-     * @param birthDate the birth date
+     * @param emailAddress the email address
      */
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    /**
+     * Gets phone number.
+     *
+     * @return the phone number
+     */
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    /**
+     * Sets phone number.
+     *
+     * @param phoneNumber the phone number
+     */
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -275,18 +278,94 @@ public class User {
         role.setUser(null);
     }
 
+    /**
+     * Gets shows.
+     *
+     * @return the shows
+     */
+    public Set<Show> getShows() {
+        return shows;
+    }
+
+    /**
+     * Sets shows.
+     *
+     * @param shows the shows
+     */
+    public void setShows(Set<Show> shows) {
+        this.shows = shows;
+    }
+
+    /**
+     * Add show.
+     *
+     * @param show the show
+     */
+    public void addShow(Show show) {
+        shows.add(show);
+    }
+
+    /**
+     * Remove show.
+     *
+     * @param show the show
+     */
+    public void removeShow(Show show) {
+        shows.remove(show);
+        show.setUser(null);
+    }
+
+    /**
+     * Gets friends.
+     *
+     * @return the friends
+     */
+    public Set<User> getFriends() {
+        return friends;
+    }
+
+    /**
+     * Sets friends.
+     *
+     * @param friends the friends
+     */
+    public void setFriends(Set<User> friends) {
+        this.friends = friends;
+    }
+
+    /**
+     * Add friend.
+     *
+     * @param friend the friend
+     */
+    public void addFriend(User friend) {
+        friends.add(friend);
+    }
+
+    /**
+     * Remove friend.
+     *
+     * @param friend the friend
+     */
+    public void removeFriend(User friend) {
+        friends.remove(friend);
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birthDate=" + birthDate +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", favoriteGenre='" + favoriteGenre + '\'' +
+                ", roles=" + roles +
+                ", shows=" + shows +
+                ", friends=" + friends +
                 '}';
     }
 }

@@ -55,7 +55,8 @@
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
             <form class="row" action="signUp" method="POST">
-                <p class="error-message">${errorMessage}</p>
+                <h3 class="col-sm-12 text-center">Create Your Account</h3>
+                <p class="col-sm-12 error-message">${errorMessage}</p>
                 <div class="form-group col-sm-6">
                     <label for="firstName">*First Name:</label>
                     <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" required="required" />
@@ -97,7 +98,7 @@
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="zipCode">*Phone Number:</label>
-                    <input type="text" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" placeholder="(###)###-####" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" placeholder=(###)###-#### required="required" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="zipCode">*ZIP Code:</label>
@@ -111,8 +112,9 @@
                     <label for="passwordConfirm">*Confirm Password:</label>
                     <input type="password" class="form-control form-control-lg" id="passwordConfirm" name="passwordConfirm" required="required" />
                 </div>
-                <br /><br />
-                <button type="submit" class="btn btn-block submit-button" name="submit">Create Account</button>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-block submit-button" name="submit">Create Account</button>
+                </div>
             </form>
         </div>
         <div class="col-sm-2"></div>

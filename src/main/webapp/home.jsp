@@ -20,7 +20,16 @@
                 <h1 class="display-4">Hello ${user.firstName}!</h1>
                 <br />
                 <h4>Here are some upcoming concerts near your area based on your interest in
-                    <span id="favoriteGenre">${user.favoriteGenre}</span> music:</h4>
+                    <c:when test="${user.favoriteGenre.equals('rb')}">
+                        <span id="favoriteGenre">R&B/Soul</span> music:
+                    </c:when>
+                    <c:when test="${user.favoriteGenre.equals('rap_hiphop')}">
+                        <span id="favoriteGenre">rap/hip hop</span> music:
+                    </c:when>
+                    <c:otherwise>
+                        <span id="favoriteGenre">${user.favoriteGenre}</span> music:
+                    </c:otherwise>
+                </h4>
             </div>
         </div>
         <br />

@@ -100,13 +100,22 @@ a#signUpLink:hover {
     padding-top: 8em;
 }
 
+h3 {
+    color: orange;
+    margin-bottom: 1em;
+}
+
+#phoneNumber {
+    letter-spacing: .05em;
+}
+
 .submit-button {
+    margin-top: 2em;
     background-color: orange;
     color: white;
 }
 .submit-button:hover {
     background-color: #cc8500;
-    box-shadow: 2px 2px 5px darkblue;
 }
 
 
@@ -117,12 +126,6 @@ a#signUpLink:hover {
     }
     h1 {
         font-size: 5em;
-    }
-    #divider {
-        border-left: 1px solid darkorange;
-        border-bottom: none;
-        height: 100%;
-        margin: 0em 0em 0em 2em;
     }
 }
 

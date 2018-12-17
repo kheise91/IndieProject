@@ -20,6 +20,7 @@ import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.security.Principal;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
@@ -37,9 +38,9 @@ public class HomePage extends HttpServlet {
         String username = userPrincipal.getName();
         List<User> foundUser = dao.getByPropertyEqual("username", username);
         User user = (User) foundUser.get(0);
-        logger.info(user.getUsername());
 
         // Set session attributes and forward to home.jsp
+        List<EventItem> events = getEventList(user.getZipCode(), user.getFavoriteGenre());
         DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMM");
         DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("dd");
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
@@ -47,11 +48,12 @@ public class HomePage extends HttpServlet {
 
         HttpSession session = request.getSession();
         session.setAttribute("user", user);
-        session.setAttribute("events", getEventList(user.getZipCode(), user.getFavoriteGenre()));
+        session.setAttribute("events", events);
         session.setAttribute("monthFormatter", monthFormatter);
         session.setAttribute("dayFormatter", dayFormatter);
         session.setAttribute("dateFormatter", dateFormatter);
         session.setAttribute("timeFormatter", timeFormatter);
+
 
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
@@ -63,29 +65,30 @@ public class HomePage extends HttpServlet {
         try {
             properties.load(this.getClass().getResourceAsStream("/project.properties"));
         } catch(IOException e) {
-            logger.debug(e);
+            logger.error(e);
         }
 
         String appKey = properties.getProperty("app_key");
         String url = "http://api.eventful.com/json/events/search?location=" + location + "&within=50&category=music_"
                 + favoriteGenre + "&sort_order=date&app_key=";
-        logger.info(url);
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url + appKey);
         String eventfulResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
-
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Search results = new Search();
+
         try {
-            results = mapper.readValue(eventfulResponse, Search.class);
+            Search results = mapper.readValue(eventfulResponse, Search.class);
+            Events events = results.getEvents();
+            if (events != null) {
+                return events.getEvent();
+            } else {
+                return Collections.emptyList();
+            }
         } catch (IOException ioe) {
             logger.error(ioe);
+            return Collections.emptyList();
         }
-
-        Events events = results.getEvents();
-        return events.getEvent();
-
     }
 }

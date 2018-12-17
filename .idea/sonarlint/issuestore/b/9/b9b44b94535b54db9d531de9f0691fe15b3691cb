@@ -1,13 +1,20 @@
 
-Gsquid:S1989U"+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
-gsquid:S1192="KDefine a constant instead of duplicating this literal "signUp.jsp" 6 times.(¢¢óóøÿÿÿÿ
-=squid:S1989p"&Add a "try/catch" block for "forward".(òø½
-Zsquid:S11558">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
-=squid:S1989p"&Add a "try/catch" block for "forward".(òø½
-isquid:S1192<"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ
-Gsquid:S1989O"+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
-Gsquid:S1989["+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
-Gsquid:S1989I"+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
-gsquid:CommentedOutCodeLine#"<This block of commented-out lines of code should be removed.(¸²Ê¡ıÿÿÿÿ
-Gsquid:S1989C"+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
-Gsquid:S1989="+Add a "try/catch" block for "sendRedirect".(¢¢óóøÿÿÿÿ
+€squid:UselessImportCheck"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8·Ø‘Åû,
+isquid:S11925"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ
+usquid:S11926"RDefine a constant instead of duplicating this literal "signUp.jsp#signUp" 6 times.(ù¾Ğ‡ıÿÿÿÿ8ŠûÅû,
+Gsquid:S1989N"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+[squid:S1854$"=Remove this useless assignment to local variable "firstName".(»†©Û8ãğ¾Åû,
+=squid:S1989i"&Add a "try/catch" block for "forward".(òø½
+Gsquid:S19896"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Gsquid:S1989H"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Nsquid:S1481("+Remove this unused "number" local variable.(ï™­ûıÿÿÿÿ8ÜïÀÅû,
+_squid:S1854%"<Remove this useless assignment to local variable "lastName".(Ş ëÇüÿÿÿÿ8ãğ¾Åû,
+Gsquid:S1989B"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Lsquid:S1481$".Remove this unused "firstName" local variable.(»†©Û8ãğ¾Åû,
+ssquid:UselessImportCheck"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8·Ø‘Åû,
+Zsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
+Gsquid:S1989T"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Gsquid:S1989<"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+]squid:S1854(":Remove this useless assignment to local variable "number".(ï™­ûıÿÿÿÿ8ÜïÀÅû,
+Psquid:S1481%"-Remove this unused "lastName" local variable.(Ş ëÇüÿÿÿÿ8ãğ¾Åû,
+=squid:S1989i"&Add a "try/catch" block for "forward".(òø½

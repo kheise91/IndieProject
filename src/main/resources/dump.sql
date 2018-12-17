@@ -30,17 +30,17 @@ CREATE index role_user_user_id_fk
 	ON role (user_id);
 
 
-CREATE TABLE shows (
+CREATE TABLE user_show (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
-  show_id VARCHAR(25) NOT NULL,
+  show_id VARCHAR(30) NOT NULL,
   FOREIGN KEY (user_id) REFERENCES user(id)
 ) ENGINE = InnoDB;
 
-CREATE TABLE friends (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE user_friend (
   user_id INT NOT NULL,
   friend_id INT NOT NULL,
+  PRIMARY KEY (user_id, friend_id),
   FOREIGN KEY (user_id) REFERENCES user(id),
   FOREIGN KEY (friend_id) REFERENCES user(id)
 ) ENGINE = InnoDB;

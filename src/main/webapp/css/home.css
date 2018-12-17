@@ -30,6 +30,10 @@ body {
     opacity: .4;
 }
 
+.error-message {
+    font-weight: bold;
+}
+
 .container {
     padding-top: 6em;
     color: white;

@@ -84,19 +84,9 @@ public class SignUpUser extends HttpServlet {
             resp.sendRedirect("signUp.jsp#signUp");
         } else {
             // Validation complete, add user
-            User user = new User();
-            user.setUsername(username);
-            user.setEmailAddress(email);
-            user.setPassword(password);
-            user.setZipCode(zipCode);
-            user.setFavoriteGenre(genre);
-
-            logger.debug("Adding user: " + user);
-
-            Role role = new Role();
-            role.setName("user");
-            role.setUsername(username);
-            role.setUser(user);
+            User user = new User(username, password, firstName, lastName, email, number, zipCode, genre);
+            Role role = new Role("user", username, user);
+            logger.info("Adding user: " + user + " and role: " + role);
             user.addRole(role);
 
             dao.insert(user);

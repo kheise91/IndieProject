@@ -14,11 +14,11 @@
     <div class="bg-img"></div>
     <jsp:include page="indexNavbar.jsp" />
 
-    <div class="container main-section">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3"></div>
             <div class="col-sm-6 text-center">
-                <h4>Your account has been created.</h4>
+                <h3>Your account has been created.</h3>
                 <h5><a href="home">Click here</a> to log in.</h5>
             </div>
             <div class="col-sm-3"></div>

@@ -18,6 +18,8 @@
 
         <mapping class="com.kevinheise.entity.User" />
         <mapping class="com.kevinheise.entity.Role" />
+        <mapping class="com.kevinheise.entity.Show" />
+        <mapping class="com.kevinheise.entity.Friend" />
 
     </session-factory>
 

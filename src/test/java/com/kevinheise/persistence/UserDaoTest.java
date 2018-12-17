@@ -40,7 +40,7 @@ public class UserDaoTest {
      */
     @Test
     void insertUserWithRoleSuccess() {
-        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
+        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "(608)617-9434", "53901", "electronic");
         Role newRole = new Role("user", "kheise", newUser);
         newUser.addRole(newRole);
         int id = userDao.insert(newUser);
@@ -54,7 +54,7 @@ public class UserDaoTest {
      */
     @Test
     void insertUserSuccess() {
-        User newUser = new User("kheise", "kheise@madisoncollege.edu", "kevinpassword", "Kevin", "Heise", new Date(1991-04-30), "53901", "Classical");
+        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "(608)617-9434", "53901", "electronic");
         int id = userDao.insert(newUser);
         assertNotEquals(0, id);
 
@@ -107,5 +107,10 @@ public class UserDaoTest {
 
         User retrievedUser = retrievedUserList.get(0);
         assertEquals("johnJ", retrievedUser.getUsername());
+    }
+
+    @Test
+    void addShowToUserShows() {
+
     }
 }

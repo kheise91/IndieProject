@@ -83,3 +83,5 @@ e
 0src/main/java/com/kevinheise/eventful/Thumb.java,5/6/56d82704d153f2e2ca60d7e78aa78f0fde23abd8
 a
 1src/main/java/com/kevinheise/eventful/Search.java,d/5/d50dd1a3dc59e235b45932420fadad8359e9c98f
+]
+-src/main/java/com/kevinheise/entity/Show.java,e/6/e66a7ab57b8f987e9b49d6a3f51eba8c8b176892

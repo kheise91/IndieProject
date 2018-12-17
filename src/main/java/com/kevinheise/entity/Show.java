@@ -8,7 +8,7 @@ import javax.persistence.*;
  * The type Show.
  */
 @Entity(name = "Show")
-@Table(name = "shows")
+@Table(name = "user_show")
 public class Show {
 
     @Id
@@ -18,7 +18,7 @@ public class Show {
 
     @ManyToOne
     @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "shows_ibfk_1")
+            foreignKey = @ForeignKey(name = "user_show_ibfk_1")
     )
     private User user;
 
@@ -103,5 +103,25 @@ public class Show {
                 ", user=" + user +
                 ", showId='" + showId + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Show show = (Show) o;
+
+        if (id != show.id) return false;
+        if (user != null ? !user.equals(show.user) : show.user != null) return false;
+        return showId != null ? showId.equals(show.showId) : show.showId == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (user != null ? user.hashCode() : 0);
+        result = 31 * result + (showId != null ? showId.hashCode() : 0);
+        return result;
     }
 }

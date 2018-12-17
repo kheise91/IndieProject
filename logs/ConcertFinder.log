@@ -33,3 +33,36 @@
 [ERROR] 2018-12-17 09:17:53.018 [http-nio-8080-exec-41] HomePage - com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "status" (class com.kevinheise.eventful.Search), not marked as ignorable (9 known properties: "page_items", "page_size", "first_item", "search_time", "total_items", "page_number", "last_item", "page_count", "events"])
  at [Source: (String)"{"status":"Authentication Error","error":"1","description":"The application key provided (bk4XJ7Hw5gD8Kp3Bdd) is not registered with Eventful.  A valid application key is required."}
 "; line: 1, column: 12] (through reference chain: com.kevinheise.eventful.Search["status"])
+[INFO ] 2018-12-17 10:07:12.587 [http-nio-8080-exec-103] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 10:18:07.654 [http-nio-8080-exec-103] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 10:24:50.842 [http-nio-8080-exec-7] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 10:25:13.477 [http-nio-8080-exec-1] ViewProfile - User{id=3, username='asandler', password='madison', firstName='Adam', lastName='Sandler', emailAddress='asandler@happymadison.net', phoneNumber='(555)555-5555', zipCode='53954', favoriteGenre='metal', roles=[], shows=[], friends=[]}
+[INFO ] 2018-12-17 10:38:35.011 [http-nio-8080-exec-9] ViewProfile - null
+[INFO ] 2018-12-17 10:40:49.943 [http-nio-8080-exec-14] ViewProfile - null
+[INFO ] 2018-12-17 10:43:21.998 [http-nio-8080-exec-30] ViewProfile - null
+[INFO ] 2018-12-17 10:43:23.537 [http-nio-8080-exec-32] ViewProfile - null
+[INFO ] 2018-12-17 10:43:25.207 [http-nio-8080-exec-21] ViewProfile - null
+[INFO ] 2018-12-17 10:43:26.786 [http-nio-8080-exec-29] ViewProfile - null
+[INFO ] 2018-12-17 10:45:37.794 [http-nio-8080-exec-37] ViewProfile - null
+[INFO ] 2018-12-17 10:47:14.976 [http-nio-8080-exec-42] ViewProfile - null
+[INFO ] 2018-12-17 10:51:20.005 [http-nio-8080-exec-44] ViewProfile - null
+[INFO ] 2018-12-17 10:54:58.781 [http-nio-8080-exec-64] ViewProfile - null
+[INFO ] 2018-12-17 10:55:00.871 [http-nio-8080-exec-61] ViewProfile - null
+[INFO ] 2018-12-17 10:55:59.018 [http-nio-8080-exec-65] ViewProfile - null
+[INFO ] 2018-12-17 10:56:00.813 [http-nio-8080-exec-63] ViewProfile - null
+[INFO ] 2018-12-17 10:56:02.362 [http-nio-8080-exec-66] ViewProfile - null
+[INFO ] 2018-12-17 10:56:18.137 [http-nio-8080-exec-67] ViewProfile - null
+[INFO ] 2018-12-17 10:56:33.445 [http-nio-8080-exec-72] ViewProfile - null
+[INFO ] 2018-12-17 10:56:34.962 [http-nio-8080-exec-70] ViewProfile - null
+[INFO ] 2018-12-17 10:57:02.609 [http-nio-8080-exec-57] ViewProfile - null
+[INFO ] 2018-12-17 10:59:22.539 [http-nio-8080-exec-70] ViewProfile - null
+[INFO ] 2018-12-17 10:59:25.102 [http-nio-8080-exec-73] ViewProfile - null
+[INFO ] 2018-12-17 11:12:16.579 [http-nio-8080-exec-2] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:17.139 [http-nio-8080-exec-9] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:20.824 [http-nio-8080-exec-10] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:21.800 [http-nio-8080-exec-9] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:23.089 [http-nio-8080-exec-8] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:23.982 [http-nio-8080-exec-7] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:23:26.374 [http-nio-8080-exec-9] ViewProfile - User{id=2, username='kheise', password='kevinh', firstName='Kevin', lastName='Heise', emailAddress='kheise@madisoncollege.edu', phoneNumber='(608)617-9434', zipCode='53901', favoriteGenre='electronic', roles=[Role{id=2, name='user', username='kheise'}], shows=[], friends=[]}
+[INFO ] 2018-12-17 11:36:59.484 [http-nio-8080-exec-2] ViewProfile - null
+[INFO ] 2018-12-17 11:37:02.064 [http-nio-8080-exec-3] ViewProfile - null

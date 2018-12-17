@@ -12,7 +12,7 @@
                         <a href="#"><i class="fas fa-users"></i>&nbsp;&nbsp;Friends</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-user"></i>&nbsp;&nbsp;View Profile</a>
+                        <a href="viewProfile"><i class="fas fa-user"></i>&nbsp;&nbsp;View Profile</a>
                     </li>
                     <li>
                         <a href="#"><i class="fas fa-user-edit"></i>&nbsp;&nbsp;Edit Profile</a>

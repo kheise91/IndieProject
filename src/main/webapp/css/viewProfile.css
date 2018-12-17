@@ -1,0 +1,75 @@
+/*******************************************************************************
+* Stylesheet for home page                                                     *
+*******************************************************************************/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.bg-img {
+    background-image: url("../images/wallpaper.jpg");
+    background-position: 48% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: -1;
+    opacity: .4;
+}
+
+.error-message {
+    font-weight: bold;
+}
+
+.container {
+    padding-top: 4em;
+    color: white;
+}
+
+.sub-menu li a {
+    padding-top: .25em !important;
+    padding-bottom: .25em !important;
+}
+
+.profile-card {
+    border: 2px solid orange;
+    background-color: rgba(0, 0, 0, .6);
+    margin: 4em;
+}
+
+.profile-card-header {
+    border-bottom: 1px solid rgba(255, 165, 0, .8);
+    padding: 0;
+}
+
+img {
+    max-width: 15em;
+}
+
+h1 {
+    color: darkorange;
+    float: right;
+    position: relative;
+    top: 200px;
+    right: 560px;
+}
+
+/* Meidum screens and up */
+@media (min-width: 768px) {
+    .container {
+        padding-top: 4em;
+    }
+}

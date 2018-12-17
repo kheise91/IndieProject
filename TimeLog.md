@@ -39,3 +39,5 @@
 | 12/13/2018 | Added servlet to redirect to home page and set up main homepage styles | 2 | |
 | 12/14/2018 | Implementing API and testing methods | 2.5 | |
 | 12/15/2018 | Displaying API results to home page | 5 | |
+| 12/16/2018 | Updating database and entities for letting a user favorite a show or add a friend. | 3 | |
+| 12/17/2018 | Adding error handling to home page (displaying message if service is down/no results found. | 1 | |

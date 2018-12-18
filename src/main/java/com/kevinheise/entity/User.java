@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,6 +39,12 @@ public class User implements Serializable {
     @Column(name = "phone_number")
     private String phoneNumber;
 
+    private String city;
+
+    private String state;
+
+    private LocalDate birthdate;
+
     @Column(name = "zip_code")
     private String zipCode;
 
@@ -58,25 +66,16 @@ public class User implements Serializable {
     public User() {
     }
 
-    /**
-     * Instantiates a new User.
-     *
-     * @param username      the username
-     * @param password      the password
-     * @param firstName     the first name
-     * @param lastName      the last name
-     * @param emailAddress  the email address
-     * @param phoneNumber   the phone number
-     * @param zipCode       the zip code
-     * @param favoriteGenre the favorite genre
-     */
-    public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String zipCode, String favoriteGenre) {
+    public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String city, String state, LocalDate birthdate, String zipCode, String favoriteGenre) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
+        this.city = city;
+        this.state = state;
+        this.birthdate = birthdate;
         this.zipCode = zipCode;
         this.favoriteGenre = favoriteGenre;
     }
@@ -205,6 +204,60 @@ public class User implements Serializable {
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    /**
+     * Gets city.
+     *
+     * @return the city
+     */
+    public String getCity() {
+        return city;
+    }
+
+    /**
+     * Sets city.
+     *
+     * @param city the city
+     */
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    /**
+     * Gets state.
+     *
+     * @return the state
+     */
+    public String getState() {
+        return state;
+    }
+
+    /**
+     * Sets state.
+     *
+     * @param state the state
+     */
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * Gets birthdate.
+     *
+     * @return the birthdate
+     */
+    public LocalDate getBirthdate() {
+        return birthdate;
+    }
+
+    /**
+     * Sets birthdate.
+     *
+     * @param birthdate the birthdate
+     */
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 
     /**
@@ -353,6 +406,15 @@ public class User implements Serializable {
         friends.remove(friend);
     }
 
+    /**
+     * Get age.
+     *
+     * @return the int
+     */
+    public int getAge(){
+        return (int) ChronoUnit.YEARS.between(birthdate, LocalDate.now());
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -363,6 +425,9 @@ public class User implements Serializable {
                 ", lastName='" + lastName + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", birthdate='" + birthdate + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", favoriteGenre='" + favoriteGenre + '\'' +
                 ", roles=" + roles +
@@ -385,6 +450,9 @@ public class User implements Serializable {
         if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
         if (emailAddress != null ? !emailAddress.equals(user.emailAddress) : user.emailAddress != null) return false;
         if (phoneNumber != null ? !phoneNumber.equals(user.phoneNumber) : user.phoneNumber != null) return false;
+        if (city != null ? !city.equals(user.city) : user.city != null) return false;
+        if (state != null ? !state.equals(user.state) : user.state != null) return false;
+        if (birthdate != null ? !birthdate.equals(user.birthdate) : user.birthdate != null) return false;
         if (zipCode != null ? !zipCode.equals(user.zipCode) : user.zipCode != null) return false;
         if (favoriteGenre != null ? !favoriteGenre.equals(user.favoriteGenre) : user.favoriteGenre != null)
             return false;
@@ -402,6 +470,9 @@ public class User implements Serializable {
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         result = 31 * result + (emailAddress != null ? emailAddress.hashCode() : 0);
         result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
+        result = 31 * result + (city != null ? city.hashCode() : 0);
+        result = 31 * result + (state != null ? state.hashCode() : 0);
+        result = 31 * result + (birthdate != null ? birthdate.hashCode() : 0);
         result = 31 * result + (zipCode != null ? zipCode.hashCode() : 0);
         result = 31 * result + (favoriteGenre != null ? favoriteGenre.hashCode() : 0);
         result = 31 * result + (roles != null ? roles.hashCode() : 0);

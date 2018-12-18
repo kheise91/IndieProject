@@ -45,31 +45,75 @@ body {
 }
 
 .profile-card {
-    border: 2px solid orange;
-    background-color: rgba(0, 0, 0, .6);
-    margin: 4em;
+    background-color: rgba(0, 0, 0, .75);
+    margin-top: 2em;
+    padding-bottom: 26em;
 }
 
 .profile-card-header {
-    border-bottom: 1px solid rgba(255, 165, 0, .8);
+    border-bottom: 1px solid white;
     padding: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card-info {
+    border-right: 1px solid ghostwhite;
+    margin-top: 2em;
+    text-align: center;
+
+    width: 50%;
+    float: left;
+}
+
+.profile-card-shows {
+    margin-top: 2em;
+    padding: 0em 2em;
+    width: 50%;
+    float: right;
 }
 
 img {
-    max-width: 15em;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 h1 {
-    color: darkorange;
-    float: right;
-    position: relative;
-    top: 200px;
-    right: 560px;
+    color: lightblue;
+    margin-top: .5em;
+    margin-bottom: 0em;
+}
+
+h5, h3 {
+    color: orange;
+}
+
+h5 {
+    border-bottom: 1px solid white;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    border-bottom: 1px solid white;
+    text-align: center;
 }
 
 /* Meidum screens and up */
 @media (min-width: 768px) {
     .container {
         padding-top: 4em;
+    }
+    img {
+        max-width: 15em;
+    }
+    .profile-card {
+        border: 1px solid darkorange;
+        margin: 4em;
     }
 }

@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.security.Principal;
+import java.util.List;
 
 @WebServlet(name = "ViewProfile", urlPatterns = { "/viewProfile" })
 public class ViewProfile extends HttpServlet {
@@ -23,15 +25,19 @@ public class ViewProfile extends HttpServlet {
 
         HttpSession session = req.getSession();
         GenericDao userDao = new GenericDao(User.class);
+        User user = (User) userDao.getByPropertyEqual("username", req.getUserPrincipal().getName()).get(0);
+
         User profile;
-        if (req.getParameter("username") != null) {
+        String profileName = req.getParameter("username");
+        if (profileName != null && !profileName.isEmpty()) {
             profile = (User)userDao.getByPropertyEqual("username", req.getParameter("username")).get(0);
         } else {
-            profile = (User)session.getAttribute("user");
+            profile = user;
         }
 
         logger.info(profile);
 
+        session.setAttribute("user", user);
         session.setAttribute("profile", profile);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/viewProfile.jsp");
         dispatcher.forward(req, resp);

@@ -11,6 +11,12 @@ body {
     background-color: black;
 }
 
+.navbar {
+    height: 80px;
+    margin-bottom: 2em;
+    background-color: rgba(0, 0, 0, 1);
+}
+
 .bg-img {
     display: none;
 

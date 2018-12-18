@@ -76,7 +76,7 @@
     </column>
     <column id="26" parent="12" name="password">
       <Position>3</Position>
-      <DataType>char(64)|0</DataType>
+      <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="27" parent="12" name="first_name">
@@ -96,96 +96,111 @@
     </column>
     <column id="30" parent="12" name="phone_number">
       <Position>7</Position>
-      <DataType>char(13)|0</DataType>
+      <DataType>char(12)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="12" name="zip_code">
+    <column id="31" parent="12" name="city">
       <Position>8</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="12" name="state">
+      <Position>9</Position>
+      <DataType>char(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="12" name="zip_code">
+      <Position>10</Position>
       <DataType>char(5)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="12" name="favorite_genre">
-      <Position>9</Position>
+    <column id="34" parent="12" name="birthdate">
+      <Position>11</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="favorite_genre">
+      <Position>12</Position>
       <DataType>varchar(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="33" parent="12" name="user_id_uindex">
+    <index id="36" parent="12" name="user_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="34" parent="12" name="user_username_uindex">
+    <index id="37" parent="12" name="user_username_uindex">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="35" parent="12" name="PRIMARY">
+    <key id="38" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="36" parent="12" name="user_id_uindex">
+    <key id="39" parent="12" name="user_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>user_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="37" parent="12" name="user_username_uindex">
+    <key id="40" parent="12" name="user_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>user_username_uindex</UnderlyingIndexName>
     </key>
-    <column id="38" parent="13" name="user_id">
+    <column id="41" parent="13" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="13" name="friend_id">
+    <column id="42" parent="13" name="friend_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="40" parent="13" name="friend_id">
+    <index id="43" parent="13" name="friend_id">
       <ColNames>friend_id</ColNames>
     </index>
-    <key id="41" parent="13" name="PRIMARY">
+    <key id="44" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id
 friend_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="42" parent="13" name="user_friend_ibfk_1">
+    <foreign-key id="45" parent="13" name="user_friend_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>ShowMe</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="43" parent="13" name="user_friend_ibfk_2">
+    <foreign-key id="46" parent="13" name="user_friend_ibfk_2">
       <ColNames>friend_id</ColNames>
       <RefSchemaName>ShowMe</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="44" parent="14" name="id">
+    <column id="47" parent="14" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="45" parent="14" name="user_id">
+    <column id="48" parent="14" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="14" name="show_id">
+    <column id="49" parent="14" name="show_id">
       <Position>3</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="47" parent="14" name="user_id">
+    <index id="50" parent="14" name="user_id">
       <ColNames>user_id</ColNames>
     </index>
-    <key id="48" parent="14" name="PRIMARY">
+    <key id="51" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="49" parent="14" name="user_show_ibfk_1">
+    <foreign-key id="52" parent="14" name="user_show_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>ShowMe</RefSchemaName>
       <RefTableName>user</RefTableName>

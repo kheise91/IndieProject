@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
@@ -34,14 +36,17 @@ public class SignUpUser extends HttpServlet {
 
         // Get form data
         String firstName = req.getParameter("firstName");
-        String lastName = req.getParameter("lastName");
-        String username = req.getParameter("username");
-        String email    = req.getParameter("email");
-        String number   = req.getParameter("phoneNumber");
-        String password = req.getParameter("password");
-        String confirm  = req.getParameter("passwordConfirm");
-        String zipCode  = req.getParameter("zipCode");
-        String genre    = req.getParameter("favoriteGenre");
+        String lastName  = req.getParameter("lastName");
+        String username  = req.getParameter("username");
+        String email     = req.getParameter("email");
+        String number    = req.getParameter("phoneNumber");
+        String birthdate = req.getParameter("birthdate");
+        String password  = req.getParameter("password");
+        String confirm   = req.getParameter("passwordConfirm");
+        String city      = req.getParameter("city");
+        String state     = req.getParameter("state");
+        String zipCode   = req.getParameter("zipCode");
+        String genre     = req.getParameter("favoriteGenre");
 
         // Validate Form
         String errorMessage = "";
@@ -84,9 +89,12 @@ public class SignUpUser extends HttpServlet {
             resp.sendRedirect("signUp.jsp#signUp");
         } else {
             // Validation complete, add user
-            User user = new User(username, password, firstName, lastName, email, number, zipCode, genre);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            LocalDate formattedBirthdate = LocalDate.parse(birthdate, formatter);
+            User user = new User(username, hashPassword(password), firstName, lastName, email, number,city, state,
+                    formattedBirthdate, zipCode, genre);
             Role role = new Role("user", username, user);
-            logger.info("Adding user: " + user + " and role: " + role);
+            logger.info("Adding user: " + user);
             user.addRole(role);
 
             dao.insert(user);
@@ -94,6 +102,21 @@ public class SignUpUser extends HttpServlet {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/signUpConfirmation.jsp");
             dispatcher.forward(req, resp);
         }
+    }
+
+    public String hashPassword(String passwordToHash) {
+
+        MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
+        try {
+            credentialHandler.setAlgorithm("sha-512");
+        } catch (NoSuchAlgorithmException e) {
+            logger.error("Exception:", e);
+        }
+
+        credentialHandler.setEncoding("UTF-8");
+        String hashedPassword = credentialHandler.mutate(passwordToHash);
+
+        return hashedPassword;
     }
 
 }

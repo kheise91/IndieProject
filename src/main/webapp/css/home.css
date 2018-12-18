@@ -10,28 +10,8 @@ body {
     background-color: black;
 }
 
-.bg-img {
-    background-image: url("../images/wallpaper.jpg");
-    background-position: 48% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    height: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    z-index: -1;
-    opacity: .4;
-}
-
 .error-message {
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .container {
@@ -73,6 +53,10 @@ body {
 .event-list-title {
     color: #9dd0e1;
     font-size: 1.25em;
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .event-list-date {

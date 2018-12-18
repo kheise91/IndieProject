@@ -1,12 +1,15 @@
 CREATE TABLE user (
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	username VARCHAR(30) NOT NULL,
-	password CHAR(64) NOT NULL,
+	password TEXT NOT NULL,
 	first_name VARCHAR(30) NOT NULL,
 	last_name VARCHAR(30) NOT NULL,
 	email_address VARCHAR(50) NOT NULL,
-	phone_number CHAR(13) NOT NULL,
+	phone_number CHAR(12) NOT NULL,
+	city VARCHAR(30) NOT NULL,
+	state CHAR(2) NOT NULL,
 	zip_code CHAR(5) NOT NULL,
+	birthdate DATE NOT NULL,
 	favorite_genre VARCHAR(20) NOT NULL,
 	CONSTRAINT user_id_uindex UNIQUE (id),
 	CONSTRAINT user_username_uindex UNIQUE (username)

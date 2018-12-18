@@ -1,9 +1,11 @@
 
-esquid:S24416"GMake "DateTimeFormatter" serializable or don't store it in the session.(¼Ş¿Ä8…¨—±û,
-Vsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8˜Î®û,
-Vsquid:S1161 ":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
-jsquid:S24415"GMake "DateTimeFormatter" serializable or don't store it in the session.(ÌúÔ®üÿÿÿÿ8°Ø®û,
-jsquid:S24414"GMake "DateTimeFormatter" serializable or don't store it in the session.(İ†Öñúÿÿÿÿ8¦Ëã­û,
-Isquid:S1989:"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
-esquid:S24413"GMake "DateTimeFormatter" serializable or don't store it in the session.(»´£à8¦Ëã­û,
-Isquid:S1989:"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
+esquid:S24417"GMake "DateTimeFormatter" serializable or don't store it in the session.(¼Ş¿Ä8…¨—±û,
+Vsquid:S1161!":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+Vsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8˜Î®û,
+psquid:S24413"MMake "List" and its parameters serializable or don't store it in the session.(í¤¶…ÿÿÿÿÿ8×êÃåû,
+esquid:S24414"GMake "DateTimeFormatter" serializable or don't store it in the session.(»´£à8¦Ëã­û,
+jsquid:S24415"GMake "DateTimeFormatter" serializable or don't store it in the session.(İ†Öñúÿÿÿÿ8¦Ëã­û,
+Isquid:S1989<"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
+Isquid:S1989<"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
+Jsquid:S1905("'Remove this unnecessary cast to "User".(ºÕ½şıÿÿÿÿ8¦µè×û,
+jsquid:S24416"GMake "DateTimeFormatter" serializable or don't store it in the session.(ÌúÔ®üÿÿÿÿ8°Ø®û,

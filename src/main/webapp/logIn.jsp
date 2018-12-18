@@ -14,12 +14,12 @@
 <jsp:include page="indexNavbar.jsp" />
 <div class="bg-img"></div>
 
-<div class="container main-section">
+<div class="container">
     <div class="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <form class="signUpLogInForm" action="j_security_check" method="POST">
-                <h4 class="text-center">Sign In</h4>
+                <h3 class="text-center">Sign In</h3>
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" class="form-control form-control-lg" id="username" name="j_username" required="required" />

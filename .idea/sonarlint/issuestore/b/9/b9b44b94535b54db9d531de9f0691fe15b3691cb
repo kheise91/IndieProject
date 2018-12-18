@@ -1,20 +1,14 @@
 
-€squid:UselessImportCheck"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8·Ø‘Åû,
-isquid:S11925"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ
-usquid:S11926"RDefine a constant instead of duplicating this literal "signUp.jsp#signUp" 6 times.(ù¾Ğ‡ıÿÿÿÿ8ŠûÅû,
-Gsquid:S1989N"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-[squid:S1854$"=Remove this useless assignment to local variable "firstName".(»†©Û8ãğ¾Åû,
-=squid:S1989i"&Add a "try/catch" block for "forward".(òø½
 Gsquid:S19896"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-Gsquid:S1989H"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-Nsquid:S1481("+Remove this unused "number" local variable.(ï™­ûıÿÿÿÿ8ÜïÀÅû,
-_squid:S1854%"<Remove this useless assignment to local variable "lastName".(Ş ëÇüÿÿÿÿ8ãğ¾Åû,
-Gsquid:S1989B"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-Lsquid:S1481$".Remove this unused "firstName" local variable.(»†©Û8ãğ¾Åû,
 ssquid:UselessImportCheck"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8·Ø‘Åû,
-Zsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
+Gsquid:S1989B"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+isquid:S11925"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ
 Gsquid:S1989T"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+usquid:S11926"RDefine a constant instead of duplicating this literal "signUp.jsp#signUp" 6 times.(ù¾Ğ‡ıÿÿÿÿ8ŠûÅû,
+Gsquid:S1989H"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Zsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
+€squid:UselessImportCheck"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8·Ø‘Åû,
+=squid:S1989_"&Add a "try/catch" block for "forward".(òø½
+=squid:S1989_"&Add a "try/catch" block for "forward".(òø½
 Gsquid:S1989<"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-]squid:S1854(":Remove this useless assignment to local variable "number".(ï™­ûıÿÿÿÿ8ÜïÀÅû,
-Psquid:S1481%"-Remove this unused "lastName" local variable.(Ş ëÇüÿÿÿÿ8ãğ¾Åû,
-=squid:S1989i"&Add a "try/catch" block for "forward".(òø½
+Gsquid:S1989N"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ

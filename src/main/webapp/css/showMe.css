@@ -1,7 +1,9 @@
 /*******************************************************************************
 *   General Styles for  for ShowMe web site                                      *
 *******************************************************************************/
-
+/*
+    Testing and error classes
+ */
 .red {
     background-color: red;
 }
@@ -13,6 +15,29 @@
     color: red;
     font-size: 1.25em;
     text-align: center;
+}
+
+/*
+    Background Image
+*/
+.bg-img {
+    background-image: url("../images/wallpaper.jpg");
+    background-position: 48% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: -1;
+    opacity: .25;
 }
 
 /*

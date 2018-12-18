@@ -6,6 +6,7 @@ import com.kevinheise.testUtils.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class UserDaoTest {
      */
     @Test
     void insertUserWithRoleSuccess() {
-        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "(608)617-9434", "53901", "electronic");
+        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "+16086179434", "Portage", "WI", LocalDate.parse("1991-04-30"), "53901", "electronic");
         Role newRole = new Role("user", "kheise", newUser);
         newUser.addRole(newRole);
         int id = userDao.insert(newUser);
@@ -54,7 +55,7 @@ public class UserDaoTest {
      */
     @Test
     void insertUserSuccess() {
-        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "(608)617-9434", "53901", "electronic");
+        User newUser = new User("kheise", "kevinh", "Kevin", "Heise", "kheise@madisoncollege.edu", "+16086179434", "Portage", "WI", LocalDate.parse("1991-04-30"), "53901", "electronic");
         int id = userDao.insert(newUser);
         assertNotEquals(0, id);
 

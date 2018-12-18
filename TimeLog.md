@@ -41,3 +41,4 @@
 | 12/15/2018 | Displaying API results to home page | 5 | |
 | 12/16/2018 | Updating database and entities for letting a user favorite a show or add a friend. | 3 | |
 | 12/17/2018 | Adding error handling to home page (displaying message if service is down/no results found. | 1 | |
+| 12/17/2018 | Adding page to view profile and servlet to determine which profile to show | 2 | |

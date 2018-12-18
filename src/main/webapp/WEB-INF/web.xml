@@ -23,6 +23,8 @@
       <web-resource-name>RequiresUserRole</web-resource-name>
       <url-pattern>/home</url-pattern>
       <url-pattern>/home.jsp</url-pattern>
+      <url-pattern>/viewProfile</url-pattern>
+      <url-pattern>/viewProfile.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

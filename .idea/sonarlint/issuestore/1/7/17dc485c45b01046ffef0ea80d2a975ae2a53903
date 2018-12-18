@@ -1,2 +1,5 @@
 
-`squid:S00107G"AConstructor has 8 parameters, which is greater than 7 authorized.(š¦ã8‚×ÁÇû,
+`squid:S00107I"AConstructor has 8 parameters, which is greater than 7 authorized.(š¦ã8‚×ÁÇû,
+vsquid:S3776÷"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(İ¢êÍıÿÿÿÿ8€éêãû,
+Esquid:S1948/"'Make "roles" transient or serializable.(ÁÀö»8ÓÓ©äû,
+Esquid:S19482"'Make "shows" transient or serializable.(‹ìó†8ÓÓ©äû,

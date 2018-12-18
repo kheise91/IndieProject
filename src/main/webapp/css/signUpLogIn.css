@@ -10,25 +10,6 @@ body {
     background-color: black;
 }
 
-    .bg-img {
-    background-image: url("../images/wallpaper.jpg");
-    background-position: 48% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    height: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    z-index: -1;
-}
-
 
 /*
     Main section
@@ -36,7 +17,6 @@ body {
 
 .container {
     padding: 6em 1em 0em 1em;
-    background-color: rgba(0,0,0,.75);
     color: white;
     height: 100%;
 }
@@ -72,6 +52,7 @@ h5 i {
     left: 100%;
     margin-left: -3px;
     top: 0;
+    display: none;
 }
 
 #v-divider-right {
@@ -81,21 +62,27 @@ h5 i {
     right: 100%;
     margin-right: -3px;
     top: 0;
+    display: none;
 }
 
 a#signUpLink {
     position: relative;
-    top: 300px;
+    top: 350px;
     color: orange;
 }
 a#signUpLink:hover {
-    color: lightblue;
     text-decoration: none;
+}
+a#signUpLink h3:hover {
+    color: lightblue !important;
 }
 
 /*
     Form Styles
 */
+form {
+    margin-bottom: 6em;
+}
 #signUp {
     padding-top: 8em;
 }
@@ -125,6 +112,9 @@ h3 {
     }
     h1 {
         font-size: 5em;
+    }
+    #v-divider-left, #v-divider-right {
+        display: block;
     }
 }
 

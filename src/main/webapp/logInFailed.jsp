@@ -19,7 +19,7 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4 main-section">
             <form class="signUpLogInForm" action="j_security_check" method="POST">
-                <h4 class="text-center">Sign In</h4>
+                <h3 class="text-center">Sign In</h3>
                 <p class="error-message text-center">*Invalid Username/Password</p>
                 <div class="form-group">
                     <label for="username">Username:</label>

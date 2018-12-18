@@ -85,3 +85,11 @@ a
 1src/main/java/com/kevinheise/eventful/Search.java,d/5/d50dd1a3dc59e235b45932420fadad8359e9c98f
 ]
 -src/main/java/com/kevinheise/entity/Show.java,e/6/e66a7ab57b8f987e9b49d6a3f51eba8c8b176892
+_
+/src/main/java/com/kevinheise/entity/Friend.java,0/9/0935e0854072dbf0ae078b7f02a331202ba8df88
+h
+8src/main/java/com/kevinheise/controller/ViewProfile.java,2/1/216f398437409c877ecff6278b4218493f099420
+O
+src/main/webapp/viewProfile.jsp,6/3/63b46e1c6add4ee6a1b1c51ca486f3343203e848
+S
+#src/main/webapp/css/viewProfile.css,f/f/ff208a188c2d6098f4236c481b6d315e58216656

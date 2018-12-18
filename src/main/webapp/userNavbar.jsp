@@ -6,10 +6,10 @@
                 <ul class="sub-menu">
                     <li>
                         <br />
-                        <a href="#"><i class="fas fa-splotch"></i>&nbsp;&nbsp;My Shows</a>
+                        <a href="#"><i class="fas fa-star"></i>&nbsp;&nbsp;My Shows</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-users"></i>&nbsp;&nbsp;Friends</a>
+                        <a href="search"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>
                     </li>
                     <li>
                         <a href="viewProfile"><i class="fas fa-user"></i>&nbsp;&nbsp;View Profile</a>

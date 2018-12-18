@@ -6,42 +6,14 @@ html, body {
     height: 100%;
 }
 
-body {
-    background-color: black;
-}
-
-.bg-img {
-    background-image: url("../images/wallpaper.jpg");
-    background-position: 48% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-
-    height: 100%;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    z-index: -1;
-    opacity: .4;
-}
-
-.error-message {
-    font-weight: bold;
-}
+.sub-menu li a {
+     padding-top: .25em !important;
+     padding-bottom: .25em !important;
+ }
 
 .container {
     padding-top: 4em;
     color: white;
-}
-
-.sub-menu li a {
-    padding-top: .25em !important;
-    padding-bottom: .25em !important;
 }
 
 .profile-card {

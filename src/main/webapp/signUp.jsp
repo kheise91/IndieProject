@@ -72,7 +72,7 @@
                 <div class="form-group col-sm-6">
                 <label for="genre">*Favorite Genre:</label>
                 <select class="form-control form-control-lg" id="genre" name="favoriteGenre">
-                    <option value="none">(Choose Genre)</option>
+                    <option value="none" diabled selected>Choose Genre...</option>
                     <option value="blues">Blues</option>
                     <option value="classical">Classical</option>
                     <option value="country">Country</option>

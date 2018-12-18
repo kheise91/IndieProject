@@ -25,6 +25,8 @@
       <url-pattern>/home.jsp</url-pattern>
       <url-pattern>/viewProfile</url-pattern>
       <url-pattern>/viewProfile.jsp</url-pattern>
+      <url-pattern>/search</url-pattern>
+      <url-pattern>/search.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>user</role-name>

@@ -32,63 +32,37 @@ public class HomePage extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        // Get user information
         GenericDao dao = new GenericDao(User.class);
-        Principal userPrincipal = request.getUserPrincipal();
-        String username = userPrincipal.getName();
-        List<User> foundUser = dao.getByPropertyEqual("username", username);
-        User user = (User) foundUser.get(0);
+        User user = (User) dao.getByPropertyEqual("username", request.getUserPrincipal().getName()).get(0);
+        String url = "";
+        String errorMessage = "";
+        List<EventItem> events = null;
+        HttpSession session = request.getSession();
+
+        // Build url to retrieve upcoming shows based on user's favorite genre
+        url = "http://api.eventful.com/json/events/search?location=" + user.getZipCode() + "&within=50&category=music_"
+                + user.getFavoriteGenre() + "&sort_order=date&app_key=";
+        events = new ServiceConsumer().getEvents(url);
+        if (events == null || events.isEmpty()) {
+            errorMessage = "No events found, try again later";
+        }
 
         // Set session attributes and forward to home.jsp
-        List<EventItem> events = getEventList(user.getZipCode(), user.getFavoriteGenre());
         DateTimeFormatter monthFormatter = DateTimeFormatter.ofPattern("MMM");
         DateTimeFormatter dayFormatter = DateTimeFormatter.ofPattern("dd");
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("h:mm a");
 
-        HttpSession session = request.getSession();
         session.setAttribute("user", user);
         session.setAttribute("events", events);
+        session.setAttribute("errorMessage", errorMessage);
         session.setAttribute("monthFormatter", monthFormatter);
         session.setAttribute("dayFormatter", dayFormatter);
         session.setAttribute("dateFormatter", dateFormatter);
         session.setAttribute("timeFormatter", timeFormatter);
 
-
-
         RequestDispatcher dispatcher = request.getRequestDispatcher("/home.jsp");
         dispatcher.forward(request, response);
     }
 
-    public List<EventItem> getEventList(String location, String favoriteGenre) {
-        Properties properties = new Properties();
-        try {
-            properties.load(this.getClass().getResourceAsStream("/project.properties"));
-        } catch(IOException e) {
-            logger.error(e);
-        }
-
-        String appKey = properties.getProperty("app_key");
-        String url = "http://api.eventful.com/json/events/search?location=" + location + "&within=50&category=music_"
-                + favoriteGenre + "&sort_order=date&app_key=";
-
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url + appKey);
-        String eventfulResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-
-        try {
-            Search results = mapper.readValue(eventfulResponse, Search.class);
-            Events events = results.getEvents();
-            if (events != null) {
-                return events.getEvent();
-            } else {
-                return Collections.emptyList();
-            }
-        } catch (IOException ioe) {
-            logger.error(ioe);
-            return Collections.emptyList();
-        }
-    }
 }

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -31,24 +32,24 @@ public class MyShows extends HttpServlet {
 
         // Get user's shows
         Set<Shows> shows = user.getShows();
-        List<String> userShows = new ArrayList<>();
         List<Event> events = new ArrayList<>();
         String url = "http://api.eventful.com/json/events/get?id=";
 
         String errorMessage = "";
         if (shows != null && !shows.isEmpty()) {
+            List<String> userShows = new ArrayList<>();
             for (Shows show : shows) {
                 userShows.add(show.getShowId());
                 Event event = new ServiceConsumer().getEvent(url + show.getShowId() + "&app_key=");
                 events.add(event);
             }
+            session.setAttribute("userShows", userShows);
         } else {
             errorMessage = "You have not added any events yet.";
         }
 
         session.setAttribute("errorMessage", errorMessage);
         session.setAttribute("events", events);
-        session.setAttribute("userShows", userShows);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/myShows.jsp");
         dispatcher.forward(request, response);

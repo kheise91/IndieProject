@@ -60,6 +60,7 @@
                                     <div class="h-divider"></div>
 
                                     <form action="addRemoveShow" method="post">
+                                        <input type="hidden" name="showTitle" value="${event.title}" />
                                         <c:choose>
                                             <c:when test="${userShows.contains(event.id)}">
                                                 <input type="hidden" name="action" value="remove" />

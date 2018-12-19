@@ -66,13 +66,14 @@ public class UpdateUser extends HttpServlet {
             logger.info("Updating user: " + user);
             dao.saveOrUpdate(user);
 
-            response.sendRedirect("viewProfile?update=success");
+            response.sendRedirect("viewProfile");
             return;
         }
 
         session.setAttribute("errorMessage", errorMessage);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/editProfile.jsp");
         dispatcher.forward(request, response);
-
     }
+
+
 }

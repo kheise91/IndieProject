@@ -2,10 +2,12 @@ package com.kevinheise.eventful;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Generated("com.robohorse.robopojogenerator")
-public class Event {
+public class Event{
 
 	@JsonProperty("country")
 	private String country;
@@ -20,7 +22,7 @@ public class Event {
 	private String venueType;
 
 	@JsonProperty("price")
-	private String price;
+	private Object price;
 
 	@JsonProperty("modified")
 	private String modified;
@@ -38,7 +40,7 @@ public class Event {
 	private String longitude;
 
 	@JsonProperty("images")
-	private Object images;
+	private Images images;
 
 	@JsonProperty("going")
 	private Object going;
@@ -89,7 +91,7 @@ public class Event {
 	private String privacy;
 
 	@JsonProperty("description")
-	private String description;
+	private Object description;
 
 	@JsonProperty("title")
 	private String title;
@@ -125,7 +127,7 @@ public class Event {
 	private String address;
 
 	@JsonProperty("performers")
-	private Object performers;
+	private Performers performers;
 
 	@JsonProperty("groups")
 	private Object groups;
@@ -186,11 +188,11 @@ public class Event {
 		return venueType;
 	}
 
-	public void setPrice(String price){
+	public void setPrice(Object price){
 		this.price = price;
 	}
 
-	public String getPrice(){
+	public Object getPrice(){
 		return price;
 	}
 
@@ -234,11 +236,11 @@ public class Event {
 		return longitude;
 	}
 
-	public void setImages(Object images){
+	public void setImages(Images images){
 		this.images = images;
 	}
 
-	public Object getImages(){
+	public Images getImages(){
 		return images;
 	}
 
@@ -274,8 +276,9 @@ public class Event {
 		return recurrence;
 	}
 
-	public void setStartTime(LocalDateTime startTime){
-		this.startTime = startTime;
+	public void setStartTime(String startTime){
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		this.startTime = LocalDateTime.parse(startTime, formatter);
 	}
 
 	public LocalDateTime getStartTime(){
@@ -370,11 +373,11 @@ public class Event {
 		return privacy;
 	}
 
-	public void setDescription(String description){
+	public void setDescription(Object description){
 		this.description = description;
 	}
 
-	public String getDescription(){
+	public Object getDescription(){
 		return description;
 	}
 
@@ -466,11 +469,11 @@ public class Event {
 		return address;
 	}
 
-	public void setPerformers(Object performers){
+	public void setPerformers(Performers performers){
 		this.performers = performers;
 	}
 
-	public Object getPerformers(){
+	public Performers getPerformers(){
 		return performers;
 	}
 
@@ -549,7 +552,7 @@ public class Event {
 	@Override
  	public String toString(){
 		return 
-			"Event{" +
+			"Event{" + 
 			"country = '" + country + '\'' + 
 			",withdrawn = '" + withdrawn + '\'' + 
 			",children = '" + children + '\'' + 

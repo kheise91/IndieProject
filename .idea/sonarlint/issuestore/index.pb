@@ -83,10 +83,6 @@ e
 0src/main/java/com/kevinheise/eventful/Thumb.java,5/6/56d82704d153f2e2ca60d7e78aa78f0fde23abd8
 a
 1src/main/java/com/kevinheise/eventful/Search.java,d/5/d50dd1a3dc59e235b45932420fadad8359e9c98f
-]
--src/main/java/com/kevinheise/entity/Show.java,e/6/e66a7ab57b8f987e9b49d6a3f51eba8c8b176892
-_
-/src/main/java/com/kevinheise/entity/Friend.java,0/9/0935e0854072dbf0ae078b7f02a331202ba8df88
 h
 8src/main/java/com/kevinheise/controller/ViewProfile.java,2/1/216f398437409c877ecff6278b4218493f099420
 O
@@ -109,3 +105,25 @@ S
 #src/main/webapp/css/editProfile.css,0/8/081e0eda08243e51a78da7e69848150e62de67ac
 O
 src/main/webapp/editProfile.jsp,1/2/12317f928acad80121d0bfbbf8814efee8027ebf
+K
+src/main/webapp/js/index.js,d/0/d025c783f678683bd911f266761cfb209bcc1419
+J
+src/main/webapp/js/menu.js,b/2/b2e14728600ec456b0f977d34a7053c17db300b2
+a
+1src/main/java/com/kevinheise/eventful/Medium.java,1/2/123c89764a22f27e4c5fd1e2f53d5c3b4baf5714
+g
+7src/main/java/com/kevinheise/controller/UpdateUser.java,9/8/98346a952f08bd1a9126653044689f7bca950c36
+^
+.src/main/java/com/kevinheise/entity/Shows.java,8/4/84775abd86428018450e28e67fd89c0aad63beab
+a
+1src/main/java/com/kevinheise/eventful/Images.java,4/a/4ad477d088061fefb19d22728a22dc6fc8a55baf
+O
+src/main/webapp/css/myShows.css,d/6/d6c6e17402815510beab94d2af41d5c548cce07b
+`
+0src/main/java/com/kevinheise/eventful/Event.java,1/2/121eae81226a4656135fd0ef0743313dba95c6f1
+j
+:src/main/java/com/kevinheise/controller/AddRemoveShow.java,d/a/da6c72a1b5b47fb52859253899351efa39fc9cd9
+K
+src/main/webapp/myShows.jsp,f/e/fef9b06d3009885e6f3918ab6db6fa9975ed6882
+d
+4src/main/java/com/kevinheise/controller/MyShows.java,4/3/43ab01ae9c10a106819c2f82f605a972fb80b1b9

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -28,21 +29,16 @@ public class MyShows extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
 
-        String updateMessage = (String) request.getAttribute("updateMessage");
-        if (request.getParameter("update") == null || request.getParameter("update").isEmpty()) {
-            updateMessage = "";
-        }
-
-        // Get user events
-        Set<Shows> userShows = user.getShows();
-        List<String> userShowList = new ArrayList<>();
+        // Get user's shows
+        Set<Shows> shows = user.getShows();
+        List<String> userShows = new ArrayList<>();
         List<Event> events = new ArrayList<>();
-        String url = "http://api.eventful.com/rest/events/get?id=";
+        String url = "http://api.eventful.com/json/events/get?id=";
 
         String errorMessage = "";
-        if (userShows != null && !userShows.isEmpty()) {
-            for (Shows show : userShows) {
-                userShowList.add(show.getShowId());
+        if (shows != null && !shows.isEmpty()) {
+            for (Shows show : shows) {
+                userShows.add(show.getShowId());
                 Event event = new ServiceConsumer().getEvent(url + show.getShowId() + "&app_key=");
                 events.add(event);
             }
@@ -50,11 +46,10 @@ public class MyShows extends HttpServlet {
             errorMessage = "You have not added any events yet.";
         }
 
-
-        session.setAttribute("updateMessage", updateMessage);
         session.setAttribute("errorMessage", errorMessage);
         session.setAttribute("events", events);
-        session.setAttribute("userShowList", userShowList);
+        session.setAttribute("userShows", userShows);
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("/myShows.jsp");
         dispatcher.forward(request, response);
     }

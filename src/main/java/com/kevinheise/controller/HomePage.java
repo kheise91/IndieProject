@@ -33,6 +33,7 @@ public class HomePage extends HttpServlet {
         User user = (User) dao.getByPropertyEqual("username", request.getUserPrincipal().getName()).get(0);
         Set<Shows> shows = user.getShows();
         logger.info(shows);
+
         List<String> userShows = new ArrayList<>();
         for (Shows show : shows) {
             userShows.add(show.getShowId());

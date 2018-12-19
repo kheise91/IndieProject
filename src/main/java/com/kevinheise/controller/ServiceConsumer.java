@@ -72,6 +72,7 @@ public class ServiceConsumer {
         WebTarget target = client.target(url + appKey);
         String eventfulResponse = target.request(MediaType.APPLICATION_JSON).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
         return mapper.readValue(eventfulResponse, Event.class);
     }

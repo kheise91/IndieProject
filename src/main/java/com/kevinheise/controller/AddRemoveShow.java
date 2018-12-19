@@ -24,24 +24,27 @@ public class AddRemoveShow extends HttpServlet {
 
         HttpSession session = request.getSession();
         GenericDao userDao = new GenericDao(User.class);
+        GenericDao showsDao = new GenericDao(Shows.class);
         User user = (User) session.getAttribute("user");
-        Shows show = new Shows(user, request.getParameter("showId"));
-        String updateMessage = "";
+        String showId = request.getParameter("showId");
 
         if (request.getParameter("action").equals("add")) {
+            SMSMessenger messenger = new SMSMessenger();
+
+            //messenger.sendMessageToUser(user);
+
+            Shows show = new Shows(user, showId);
             logger.info("adding show: " + show);
             user.addShow(show);
             userDao.saveOrUpdate(user);
-            updateMessage = "Shows Successfully Added";
         } else if (request.getParameter("action").equals("remove")) {
+            Shows show = (Shows) showsDao.getByPropertyEqual("showId", showId).get(0);
             logger.info("removing show: " + show);
             user.removeShow(show);
             userDao.saveOrUpdate(user);
-            updateMessage = "Shows Successfully Removed";
         }
 
-        session.setAttribute("updateMessage", updateMessage);
-        response.sendRedirect("home");
+        response.sendRedirect("myShows?update=success");
     }
 
 }

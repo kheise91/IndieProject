@@ -18,14 +18,30 @@
     <div class="row">
         <div class="col-sm-12" style="padding:0em;">
 
-            <c:if test="${not empty updateMessage}">
-                <div class="success-message">${updateMessage}</div>
-            </c:if>
-
             <div class="profile-card">
                 <div class="profile-card-header">
-                    <h1>${profile.username.toUpperCase()}</h1>
+                    <h1>${profile.username.toUpperCase()} (${profile.emailAddress})</h1>
                     <img src="images/defaultImage.png" />
+
+                    <form id="updateRideShare" action="toggleRideShare" method="post">
+                        <c:choose>
+                            <c:when test="${user.rideShare.equals('Y')}">
+                                <input type="hidden" name="action" value="on" />
+                                <label class="switch" title="Enabling Ride Share will allow you to receive SMS notifications to your phone.">
+                                    <input type="checkbox" checked="checked" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </c:when>
+                            <c:otherwise>
+                                <input type="hidden" name="action" value="off" />
+                                <label class="switch" title="Enabling Ride Share will allow you to receive SMS notifications to your phone.">
+                                    <input type="checkbox" />
+                                    <span class="slider round"></span>
+                                </label>
+                            </c:otherwise>
+                        </c:choose>
+                    </form>
+
                 </div>
 
                 <div class="profile-card-info">
@@ -51,5 +67,9 @@
 </html>
 
 <script type="text/javascript">
-    $(".success-message").delay(3000).hide(500);
+    $('.switch').on('click', function() {
+        setTimeout(function() {
+            $("#updateRideShare").submit();
+        }, 1000);
+    });
 </script>

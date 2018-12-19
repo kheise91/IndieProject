@@ -43,8 +43,6 @@ public class TestServiceClient {
         } catch(IOException e) {
             logger.debug(e);
         }
-
-
     }
 
     @Test
@@ -106,10 +104,19 @@ public class TestServiceClient {
         LocalDateTime expectedDate = LocalDateTime.parse("2019-01-31T20:00");
 
         assertEquals(expectedDate, eventDate);
-
-        String abbDate = eventDate.format(DateTimeFormatter.ofPattern("MMM dd"));
-
-        logger.debug(abbDate);
     }
 
+    @Test
+    void testGetSingleEvent() throws Exception {
+        Client client = ClientBuilder.newClient();
+        WebTarget target = client.target("http://api.eventful.com/json/events/get?id=E0-001-120354494-1&app_key=" + app_key);
+        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+        Event event = mapper.readValue(response, Event.class);
+        String id = event.getId();
+
+        assertEquals("???", id);
+    }
 }

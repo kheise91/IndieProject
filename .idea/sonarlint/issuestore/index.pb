@@ -1,10 +1,6 @@
 
 ]
 -src/main/java/com/kevinheise/entity/Role.java,3/e/3e0dd13d3ecbfe228e5c6c326d36ff3658861d0f
-B
-logs/hibernate.log,9/0/90a1b32fd50d04814dffa07f00c7d4ad83616cbd
-F
-logs/ConcertFinder.log,c/6/c6de58b64d374686677e9048d32f0bcfe90f7aa3
 J
 src/main/webapp/logOut.jsp,a/1/a159d9b627b5e41b39ef7a4eb3919402d88cf263
 M

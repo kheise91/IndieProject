@@ -50,7 +50,6 @@ public class SMSMessenger {
                     .withMessage(message)
                     .withPhoneNumber(phoneNumber)
                     .withMessageAttributes(smsAttributes));
-            System.out.println(result); // Prints the message ID.
 
 
         }

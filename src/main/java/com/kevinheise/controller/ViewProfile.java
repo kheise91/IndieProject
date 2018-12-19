@@ -24,8 +24,7 @@ public class ViewProfile extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         HttpSession session = req.getSession();
-        GenericDao userDao = new GenericDao(User.class);
-        User user = (User) userDao.getByPropertyEqual("username", req.getUserPrincipal().getName()).get(0);
+        User user = (User) session.getAttribute("user");
 
         String successfulUpdateMessage = "";
         if (req.getParameter("update") != null && !req.getParameter("update").isEmpty()) {
@@ -34,6 +33,7 @@ public class ViewProfile extends HttpServlet {
 
         User profile;
         String profileName = req.getParameter("username");
+        GenericDao userDao = new GenericDao(User.class);
         if (profileName != null && !profileName.isEmpty()) {
             profile = (User)userDao.getByPropertyEqual("username", req.getParameter("username")).get(0);
         } else {
@@ -42,7 +42,6 @@ public class ViewProfile extends HttpServlet {
 
         logger.info(profile);
 
-        session.setAttribute("user", user);
         session.setAttribute("profile", profile);
         session.setAttribute("updateMessage", successfulUpdateMessage);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/viewProfile.jsp");

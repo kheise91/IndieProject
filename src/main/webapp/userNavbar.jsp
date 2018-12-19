@@ -6,7 +6,7 @@
                 <ul class="sub-menu">
                     <li>
                         <br />
-                        <a href="#"><i class="fas fa-star"></i>&nbsp;&nbsp;My Shows</a>
+                        <a href="myShows"><i class="fas fa-star"></i>&nbsp;&nbsp;My Shows</a>
                     </li>
                     <li>
                         <a href="search"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</a>

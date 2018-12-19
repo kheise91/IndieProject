@@ -23,6 +23,8 @@
       <web-resource-name>RequiresUserRole</web-resource-name>
       <url-pattern>/home</url-pattern>
       <url-pattern>/home.jsp</url-pattern>
+      <url-pattern>/myShows</url-pattern>
+      <url-pattern>/myShows.jsp</url-pattern>
       <url-pattern>/viewProfile</url-pattern>
       <url-pattern>/viewProfile.jsp</url-pattern>
       <url-pattern>/editProfile</url-pattern>

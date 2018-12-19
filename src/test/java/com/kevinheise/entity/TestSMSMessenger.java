@@ -44,7 +44,7 @@ public class TestSMSMessenger {
 
     @Test
     void sendMessageTest() {
-            AWSCredentials awsCredentials = new BasicAWSCredentials("AKIAI4OUGTNEDDY6KEUQ", "hFHu/LrwPIOEQBufmrQyVLQ552x3ZNHYW0mebnVG");
+            AWSCredentials awsCredentials = new BasicAWSCredentials("", "");
             final AmazonSNSClient client = new AmazonSNSClient(awsCredentials);
             client.setRegion(Region.getRegion(Regions.US_EAST_1));
 

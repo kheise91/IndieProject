@@ -18,6 +18,10 @@
     <div class="row">
         <div class="col-sm-12" style="padding:0em;">
 
+            <c:if test="${not empty updateMessage}">
+                <div class="success-message">${updateMessage}</div>
+            </c:if>
+
             <div class="profile-card">
                 <div class="profile-card-header">
                     <h1>${profile.username.toUpperCase()}</h1>
@@ -45,3 +49,7 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+    $(".success-message").delay(3000).hide(500);
+</script>

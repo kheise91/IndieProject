@@ -51,6 +51,9 @@ public class User implements Serializable {
     @Column(name = "favorite_genre")
     private String favoriteGenre;
 
+    @Column(name = "ride_share")
+    private String rideShare;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<Role> roles = new HashSet<>();
 
@@ -66,7 +69,7 @@ public class User implements Serializable {
     public User() {
     }
 
-    public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String city, String state, LocalDate birthdate, String zipCode, String favoriteGenre) {
+    public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String city, String state, LocalDate birthdate, String zipCode, String favoriteGenre, String rideShare) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
@@ -78,6 +81,7 @@ public class User implements Serializable {
         this.birthdate = birthdate;
         this.zipCode = zipCode;
         this.favoriteGenre = favoriteGenre;
+        this.rideShare = rideShare;
     }
 
     /**
@@ -297,6 +301,24 @@ public class User implements Serializable {
     }
 
     /**
+     * Gets ride share.
+     *
+     * @return the ride share
+     */
+    public String getRideShare() {
+        return rideShare;
+    }
+
+    /**
+     * Sets ride share.
+     *
+     * @param rideShare the ride share
+     */
+    public void setRideShare(String rideShare) {
+        this.rideShare = rideShare;
+    }
+
+    /**
      * Gets roles.
      *
      * @return the roles
@@ -433,6 +455,7 @@ public class User implements Serializable {
                 ", roles=" + roles +
                 ", shows=" + shows +
                 ", friends=" + friends +
+                ", ride_share=" + rideShare +
                 '}';
     }
 
@@ -456,6 +479,8 @@ public class User implements Serializable {
         if (zipCode != null ? !zipCode.equals(user.zipCode) : user.zipCode != null) return false;
         if (favoriteGenre != null ? !favoriteGenre.equals(user.favoriteGenre) : user.favoriteGenre != null)
             return false;
+        if (rideShare != null ? !rideShare.equals(user.rideShare) : user.rideShare != null)
+            return false;
         if (roles != null ? !roles.equals(user.roles) : user.roles != null) return false;
         if (shows != null ? !shows.equals(user.shows) : user.shows != null) return false;
         return friends != null ? friends.equals(user.friends) : user.friends == null;
@@ -475,6 +500,7 @@ public class User implements Serializable {
         result = 31 * result + (birthdate != null ? birthdate.hashCode() : 0);
         result = 31 * result + (zipCode != null ? zipCode.hashCode() : 0);
         result = 31 * result + (favoriteGenre != null ? favoriteGenre.hashCode() : 0);
+        result = 31 * result + (rideShare != null ? rideShare.hashCode() : 0);
         result = 31 * result + (roles != null ? roles.hashCode() : 0);
         result = 31 * result + (shows != null ? shows.hashCode() : 0);
         result = 31 * result + (friends != null ? friends.hashCode() : 0);

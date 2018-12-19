@@ -1,78 +1,52 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>ShowMe - Sign Up</title>
+    <title>ShowMe - Edit Profile</title>
 
     <jsp:include page="headTags.jsp" />
 
-    <link rel="stylesheet" href="css/signUpLogIn.css" />
+    <link rel="stylesheet" href="css/editProfile.css" />
 </head>
 
 <body>
-
-<jsp:include page="indexNavbar.jsp" />
+<jsp:include page="userNavbar.jsp" />
 <div class="bg-img"></div>
 
 <div class="container">
-
     <div class="row">
+
+        <div class="col-sm-12 text-center">
+            <h3>Edit your profile</h3>
+            <p class="col-sm-12 error-message">${errorMessage}</p>
+        </div>
+
         <div class="col-sm-12">
-            <h1 class="text-center">ShowMe</h1>
-            <hr />
-        </div>
-    </div>
+            <form action="updateUser" class="row" method="POST">
 
-    <div class="row">
-        <div class="col-sm-4">
-            <h5><i class="far fa-eye"></i>
-                <br /><br />
-                View upcoming concerts in your area based on your musical tastes
-            </h5>
-            <div id="v-divider-left"></div>
-        </div>
-        <div class="col-sm-4">
-            <h5><i class="fas fa-calendar-check"></i>
-                <br /><br />
-                Keep track of the shows you plan on attending
-            </h5>
-        </div>
-        <div class="col-sm-4">
-            <div id="v-divider-right"></div>
-            <h5><i class="fas fa-users"></i>
-                <br /><br />
-                Find link-minded individuals who are looking to share a ride to the show
-            </h5>
-        </div>
-    </div>
-
-    <a href="#signUp" id="signUpLink"><h3 class="text-center">Sign Up Today <i class="fas fa-caret-square-right"></i></h3></a>
-</div>
-
-<div class="container" id="signUp">
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-8">
-            <form class="row" action="signUp" method="POST">
-                <h3 class="col-sm-12 text-center">Create Your Account</h3>
-                <p class="col-sm-12 error-message">${errorMessage}</p>
                 <div class="form-group col-sm-6">
                     <label for="firstName">*First Name:</label>
-                    <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" value="${user.firstName}" required="required" />
                 </div>
                 <div class="form-group col-sm-6">
                     <label for="lastName">*Last Name:</label>
-                    <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" value="${user.lastName}" required="required" />
                 </div>
+
+
                 <div class="form-group col-sm-6">
-                    <label for="username">*Username:</label>
-                    <input type="text" class="form-control form-control-lg" id="username" name="username" required="required" />
+                    <label for="email">*Email:</label>
+                    <input type="text" class="form-control form-control-lg" id="email" name="email" value="${user.emailAddress}" required="required" />
                 </div>
-                    <div class="form-group col-sm-6">
+
+                <div class="form-group col-sm-6">
+                    <label for="phoneNumber">*Phone Number:</label>
+                    <input type="text" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" value="${user.phoneNumber.substring(2)}" placeholder=(###)###-#### required="required" />
+                </div>
+
+                <div class="form-group col-sm-6">
                     <label for="genre">*Favorite Genre:</label>
                     <select class="form-control form-control-lg" id="genre" name="favoriteGenre">
-                        <option value="none" disabled selected>Choose Genre...</option>
                         <option value="blues">Blues</option>
                         <option value="classical">Classical</option>
                         <option value="country">Country</option>
@@ -92,26 +66,18 @@
                         <option value="alternative">Alternative</option>
                     </select>
                 </div>
-                <div class="form-group col-sm-12">
-                    <label for="email">*Email:</label>
-                    <input type="text" class="form-control form-control-lg" id="email" name="email" required="required" />
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="phoneNumber">*Phone Number:</label>
-                    <input type="text" class="form-control form-control-lg" id="phoneNumber" name="phoneNumber" placeholder="(###)###-####" required="required" />
-                </div>
                 <div class="form-group col-sm-6">
                     <label for="birthdate">*BirthDate:</label>
-                    <input type="date" class="form-control form-control-lg" id="birthdate" name="birthdate" required="required" />
+                    <input type="date" class="form-control form-control-lg" id="birthdate" name="birthdate" value="${user.birthdate}" required="required" />
                 </div>
+
                 <div class="form-group col-sm-6">
                     <label for="city">*City:</label>
-                    <input type="text" class="form-control form-control-lg" id="city" name="city" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="city" name="city" value="${user.city}" required="required" />
                 </div>
                 <div class="form-group col-sm-2">
                     <label for="state">*State:</label>
                     <select class="form-control form-control-lg" id="state" name="state">
-                        <option value="xxx" disabled selected>--</option>
                         <option value="AL">AL</option>
                         <option value="AK">AK</option>
                         <option value="AR">AR</option>
@@ -167,26 +133,22 @@
                 </div>
                 <div class="form-group col-sm-4">
                     <label for="zipCode">*ZIP Code:</label>
-                    <input type="text" class="form-control form-control-lg" id="zipCode" name="zipCode" required="required" />
+                    <input type="text" class="form-control form-control-lg" id="zipCode" name="zipCode" value="${user.zipCode}" required="required" />
                 </div>
-                <div class="form-group col-sm-6">
-                    <label for="password">*Password:</label>
-                    <input type="password" class="form-control form-control-lg" id="password" name="password" required="required" />
-                </div>
-                <div class="form-group col-sm-6">
-                    <label for="passwordConfirm">*Confirm Password:</label>
-                    <input type="password" class="form-control form-control-lg" id="passwordConfirm" name="passwordConfirm" required="required" />
-                </div>
+
                 <div class="col-sm-12">
-                    <button style="margin-top:2em;" type="submit" class="btn btn-block submit-button" name="submit">Create Account</button>
+                    <input type="submit" class="btn btn-block" name="editProfileSubmit" value="Save Changes" />
                 </div>
             </form>
         </div>
-        <div class="col-sm-2"></div>
     </div>
 </div>
 
 <jsp:include page="footer.jsp" />
 
+<script type="text/javascript">
+    $("#genre").val("${user.favoriteGenre}");
+    $("#state").val("${user.state}");
+</script>
 </body>
 </html>

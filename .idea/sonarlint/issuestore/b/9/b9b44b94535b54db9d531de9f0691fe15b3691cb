@@ -1,14 +1,13 @@
 
-Gsquid:S19896"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-ssquid:UselessImportCheck"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ŒòÍ¾şÿÿÿÿ8·Ø‘Åû,
-Gsquid:S1989B"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-isquid:S11925"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ
-Gsquid:S1989T"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-usquid:S11926"RDefine a constant instead of duplicating this literal "signUp.jsp#signUp" 6 times.(ù¾Ğ‡ıÿÿÿÿ8ŠûÅû,
-Gsquid:S1989H"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-Zsquid:S11551">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
-€squid:UselessImportCheck"URemove this unused import 'org.apache.catalina.realm.MessageDigestCredentialHandler'.(ë‰‚Ì8·Ø‘Åû,
-=squid:S1989_"&Add a "try/catch" block for "forward".(òø½
-=squid:S1989_"&Add a "try/catch" block for "forward".(òø½
-Gsquid:S1989<"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
-Gsquid:S1989N"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Zsquid:S11556">Use isEmpty() to check whether the collection is empty or not.(ÊÏóËûÿÿÿÿ
+Gsquid:S1989Y"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+=squid:S1989g"&Add a "try/catch" block for "forward".(òø½
+Gsquid:S1989A"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Gsquid:S1989G"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+Gsquid:S1989S"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+=squid:S1989g"&Add a "try/catch" block for "forward".(òø½
+Gsquid:S1989M"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+usquid:S1192;"RDefine a constant instead of duplicating this literal "signUp.jsp#signUp" 6 times.(ù¾Ğ‡ıÿÿÿÿ8ŠûÅû,
+Gsquid:S1989;"+Add a "try/catch" block for "sendRedirect".(ù¾Ğ‡ıÿÿÿÿ
+„squid:S1488u"fImmediately return this expression instead of assigning it to the temporary variable "hashedPassword".(é„¬Å8ğ×Çüû,
+isquid:S1192:"MDefine a constant instead of duplicating this literal "errorMessage" 6 times.(¼äÙºüÿÿÿÿ

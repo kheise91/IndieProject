@@ -11,6 +11,7 @@ CREATE TABLE user (
 	zip_code CHAR(5) NOT NULL,
 	birthdate DATE NOT NULL,
 	favorite_genre VARCHAR(20) NOT NULL,
+	ride_share CHAR(1) NOT NULL,
 	CONSTRAINT user_id_uindex UNIQUE (id),
 	CONSTRAINT user_username_uindex UNIQUE (username)
 ) ENGINE = InnoDB;

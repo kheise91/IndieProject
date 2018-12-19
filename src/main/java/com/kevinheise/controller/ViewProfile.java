@@ -27,6 +27,11 @@ public class ViewProfile extends HttpServlet {
         GenericDao userDao = new GenericDao(User.class);
         User user = (User) userDao.getByPropertyEqual("username", req.getUserPrincipal().getName()).get(0);
 
+        String successfulUpdateMessage = "";
+        if (req.getParameter("update") != null && !req.getParameter("update").isEmpty()) {
+            successfulUpdateMessage = "Profile Updated Successfully";
+        }
+
         User profile;
         String profileName = req.getParameter("username");
         if (profileName != null && !profileName.isEmpty()) {
@@ -39,6 +44,7 @@ public class ViewProfile extends HttpServlet {
 
         session.setAttribute("user", user);
         session.setAttribute("profile", profile);
+        session.setAttribute("updateMessage", successfulUpdateMessage);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/viewProfile.jsp");
         dispatcher.forward(req, resp);
     }

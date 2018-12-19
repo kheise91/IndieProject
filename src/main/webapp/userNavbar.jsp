@@ -15,7 +15,7 @@
                         <a href="viewProfile"><i class="fas fa-user"></i>&nbsp;&nbsp;View Profile</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-user-edit"></i>&nbsp;&nbsp;Edit Profile</a>
+                        <a href="editProfile"><i class="fas fa-user-edit"></i>&nbsp;&nbsp;Edit Profile</a>
                     </li>
                     <li>
                         <a href="logOut.jsp"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Log Out</a>

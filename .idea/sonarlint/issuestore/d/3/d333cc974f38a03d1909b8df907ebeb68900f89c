@@ -1,11 +1,17 @@
 
-esquid:S24417"GMake "DateTimeFormatter" serializable or don't store it in the session.(¼Þ¿Ä8…¨—±û,
-Vsquid:S1161!":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+bsquid:UselessImportCheck"7Remove this unused import 'javax.ws.rs.core.MediaType'.(œ±‹¡8ÕÑ–„ü,
+Isquid:S1989A"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
+psquid:S24419"MMake "List" and its parameters serializable or don't store it in the session.(í¤¶…ÿÿÿÿÿ8Áª”„ü,
+jsquid:S2441="GMake "DateTimeFormatter" serializable or don't store it in the session.(ÌúÔ®üÿÿÿÿ8Áª”„ü,
+Isquid:S1989A"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
+esquid:S2441;"GMake "DateTimeFormatter" serializable or don't store it in the session.(»´£à8Áª”„ü,
+esquid:S2441>"GMake "DateTimeFormatter" serializable or don't store it in the session.(¼Þ¿Ä8Áª”„ü,
+‚squid:UselessImportCheck"RRemove this unused import 'com.fasterxml.jackson.databind.DeserializationFeature'.(ÌòÔ¹üÿÿÿÿ8ÕÑ–„ü,
+^squid:UselessImportCheck"4Remove this unused import 'java.security.Principal'.(’ÛÞ[8™ª°ýû,
+jsquid:S2441<"GMake "DateTimeFormatter" serializable or don't store it in the session.(Ý†Öñúÿÿÿÿ8Áª”„ü,
+Hsquid:S1068"*Remove this unused "logger" private field.(æ×âÁ8ÕÑ–„ü,
+bsquid:UselessImportCheck"2Remove this unused import 'java.util.Collections'.(¢³ïÓþÿÿÿÿ8ÕÑ–„ü,
 Vsquid:UselessImportCheck"+Remove this unused import 'java.util.Date'.(¸…¼ü8˜Î®û,
-psquid:S24413"MMake "List" and its parameters serializable or don't store it in the session.(í¤¶…ÿÿÿÿÿ8×êÃåû,
-esquid:S24414"GMake "DateTimeFormatter" serializable or don't store it in the session.(»´£à8¦Ëã­û,
-jsquid:S24415"GMake "DateTimeFormatter" serializable or don't store it in the session.(Ý†Öñúÿÿÿÿ8¦Ëã­û,
-Isquid:S1989<"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
-Isquid:S1989<"&Add a "try/catch" block for "forward".(ÜÕˆêøÿÿÿÿ8ØÇÛ­û,
-Jsquid:S1905("'Remove this unnecessary cast to "User".(ºÕ½þýÿÿÿÿ8¦µè×û,
-jsquid:S24416"GMake "DateTimeFormatter" serializable or don't store it in the session.(ÌúÔ®üÿÿÿÿ8°Ø®û,
+\squid:UselessImportCheck"1Remove this unused import 'java.util.Properties'.(¬µŽ²8ÕÑ–„ü,
+Vsquid:S1161!":Add the "@Override" annotation above this method signature(Ïû©Öûÿÿÿÿ
+ssquid:UselessImportCheck"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™8ÕÑ–„ü,

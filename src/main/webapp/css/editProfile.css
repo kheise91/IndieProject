@@ -1,0 +1,42 @@
+/*******************************************************************************
+* Stylesheet for sign up and log in pages                                      *
+*******************************************************************************/
+
+body {
+    height: auto;
+}
+
+.sub-menu li a {
+    padding-top: .25em !important;
+    padding-bottom: .25em !important;
+}
+
+.container {
+    margin-top: 6em;
+    color: white;
+}
+
+h3 {
+    color: orange;
+    margin-bottom: 1em;
+}
+
+form {
+    padding: 0em 12em;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: white;
+    margin-top: 2em !important;
+}
+input[type="submit"]:hover {
+    background-color: #cc8500;
+}
+
+/* Meidum screens and up */
+@media (min-width: 768px) {
+    .container {
+        margin-top: 8em;
+    }
+}

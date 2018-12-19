@@ -62,17 +62,18 @@ public class TestSMSMessenger {
         SMSMessenger messenger = new SMSMessenger();
         GenericDao dao = new GenericDao(User.class);
         User user = (User) dao.getByPropertyEqual("username", "kheise").get(0);
-        assertEquals("???", user);
-        //messenger.sendMessageToUser(user);
+        messenger.sendMessageToUser(user, "Testing Message");
+
+        assertEquals("+16086179434", user.getPhoneNumber());
     }
 
 
-    public static void sendSMSMessage(AmazonSNSClient snsClient, String message,
+    public static PublishResult sendSMSMessage(AmazonSNSClient snsClient, String message,
                                       String phoneNumber, Map<String, MessageAttributeValue> smsAttributes) {
         PublishResult result = snsClient.publish(new PublishRequest()
                 .withMessage(message)
                 .withPhoneNumber(phoneNumber)
                 .withMessageAttributes(smsAttributes));
-        System.out.println(result); // Prints the message ID.
+        return result;
     }
 }

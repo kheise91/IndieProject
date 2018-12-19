@@ -32,8 +32,8 @@ public class UserDaoTest {
     @Test
     void getByIdSuccess() {
         User retrievedUser = (User) userDao.getById(1);
-        assertEquals("John", retrievedUser.getFirstName());
-        assertEquals("Johnson", retrievedUser.getLastName());
+        assertEquals("Kevin", retrievedUser.getFirstName());
+        assertEquals("Heise", retrievedUser.getLastName());
     }
 
     /**
@@ -95,7 +95,7 @@ public class UserDaoTest {
     @Test
     void getAllUsersSuccess() {
         List<User> users = userDao.getAll();
-        assertEquals(3, users.size());
+        assertEquals(1, users.size());
     }
 
     /**
@@ -103,15 +103,11 @@ public class UserDaoTest {
      */
     @Test
     void getByUsernameSuccess() {
-        List<User> retrievedUserList = userDao.getByPropertyEqual("username", "johnj");
+        List<User> retrievedUserList = userDao.getByPropertyEqual("username", "kheise");
         assertEquals(1, retrievedUserList.size());
 
         User retrievedUser = retrievedUserList.get(0);
-        assertEquals("johnJ", retrievedUser.getUsername());
+        assertEquals("kheise", retrievedUser.getUsername());
     }
 
-    @Test
-    void addShowToUserShows() {
-
-    }
 }

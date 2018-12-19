@@ -4,6 +4,7 @@ package com.kevinheise.entity;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kevinheise.controller.ServiceConsumer;
 import com.kevinheise.eventful.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,6 +25,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TestServiceClient {
 
@@ -50,73 +52,28 @@ public class TestServiceClient {
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url + app_key);
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
-        assertEquals("???", response);
+        Search results = mapper.readValue(response, Search.class);
+        Events events = results.getEvents();
+
+        assertNotNull(events);
     }
 
     @Test
      void testGetListOfEvents() throws Exception {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url + app_key);
-        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
+        List<EventItem> eventList = new ServiceConsumer().getEvents(url);
 
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Search results = mapper.readValue(response, Search.class);
-
-        Events events = results.getEvents();
-        List<EventItem> eventList = events.getEvent();
-
-        assertEquals("???", eventList);
-    }
-
-    @Test
-    void testGetImage() throws Exception {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url + app_key);
-        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Search results = mapper.readValue(response, Search.class);
-
-        Events events = results.getEvents();
-        List<EventItem> eventList = events.getEvent();
-        String eventImage = eventList.get(4).getImage().getUrl();
-
-        assertEquals("???", eventImage);
-    }
-
-    @Test
-    void testGetDate() throws Exception {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(url + app_key);
-        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Search results = mapper.readValue(response, Search.class);
-
-        Events events = results.getEvents();
-        EventItem event = events.getEvent().get(0);
-
-        LocalDateTime eventDate = event.getStartTime();
-        LocalDateTime expectedDate = LocalDateTime.parse("2019-01-31T20:00");
-
-        assertEquals(expectedDate, eventDate);
+        assertEquals(7, eventList.size());
     }
 
     @Test
     void testGetSingleEvent() throws Exception {
-        Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://api.eventful.com/json/events/get?id=E0-001-120354494-1&app_key=" + app_key);
-        String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-        Event event = mapper.readValue(response, Event.class);
+        String url = "http://api.eventful.com/json/events/get?id=E0-001-120354494-1&app_key=";
+        Event event = new ServiceConsumer().getEvent(url);
         String id = event.getId();
 
-        assertEquals("???", id);
+        assertEquals("E0-001-120354494-1", id);
     }
 }

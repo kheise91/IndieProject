@@ -17,11 +17,20 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * The type Sms messenger.
+ */
 public class SMSMessenger {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-        public void sendMessageToUser(User user, String messageInput) {
+    /**
+     *  Builds the SMS notification to be sent
+     *
+     * @param user         the user
+     * @param messageInput the message input
+     */
+    public void sendMessageToUser(User user, String messageInput) {
             Properties properties = new Properties();
             try {
                 properties.load(this.getClass().getResourceAsStream("/project.properties"));
@@ -44,13 +53,21 @@ public class SMSMessenger {
             sendSMSMessage(snsClient, message, phoneNumber, smsAttributes);
         }
 
-        public static void sendSMSMessage(AmazonSNSClient snsClient, String message,
+    /**
+     * Sends the SMS notification
+     *
+     * @param snsClient     the sns client
+     * @param message       the message
+     * @param phoneNumber   the phone number
+     * @param smsAttributes the sms attributes
+     */
+    public void sendSMSMessage(AmazonSNSClient snsClient, String message,
                                           String phoneNumber, Map<String, MessageAttributeValue> smsAttributes) {
             PublishResult result = snsClient.publish(new PublishRequest()
                     .withMessage(message)
                     .withPhoneNumber(phoneNumber)
                     .withMessageAttributes(smsAttributes));
-
+            logger.info(result);
 
         }
 }

@@ -6,7 +6,9 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * The type Role.
+ *  Class to represent a role belonging to a user
+ *
+ *  @author kheise
  */
 @Entity(name = "Role")
 @Table(name = "role")

@@ -21,9 +21,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
- * Created by Kevin Heise
+ *  Servlet for signing up a new user and adding a role
+ *
+ *  @author kheise
  */
-
 @WebServlet(name = "SignUpUser", urlPatterns = { "/signUp" } )
 public class SignUpUser extends HttpServlet {
 
@@ -90,6 +91,12 @@ public class SignUpUser extends HttpServlet {
         resp.sendRedirect("signUp.jsp#signUp");
     }
 
+    /**
+     * Hash password string.
+     *
+     * @param passwordToHash the password to hash
+     * @return the string
+     */
     public String hashPassword(String passwordToHash) {
 
         MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();

@@ -16,6 +16,11 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ *  Servlet to update a user after filling out the edit profile form.
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "UpdateUser", urlPatterns = "/updateUser")
 public class UpdateUser extends HttpServlet {
 

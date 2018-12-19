@@ -16,6 +16,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ *  Servlet for the search page that will also display results
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "SearchPage", urlPatterns = { "/search" })
 public class SearchPage extends HttpServlet {
 

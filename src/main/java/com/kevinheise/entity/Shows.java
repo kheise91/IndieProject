@@ -6,7 +6,9 @@ import javax.persistence.*;
 import java.util.Objects;
 
 /**
- * The type Shows.
+ *  Class to represent a show belonging to a user.
+ *
+ *  @author kheise
  */
 @Entity(name = "Shows")
 @Table(name = "shows")

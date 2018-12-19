@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.kevinheise.eventful.Event;
 import com.kevinheise.eventful.EventItem;
-import com.kevinheise.eventful.Events;
 import com.kevinheise.eventful.Search;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,7 +23,7 @@ import java.util.Properties;
 public class ServiceConsumer {
 
     /**
-     * Gets events.
+     * Gets list of events based on url passed in
      *
      * @param url the url
      * @return the events
@@ -57,6 +56,13 @@ public class ServiceConsumer {
     }
 
 
+    /**
+     * Gets a single event, used for building list of user's events
+     *
+     * @param url the url
+     * @return the event
+     * @throws IOException the io exception
+     */
     public Event getEvent(String url) throws IOException {
         final Logger logger = LogManager.getLogger(this.getClass());
 

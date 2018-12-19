@@ -20,6 +20,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *  Servlet for MyShows page, loads any shows that user has added to their list
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "MyShows", urlPatterns = "/myShows")
 public class MyShows extends HttpServlet {
 

@@ -11,6 +11,11 @@ import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
+/**
+ * The type Generic dao.
+ *
+ * @param <T> the type parameter
+ */
 public class GenericDao<T> {
     private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -26,7 +31,9 @@ public class GenericDao<T> {
 
     /**
      * Gets a entity by id
-     * @param id entity id to search by
+     *
+     * @param <T> the type parameter
+     * @param id  entity id to search by
      * @return a entity
      */
     public <T>T getById(int id) {
@@ -67,11 +74,12 @@ public class GenericDao<T> {
 
     }
 
-    /** Event entity by property (exact match)
+    /**
+     * Event entity by property (exact match)
      * sample usage: getByPropertyEqual("lastName", "Curry")
      *
      * @param propertyName entity property to search by
-     * @param value value of the property to search for
+     * @param value        value of the property to search for
      * @return list of entities meeting the criteria search
      */
     public List<T> getByPropertyEqual(String propertyName, String value) {
@@ -88,7 +96,8 @@ public class GenericDao<T> {
 
     /**
      * insert entity
-     * @param entity  Entity to be inserted or updated
+     *
+     * @param entity Entity to be inserted or updated
      * @return id of the inserted order
      */
     public int insert(T entity) {
@@ -103,7 +112,8 @@ public class GenericDao<T> {
 
     /**
      * update entity
-     * @param entity  Entity to be inserted or updated
+     *
+     * @param entity Entity to be inserted or updated
      */
     public void saveOrUpdate(T entity) {
         Session session = getSession();
@@ -118,7 +128,7 @@ public class GenericDao<T> {
      * sample usage: getByPropertyLike("lastName", "C")
      *
      * @param propertyName entity property to search by
-     * @param value value of the property to search for
+     * @param value        value of the property to search for
      * @return list of entities meeting the criteria search
      */
     public List<T> getByPropertyLike(String propertyName, String value) {

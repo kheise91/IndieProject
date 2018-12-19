@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ *  Servlet to toggle ride share on or off for user
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "ToggleRideShare", urlPatterns = "/toggleRideShare")
 public class ToggleRideShare extends HttpServlet {
 

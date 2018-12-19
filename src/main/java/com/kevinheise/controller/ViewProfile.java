@@ -1,13 +1,5 @@
 package com.kevinheise.controller;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.regions.Region;
-import com.amazonaws.regions.Regions;
-import com.amazonaws.services.sns.AmazonSNSClient;
-import com.amazonaws.services.sns.model.MessageAttributeValue;
-import com.amazonaws.services.sns.model.PublishRequest;
-import com.amazonaws.services.sns.model.PublishResult;
 import com.kevinheise.entity.User;
 import com.kevinheise.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
@@ -21,11 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.security.Principal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
+/**
+ *  Servlet to control the view profile page. Default profile is the user logged in, but other profiles can be viewed
+ *  with the use of a url parameter.
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "ViewProfile", urlPatterns = { "/viewProfile" })
 public class ViewProfile extends HttpServlet {
 
@@ -50,15 +44,6 @@ public class ViewProfile extends HttpServlet {
         session.setAttribute("profile", profile);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/viewProfile.jsp");
         dispatcher.forward(req, resp);
-    }
-
-    public static void sendSMSMessage(AmazonSNSClient snsClient, String message,
-                                      String phoneNumber, Map<String, MessageAttributeValue> smsAttributes) {
-        PublishResult result = snsClient.publish(new PublishRequest()
-                .withMessage(message)
-                .withPhoneNumber(phoneNumber)
-                .withMessageAttributes(smsAttributes));
-        System.out.println(result); // Prints the message ID.
     }
 
 }

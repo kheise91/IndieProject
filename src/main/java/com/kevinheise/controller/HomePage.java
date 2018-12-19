@@ -18,6 +18,11 @@ import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ *  Servlet for the home page that displays a lit of events based on user's favorite genre and location
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "HomePage", urlPatterns = { "/home" } )
 public class HomePage extends HttpServlet {
 

@@ -14,9 +14,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+/**
+ *  Servlet to add / remove a show to a user's list of shows
+ *
+ *  @author kheise
+ */
 @WebServlet(name = "AddRemoveShow", urlPatterns = "/addRemoveShow")
 public class AddRemoveShow extends HttpServlet {
 
@@ -28,8 +34,12 @@ public class AddRemoveShow extends HttpServlet {
         HttpSession session = request.getSession();
         GenericDao userDao = new GenericDao(User.class);
         GenericDao showsDao = new GenericDao(Shows.class);
+
+        // Get user and list of their shows
         User user = (User) session.getAttribute("user");
-        List<String> userShows = (List<String>) session.getAttribute("userShows");
+        List<String> userShows = new ArrayList<>();
+
+        // Get form parameters
         String action = request.getParameter("action");
         String showId = request.getParameter("showId");
         String showTitle = request.getParameter("showTitle");

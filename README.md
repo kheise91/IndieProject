@@ -1,9 +1,9 @@
 # [ShowMe](http://18.218.13.172:8080/ShowMe/)
 
-## [ShowMe Demo]()
-
 This repository is for my Indie Project (ShowMe)
 
+## [ShowMe Demo - Part 1](https://youtu.be/s808aNiFkUs)
+## [ShowMe Demo - Part 2](https://youtu.be/ysslM17fKkM)
 ### Problem Statement
 
 What if there was only one place you had to go to view upcoming concerts in your area, based on your musical tastes? ShowMe will do just that. ShowMe will aslo keep track of any previous shows that you've attended, making it easy to view photos to remind you of the great times you had.

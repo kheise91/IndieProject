@@ -54,3 +54,4 @@ fabric.properties
 # Project properties
 src/test/resources/project.properties
 src/main/resources/project.properties
+logs/

@@ -44,3 +44,4 @@
 | 12/17/2018 | Adding page to view profile and servlet to determine which profile to show | 2 | |
 | 12/17/2018 | Adding page to search for events, cleaning up code in controller classes, and adding new class with function to consume rest service. Also hashing password when adding a new user. | 6 | |
 | 12/19/2018 | Adding page to edit user's profile | 3 | |
+| 12/19/2018 | Adding ride share feature and sms notifications | 5 | |

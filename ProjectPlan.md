@@ -36,36 +36,36 @@
 - [x] Create db on AWS
 - [x] Deploy to AWS
 - [x] Create dashboard / welcome screen jsp
-- [ ] Create user account page jsp
-- [ ] Add/update/delete account settings jsp
+- [x] Create user account page jsp
+- [x] Add/update/delete account settings jsp
 - [x] Prepare for Checkpoint 2
 - [x] Weekly Journal Entry
  
 ### Week 7
 - [x] Set up authentication locally
 - [x] Set up authentication on AWS
-- [ ] Set up friends page jsp
+~~- [ ] Set up friends page jsp~~
 - [x] Review and incorporate feedback from Checkpoint 2
 - [x] Weekly Journal Entry
 
 ### Week 8
-- [ ] Integrate bandsintown api
-- [ ] Add upcoming shows to dasboard jsp and home screen jsp
-- [ ] Add search functionality to dashboard jsp
-- [ ] Set up My Shows jsp
-- [ ] My Shows to display previous shows, upcoming shows, and shows the user would like to go to
+- [x] Integrate eventful api
+- [x] Add upcoming shows to dasboard jsp and home screen jsp
+- [x] Add search functionality to dashboard jsp
+- [x] Set up My Shows jsp
+- [x] My Shows to display upcoming shows, and shows the user would like to go to
 - [x] Prepare for Checkpoint 3
 - [x] Weekly journal entry
 
 ### Week 9
-- [ ] View friends/other user's show data
-- [ ] Add notification when two users are looking for a show to go to together
-- [ ] Add password reset/reminder functionality
+~~- [ ] View friends/other user's show data~~
+- [x] Add notification when two users are looking for a show to go to together
+~~- [ ] Add password reset/reminder functionality~~
 - [x] Review and incorporate feedback from Checkpoint 3
 - [x] Weekly Journal Entry
 
 ### Week 10
-- [ ] Unit test all api integrations
+- [x] Unit test all api integrations
 - [x] Weekly Journal Entry
 
 ### Week 11 - Team project work week
@@ -76,22 +76,22 @@
 - [x] Weekly Journal Entry
 
 ### Week 13
-- [ ] Work through todo list for indie project
-- [ ] Prepare for week 13 peer code reviews
-- [ ] Review project rubric
-- [ ] Weekly Journal Entry
+- [x] Work through todo list for indie project
+- [x] Prepare for week 13 peer code reviews
+- [x] Review project rubric
+- [x] Weekly Journal Entry
 
 ### Week 14
-- [ ] Create final presentation
-- [ ] Weekly Journal Entry
+- [x] Create final presentation
+- [x] Weekly Journal Entry
 
 ### Week 15
-- [ ] Final Presentation
-- [ ] Create video
-- [ ] Finalize all documentation
-- [ ] Code quality check
-- [ ] fWeekly Journal Entry
+- [x] Final Presentation
+- [x] Create video
+- [x] Finalize all documentation
+- [x] Code quality check
+- [x] Weekly Journal Entry
 
 ### Week 16
-- [ ] Final touches before code complete
-- [ ] Weekly Journal Entry
+- [x] Final touches before code complete
+- [x] Weekly Journal Entry

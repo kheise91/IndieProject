@@ -29,7 +29,7 @@ public class SearchPage extends HttpServlet {
         HttpSession session = request.getSession();
 
         if (request.getParameter("submit") != null && !request.getParameter("submit").isEmpty()) {
-            // Get form parameters
+            // Event form parameters
             String genre = request.getParameter("genre");
             String distance = request.getParameter("distance");
             String zipCode = request.getParameter("zipCode");
@@ -46,7 +46,7 @@ public class SearchPage extends HttpServlet {
                         + genre + "&sort_order=date&app_key=";
                 logger.info("Search url: " + url);
 
-                // Get event list, set session attributes and forward to search.jsp
+                // Event event list, set session attributes and forward to search.jsp
                 events = new ServiceConsumer().getEvents(url);
                 logger.info(events);
 

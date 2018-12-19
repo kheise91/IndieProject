@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
 <div class="row">
     <div class="col-sm-12">
 
@@ -57,7 +58,21 @@
                                             ${event.cityName}, ${event.regionAbbr} ${event.postalCode}
                                     </p>
                                     <div class="h-divider"></div>
-                                    <a href="#" class="add-remove-show">Add To My Shows</a>
+
+                                    <form action="addRemoveShow" method="post">
+                                        <c:choose>
+                                            <c:when test="${userShows.contains(event.id)}">
+                                                <input type="hidden" name="action" value="remove" />
+                                                <input type="hidden" name="showId" value="${event.id}" />
+                                                <input type="submit" name="addRemoveSubmit" class="add-remove-show" value="Remove From My Shows" />
+                                            </c:when>
+                                            <c:otherwise>
+                                                <input type="hidden" name="action" value="add" />
+                                                <input type="hidden" name="showId" value="${event.id}" />
+                                                <input type="submit" name="addRemoveSubmit" class="add-remove-show" value="Add To My Shows" />
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </form>
                                 </div>
                             </div>
                         </div>

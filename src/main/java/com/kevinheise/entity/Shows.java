@@ -3,22 +3,23 @@ package com.kevinheise.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 /**
- * The type Show.
+ * The type Shows.
  */
-@Entity(name = "Show")
-@Table(name = "user_show")
-public class Show {
+@Entity(name = "Shows")
+@Table(name = "shows")
+public class Shows {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
     @ManyToOne
     @JoinColumn(name = "user_id",
-            foreignKey = @ForeignKey(name = "user_show_ibfk_1")
+            foreignKey = @ForeignKey(name = "shows_user_user_id_fk")
     )
     private User user;
 
@@ -26,18 +27,18 @@ public class Show {
     private String showId;
 
     /**
-     * Instantiates a new Show.
+     * Instantiates a new Shows.
      */
-    public Show() {
+    public Shows() {
     }
 
     /**
-     * Instantiates a new Show.
+     * Instantiates a new Shows.
      *
      * @param user   the user
      * @param showId the show id
      */
-    public Show(User user, String showId) {
+    public Shows(User user, String showId) {
         this.user = user;
         this.showId = showId;
     }
@@ -98,7 +99,7 @@ public class Show {
 
     @Override
     public String toString() {
-        return "Show{" +
+        return "Shows{" +
                 "id=" + id +
                 ", user=" + user +
                 ", showId='" + showId + '\'' +
@@ -109,19 +110,14 @@ public class Show {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
-        Show show = (Show) o;
-
-        if (id != show.id) return false;
-        if (user != null ? !user.equals(show.user) : show.user != null) return false;
-        return showId != null ? showId.equals(show.showId) : show.showId == null;
+        Shows shows = (Shows) o;
+        return id == shows.id &&
+                Objects.equals(user, shows.user) &&
+                Objects.equals(showId, shows.showId);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (user != null ? user.hashCode() : 0);
-        result = 31 * result + (showId != null ? showId.hashCode() : 0);
-        return result;
+        return Objects.hash(id, user, showId);
     }
 }

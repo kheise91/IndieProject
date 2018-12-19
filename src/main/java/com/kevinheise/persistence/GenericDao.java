@@ -67,7 +67,7 @@ public class GenericDao<T> {
 
     }
 
-    /** Get entity by property (exact match)
+    /** Event entity by property (exact match)
      * sample usage: getByPropertyEqual("lastName", "Curry")
      *
      * @param propertyName entity property to search by
@@ -114,7 +114,7 @@ public class GenericDao<T> {
     }
 
     /**
-     * Get entity by property (like)
+     * Event entity by property (like)
      * sample usage: getByPropertyLike("lastName", "C")
      *
      * @param propertyName entity property to search by

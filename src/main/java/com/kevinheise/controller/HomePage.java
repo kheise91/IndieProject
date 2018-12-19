@@ -1,7 +1,6 @@
 package com.kevinheise.controller;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kevinheise.entity.Shows;
 import com.kevinheise.entity.User;
 import com.kevinheise.eventful.*;
 import com.kevinheise.persistence.GenericDao;
@@ -15,15 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.MediaType;
 import java.io.IOException;
-import java.security.Principal;
 import java.time.format.DateTimeFormatter;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 @WebServlet(name = "HomePage", urlPatterns = { "/home" } )
 public class HomePage extends HttpServlet {
@@ -32,17 +25,24 @@ public class HomePage extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Get user and user's list of shows
+        HttpSession session = request.getSession();
+        String errorMessage = "";
+
         GenericDao dao = new GenericDao(User.class);
         User user = (User) dao.getByPropertyEqual("username", request.getUserPrincipal().getName()).get(0);
-        String url = "";
-        String errorMessage = "";
-        List<EventItem> events = null;
-        HttpSession session = request.getSession();
+        Set<Shows> shows = user.getShows();
+        logger.info(shows);
+        List<String> userShows = new ArrayList<>();
+        for (Shows show : shows) {
+            userShows.add(show.getShowId());
+        }
+        logger.info(userShows);
 
         // Build url to retrieve upcoming shows based on user's favorite genre
-        url = "http://api.eventful.com/json/events/search?location=" + user.getZipCode() + "&within=50&category=music_"
+        String url = "http://api.eventful.com/json/events/search?location=" + user.getZipCode() + "&within=50&category=music_"
                 + user.getFavoriteGenre() + "&sort_order=date&app_key=";
-        events = new ServiceConsumer().getEvents(url);
+        List<EventItem> events = new ServiceConsumer().getEvents(url);
         if (events == null || events.isEmpty()) {
             errorMessage = "No events found, try again later";
         }
@@ -55,6 +55,7 @@ public class HomePage extends HttpServlet {
 
         session.setAttribute("user", user);
         session.setAttribute("events", events);
+        session.setAttribute("userShows", userShows);
         session.setAttribute("errorMessage", errorMessage);
         session.setAttribute("monthFormatter", monthFormatter);
         session.setAttribute("dayFormatter", dayFormatter);

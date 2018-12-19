@@ -5,10 +5,10 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.*;
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -16,11 +16,11 @@ import java.util.Set;
  */
 @Entity(name = "User")
 @Table(name = "user")
-public class User implements Serializable {
+public class User {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
-    @GenericGenerator(name = "native",strategy = "native")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
     private String username;
@@ -58,10 +58,7 @@ public class User implements Serializable {
     private Set<Role> roles = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Show> shows = new HashSet<>();
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Friend> friends = new HashSet<>();
+    private Set<Shows> shows = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -69,6 +66,22 @@ public class User implements Serializable {
     public User() {
     }
 
+    /**
+     * Instantiates a new User.
+     *
+     * @param username      the username
+     * @param password      the password
+     * @param firstName     the first name
+     * @param lastName      the last name
+     * @param emailAddress  the email address
+     * @param phoneNumber   the phone number
+     * @param city          the city
+     * @param state         the state
+     * @param birthdate     the birthdate
+     * @param zipCode       the zip code
+     * @param favoriteGenre the favorite genre
+     * @param rideShare     the ride share
+     */
     public User(String username, String password, String firstName, String lastName, String emailAddress, String phoneNumber, String city, String state, LocalDate birthdate, String zipCode, String favoriteGenre, String rideShare) {
         this.username = username;
         this.password = password;
@@ -337,6 +350,24 @@ public class User implements Serializable {
     }
 
     /**
+     * Gets shows.
+     *
+     * @return the shows
+     */
+    public Set<Shows> getShows() {
+        return shows;
+    }
+
+    /**
+     * Sets shows.
+     *
+     * @param shows the shows
+     */
+    public void setShows(Set<Shows> shows) {
+        this.shows = shows;
+    }
+
+    /**
      * Add role.
      *
      * @param role the role
@@ -356,29 +387,11 @@ public class User implements Serializable {
     }
 
     /**
-     * Gets shows.
-     *
-     * @return the shows
-     */
-    public Set<Show> getShows() {
-        return shows;
-    }
-
-    /**
-     * Sets shows.
-     *
-     * @param shows the shows
-     */
-    public void setShows(Set<Show> shows) {
-        this.shows = shows;
-    }
-
-    /**
      * Add show.
      *
      * @param show the show
      */
-    public void addShow(Show show) {
+    public void addShow(Shows show) {
         shows.add(show);
     }
 
@@ -387,49 +400,13 @@ public class User implements Serializable {
      *
      * @param show the show
      */
-    public void removeShow(Show show) {
+    public void removeShow(Shows show) {
         shows.remove(show);
         show.setUser(null);
     }
 
     /**
-     * Gets friends.
-     *
-     * @return the friends
-     */
-    public Set<Friend> getFriends() {
-        return friends;
-    }
-
-    /**
-     * Sets friends.
-     *
-     * @param friends the friends
-     */
-    public void setFriends(Set<Friend> friends) {
-        this.friends = friends;
-    }
-
-    /**
-     * Add friend.
-     *
-     * @param friend the friend
-     */
-    public void addFriend(Friend friend) {
-        friends.add(friend);
-    }
-
-    /**
-     * Remove friend.
-     *
-     * @param friend the friend
-     */
-    public void removeFriend(Friend friend) {
-        friends.remove(friend);
-    }
-
-    /**
-     * Get age.
+     * Get age int.
      *
      * @return the int
      */
@@ -449,13 +426,10 @@ public class User implements Serializable {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", birthdate='" + birthdate + '\'' +
+                ", birthdate=" + birthdate +
                 ", zipCode='" + zipCode + '\'' +
                 ", favoriteGenre='" + favoriteGenre + '\'' +
-                ", roles=" + roles +
-                ", shows=" + shows +
-                ", friends=" + friends +
-                ", ride_share=" + rideShare +
+                ", rideShare='" + rideShare + '\'' +
                 '}';
     }
 
@@ -463,47 +437,24 @@ public class User implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         User user = (User) o;
-
-        if (id != user.id) return false;
-        if (username != null ? !username.equals(user.username) : user.username != null) return false;
-        if (password != null ? !password.equals(user.password) : user.password != null) return false;
-        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
-        if (emailAddress != null ? !emailAddress.equals(user.emailAddress) : user.emailAddress != null) return false;
-        if (phoneNumber != null ? !phoneNumber.equals(user.phoneNumber) : user.phoneNumber != null) return false;
-        if (city != null ? !city.equals(user.city) : user.city != null) return false;
-        if (state != null ? !state.equals(user.state) : user.state != null) return false;
-        if (birthdate != null ? !birthdate.equals(user.birthdate) : user.birthdate != null) return false;
-        if (zipCode != null ? !zipCode.equals(user.zipCode) : user.zipCode != null) return false;
-        if (favoriteGenre != null ? !favoriteGenre.equals(user.favoriteGenre) : user.favoriteGenre != null)
-            return false;
-        if (rideShare != null ? !rideShare.equals(user.rideShare) : user.rideShare != null)
-            return false;
-        if (roles != null ? !roles.equals(user.roles) : user.roles != null) return false;
-        if (shows != null ? !shows.equals(user.shows) : user.shows != null) return false;
-        return friends != null ? friends.equals(user.friends) : user.friends == null;
+        return id == user.id &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(emailAddress, user.emailAddress) &&
+                Objects.equals(phoneNumber, user.phoneNumber) &&
+                Objects.equals(city, user.city) &&
+                Objects.equals(state, user.state) &&
+                Objects.equals(birthdate, user.birthdate) &&
+                Objects.equals(zipCode, user.zipCode) &&
+                Objects.equals(favoriteGenre, user.favoriteGenre) &&
+                Objects.equals(rideShare, user.rideShare);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (username != null ? username.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (emailAddress != null ? emailAddress.hashCode() : 0);
-        result = 31 * result + (phoneNumber != null ? phoneNumber.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        result = 31 * result + (state != null ? state.hashCode() : 0);
-        result = 31 * result + (birthdate != null ? birthdate.hashCode() : 0);
-        result = 31 * result + (zipCode != null ? zipCode.hashCode() : 0);
-        result = 31 * result + (favoriteGenre != null ? favoriteGenre.hashCode() : 0);
-        result = 31 * result + (rideShare != null ? rideShare.hashCode() : 0);
-        result = 31 * result + (roles != null ? roles.hashCode() : 0);
-        result = 31 * result + (shows != null ? shows.hashCode() : 0);
-        result = 31 * result + (friends != null ? friends.hashCode() : 0);
-        return result;
+        return Objects.hash(id, username, password, firstName, lastName, emailAddress, phoneNumber, city, state, birthdate, zipCode, favoriteGenre, rideShare);
     }
 }

@@ -1,8 +1,8 @@
 package com.kevinheise.controller;
 
-import com.kevinheise.entity.Show;
+import com.kevinheise.entity.Shows;
 import com.kevinheise.entity.User;
-import com.kevinheise.eventful.EventItem;
+import com.kevinheise.eventful.Event;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -28,34 +28,33 @@ public class MyShows extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
 
-        String successfulUpdateMessage = "";
-        if (request.getParameter("update") != null && !request.getParameter("update").isEmpty()) {
-            successfulUpdateMessage = "Event Added Successfully";
+        String updateMessage = (String) request.getAttribute("updateMessage");
+        if (request.getParameter("update") == null || request.getParameter("update").isEmpty()) {
+            updateMessage = "";
         }
 
-        Set<Show> shows = Collections.emptySet();
-        List<EventItem> events = Collections.emptyList();
+        // Get user events
+        Set<Shows> userShows = user.getShows();
+        List<String> userShowList = new ArrayList<>();
+        List<Event> events = new ArrayList<>();
         String url = "http://api.eventful.com/rest/events/get?id=";
+
         String errorMessage = "";
-
-        try {
-            shows = user.getShows();
-        } catch (NullPointerException exception) {
-            logger.error(exception);
-        }
-
-        if (shows != null && !shows.isEmpty()) {
-            for (Show show : shows) {
-                events.add(new ServiceConsumer().getEvents(url + show.getShowId() + "&app_key=").get(0));
+        if (userShows != null && !userShows.isEmpty()) {
+            for (Shows show : userShows) {
+                userShowList.add(show.getShowId());
+                Event event = new ServiceConsumer().getEvent(url + show.getShowId() + "&app_key=");
+                events.add(event);
             }
         } else {
             errorMessage = "You have not added any events yet.";
         }
 
 
-        session.setAttribute("updateMessage", successfulUpdateMessage);
+        session.setAttribute("updateMessage", updateMessage);
         session.setAttribute("errorMessage", errorMessage);
         session.setAttribute("events", events);
+        session.setAttribute("userShowList", userShowList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/myShows.jsp");
         dispatcher.forward(request, response);
     }

@@ -35,7 +35,7 @@ public class SignUpUser extends HttpServlet {
         GenericDao dao = new GenericDao(User.class);
         HttpSession session = req.getSession();
 
-        // Get form data
+        // Event form data
         String firstName = req.getParameter("firstName");
         String lastName  = req.getParameter("lastName");
         String username  = req.getParameter("username");

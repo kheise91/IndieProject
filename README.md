@@ -1,6 +1,6 @@
-# Kevin Heise Individual Project
+# [ShowMe](http://18.218.13.172:8080/ShowMe/)
 
-##[ShowMe Demo]()
+## [ShowMe Demo]()
 
 This repository is for my Indie Project (ShowMe)
 
